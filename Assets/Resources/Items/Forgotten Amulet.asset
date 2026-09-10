@@ -10,48 +10,56 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
-  m_Name: Gold ring
+  m_Name: Forgotten Amulet
   m_EditorClassIdentifier: Assembly-CSharp::Item
   itemDescription: 
   itemTag: 
   itemFlavourText: 
   classRequirement: 
-  itemIcon: {fileID: 21300000, guid: 70429bf7d5f2bf341be1c31492f4ecd0, type: 3}
-  itemType: 0
+  itemIcon: {fileID: 21300000, guid: 70eac250aadcaa5419d2e54e1e0851ce, type: 3}
+  itemType: 1
   itemRarity: 0
-  itemCost: 1000
+  itemCost: 0
   itemSet: {fileID: 0}
-  randomStatCount: 1
-  guaranteedStats:
-  - stat: 0
-    minimum: 1
-    maximum: 1
-    isPercent: 0
+  randomStatCount: 2
+  guaranteedStats: []
   randomisableStats:
   - stat: 0
-    minimum: -1
-    maximum: 1
+    minimum: 8
+    maximum: 12
+    isPercent: 0
+  - stat: 1
+    minimum: 2
+    maximum: 4
+    isPercent: 0
+  - stat: 4
+    minimum: 48
+    maximum: 80
+    isPercent: 0
+  - stat: 5
+    minimum: 32
+    maximum: 48
     isPercent: 0
   minimumDropLevel: 0
-  canPurchaseInShop: 1
-  canDropOffMonster: 0
+  canPurchaseInShop: 0
+  canDropOffMonster: 1
   template: {fileID: 0}
   engine:
     scripts:
     - scriptName: Item Equipped
-      scriptUID: 1164311574
+      scriptUID: 1890580967
       hasWait: 0
       reportErrors: 1
       eventNodes:
-      - rid: 4660473780534771805
+      - rid: 4660473780534771801
       conditionNodes: []
       actionNodes: []
     - scriptName: Item Unequipped
-      scriptUID: 1994721720
+      scriptUID: 670680619
       hasWait: 0
       reportErrors: 1
       eventNodes:
-      - rid: 4660473780534771806
+      - rid: 4660473780534771802
       conditionNodes: []
       actionNodes: []
   references:
@@ -59,7 +67,7 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 4660473780534771805
+    - rid: 4660473780534771801
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -80,7 +88,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 4660473780534771806
+    - rid: 4660473780534771802
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2

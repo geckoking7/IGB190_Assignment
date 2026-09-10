@@ -43505,8 +43505,8 @@ MonoBehaviour:
     empoweredMonsterXPModifier: 5
     empoweredMonsterGoldModifier: 3
     empoweredMonsterCommonDropChance: 1
-    empoweredMonsterRareDropChance: 0.2
-    empoweredMonsterLegendaryDropChance: 0
+    empoweredMonsterRareDropChance: 0.3
+    empoweredMonsterLegendaryDropChance: 0.05
   _playerExperienceValues:
     baseMonsterXP: 10
     startingXPPerLevel: 1000

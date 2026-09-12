@@ -128,7 +128,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 1
+        value: 5
     - rid: 1004
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
@@ -635,7 +635,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 150
+        value: 125
     - rid: 1027
       type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
       data:

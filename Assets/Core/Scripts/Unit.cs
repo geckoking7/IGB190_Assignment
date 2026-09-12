@@ -212,6 +212,7 @@ public class Unit : Interactable
     protected virtual float ApplyDamageFormula(float amount, bool isCritical,
         Unit damagingUnit, IVisualCodeHandler damageSource)
     {
+        //important: "isCritical" has already scaled "amount" at this point, in the
         // Apply damage modifiers (e.g. a -50% damage taken buff).
         amount *= GetBaseDamageTakenModifier();
 
@@ -899,14 +900,15 @@ public class Unit : Interactable
             amount *= GetAbilityDamageModifier(ability);
 
         bool isCrit = false;
-        if (CheckForCritical())
+        foreach (var unit in units)
         {
-            amount *= stats.GetValue(Stat.CriticalStrikeDamage);
-            isCrit = true;
-        }
-        foreach (Unit unit in units)
-        {
-            unit.TakeDamage(amount, isCrit, this, source);
+            var newAmount = amount;
+            if (CheckForCritical())
+            {
+                newAmount *= stats.GetValue(Stat.CriticalStrikeDamage);
+                isCrit = true;
+            }
+            unit.TakeDamage(newAmount, isCrit, this, source);
         }
     }
 

@@ -5100,7 +5100,7 @@ MonoBehaviour:
   unitName: Monster 5
   baseDamage: 5
   baseAttacksPerSecond: 1
-  baseMaxHealth: 30
+  baseMaxHealth: 200
   baseMaxResource: 100
   baseMovementSpeed: 1
   baseArmor: 0
@@ -5143,7 +5143,7 @@ MonoBehaviour:
   uiSize: 1
   uiHeight: 1.7
   spawnLevel: 1
-  spawnLikelihood: 5
+  spawnLikelihood: 10
 --- !u!54 &5473502248093228870
 Rigidbody:
   m_ObjectHideFlags: 0

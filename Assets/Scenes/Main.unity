@@ -4547,14 +4547,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2723096954045919853, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
-      propertyPath: spawnDensity
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2723096954302082401, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
-      propertyPath: spawnDensity
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 4157343042942318865, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
       propertyPath: m_Name
       value: Room 4
@@ -8036,6 +8028,10 @@ PrefabInstance:
     - target: {fileID: 4774323926024196215, guid: caef50e694e10204c993186864e4cc23, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5184449006530483668, guid: caef50e694e10204c993186864e4cc23, type: 3}
+      propertyPath: baseMaxHealth
+      value: 67
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12900,11 +12896,11 @@ MonoBehaviour:
   baseAttacksPerSecond: 1.5
   baseMaxHealth: 200
   baseMaxResource: 200
-  baseMovementSpeed: 2.5
+  baseMovementSpeed: 3
   baseArmor: 0
   baseCriticalStrikeChance: 0.1
   baseCriticalStrikeDamage: 1.5
-  baseHealthRegen: 10
+  baseHealthRegen: 20
   baseResourceRegen: 8
   baseAttackRange: 2
   health: 500
@@ -16476,6 +16472,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
+  m_UseReflectionProbes: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -18339,6 +18336,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
+  m_UseReflectionProbes: 0
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
@@ -21260,7 +21258,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1043651113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21277,13 +21275,13 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 0, a: 0}
   colorFade: {r: 0, g: 0, b: 0, a: 0}
   unitName: Barbarian
-  baseDamage: 20
-  baseAttacksPerSecond: 1.5
-  baseMaxHealth: 300
+  baseDamage: 23
+  baseAttacksPerSecond: 1.4
+  baseMaxHealth: 800
   baseMaxResource: 100
   baseMovementSpeed: 3
   baseArmor: 0
-  baseCriticalStrikeChance: 0.1
+  baseCriticalStrikeChance: 0.2
   baseCriticalStrikeDamage: 1.5
   baseHealthRegen: 20
   baseResourceRegen: 0
@@ -21319,15 +21317,15 @@ MonoBehaviour:
   currentGold: 0
   currentLevel: 1
   currentExperience: 0
-  experienceToNextLevel: 100
+  experienceToNextLevel: 40
   leftClickAbility: {fileID: 0}
   rightClickAlsoMoves: 1
   levelUpFeedback: {fileID: 11400000, guid: 9cdaa1d98fc0cc4428a905e670a76812, type: 2}
   resourceName: Rage
   resourceMaterial: {fileID: 2100000, guid: b8286c3806406a74eaa1c5a1ac724e39, type: 2}
   bonusDamagePerLevel: 0
-  bonusHealthPerLevel: 0
-  bonusMovementSpeedPerLevel: 0
+  bonusHealthPerLevel: 50
+  bonusMovementSpeedPerLevel: 0.3
   bonusResourcePerLevel: 0
   bonusArmorPerLevel: 0
   bonusCriticalChancePerLevel: 0
@@ -21344,7 +21342,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.05
-  m_Speed: 3.5
+  m_Speed: 3
   m_Acceleration: 9999
   avoidancePriority: 1
   m_AngularSpeed: 9999
@@ -25440,18 +25438,6 @@ PrefabInstance:
     - target: {fileID: 2530420025797128780, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2723096954045919853, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
-      propertyPath: spawnDensity
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2723096954045919853, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
-      propertyPath: maximumSpawnLevel
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2723096954302082401, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
-      propertyPath: spawnDensity
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4124517350831407445, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
       propertyPath: m_IsActive
@@ -40115,7 +40101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1806430104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40140,7 +40126,7 @@ MonoBehaviour:
   baseArmor: 0
   baseCriticalStrikeChance: 0.1
   baseCriticalStrikeDamage: 1.5
-  baseHealthRegen: 5
+  baseHealthRegen: 20
   baseResourceRegen: 2
   baseAttackRange: 2
   health: 500
@@ -43495,7 +43481,7 @@ MonoBehaviour:
     baseGoldDropAmountMinimum: 10
     baseGoldDropAmountMaximum: 20
     goldDropChance: 0.2
-    unempoweredMonsterCommonDropChance: 0
+    unempoweredMonsterCommonDropChance: 0.134
     unempoweredMonsterRareDropChance: 0
     unempoweredMonsterLegendaryDropChance: 0
   _empoweredMonsterValues:
@@ -43505,18 +43491,19 @@ MonoBehaviour:
     empoweredMonsterXPModifier: 5
     empoweredMonsterGoldModifier: 3
     empoweredMonsterCommonDropChance: 1
-    empoweredMonsterRareDropChance: 0.3
-    empoweredMonsterLegendaryDropChance: 0.05
+    empoweredMonsterRareDropChance: 0.2
+    empoweredMonsterLegendaryDropChance: 0
   _playerExperienceValues:
     baseMonsterXP: 10
-    startingXPPerLevel: 1000
-    additionalMaxXPPerLevel: 0
+    startingXPPerLevel: 50
+    additionalMaxXPBPerLevel: 25
+    additionalMaxXPAPerLevel: 1.05
   _monsterScalingValues:
     increasedHealthPerPlayerLevel: 0.25
     increasedDamagePerPlayerLevel: 0.25
   _healthGlobeValues:
-    baseHealthGlobeChance: 0.2
-    reducedChancePerExistingGlobe: 0.5
+    baseHealthGlobeChance: 0
+    reducedChancePerExistingGlobe: 0
     spawnRadius: 6
     lifetime: 5
     healthGlobeHealthRestore: 50
@@ -45183,14 +45170,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2723096954045919853, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
-      propertyPath: spawnDensity
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2723096954302082401, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
-      propertyPath: spawnDensity
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 4124517350831407445, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -46778,7 +46757,7 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3033969488828756921}
   m_Enabled: 1
-  serializedVersion: 12
+  serializedVersion: 13
   m_Type: 1
   m_Color: {r: 0.1397059, g: 0.53722113, b: 1, a: 1}
   m_Intensity: 0.2
@@ -46830,7 +46809,7 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
-  m_ShadowRadius: 0
+  m_ShapeRadius: 0
   m_ShadowAngle: 0
   m_LightUnit: 1
   m_LuxAtDistance: 1
@@ -46995,10 +46974,6 @@ PrefabInstance:
     - target: {fileID: 1883707019183669310, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2723096954045919853, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
-      propertyPath: spawnDensity
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2723096954302082401, guid: 3660627c257c107448bbab1f879c40e8, type: 3}
       propertyPath: spawnDensity
@@ -47549,7 +47524,7 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1312009403925875449}
   m_Enabled: 1
-  serializedVersion: 12
+  serializedVersion: 13
   m_Type: 1
   m_Color: {r: 1, g: 0.9253336, b: 0.7216981, a: 1}
   m_Intensity: 0.35
@@ -47601,7 +47576,7 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
-  m_ShadowRadius: 0
+  m_ShapeRadius: 0
   m_ShadowAngle: 0
   m_LightUnit: 1
   m_LuxAtDistance: 1

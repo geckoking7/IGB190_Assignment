@@ -42,7 +42,9 @@ public class DeathWindow : UIWindow, IPausing
     private void OnPlayerKilled(GameEvents.OnPlayerKilledInfo info)
     {
         // Update the cause of death text based on whether a unit caused the death
-        causeOfDeathText.text = info.killingUnit != null ? $"You were slain by a {info.killingUnit.unitName}" : "You were slain";
+        string[] deathCauses = new []{ "eviscerated", "disemboweled", "destroyed", "brutally slain", "pwned", "taken apart", "annihilated", "obliterated" };
+        var deathCause = deathCauses[Random.Range(0, deathCauses.Length - 1)];
+        causeOfDeathText.text = info.killingUnit != null ? $"You were {deathCause} by a {info.killingUnit.unitName}" : $"You were {deathCause}";
 
         // Show the death window after a delay
         Invoke(nameof(Show), 2.0f);

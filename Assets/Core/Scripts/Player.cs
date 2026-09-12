@@ -1,3 +1,4 @@
+//#define GOD_MODE
 using MyUtilities;
 using System;
 using System.Collections;
@@ -11,7 +12,7 @@ public class Player : Unit
     [HideInInspector] public float currentGold = 0;
     [HideInInspector] public int currentLevel = 1;
     [HideInInspector] public float currentExperience = 0;
-    [HideInInspector] public float experienceToNextLevel = 100;
+    public float experienceToNextLevel = 100;
     [HideInInspector] public Ability leftClickAbility;
     [HideInInspector] public bool rightClickAlsoMoves = false;
     [DoNotSerialize] public Inventory inventory;
@@ -58,7 +59,7 @@ public class Player : Unit
         base.Start();
         SetOutline(OUTLINE_COLOR);
         CacheLeftClickAbility();
-        UpdateExperienceRequiredForLevel();
+        //UpdateExperienceRequiredForLevel();
         SetupPlayerInventory();
         SetupEquipment();
         SetupSellSlot();
@@ -125,6 +126,9 @@ public class Player : Unit
     /// </summary>
     public override void TakeDamage(float amount, bool isCritical, Unit damagingUnit, IVisualCodeHandler damageSource)
     {
+#if GOD_MODE
+        return;
+#endif
         base.TakeDamage(amount, isCritical, damagingUnit, damageSource);
     }
 
@@ -501,6 +505,7 @@ public class Player : Unit
     /// </summary>
     public virtual void AddLevels(int levelsToAdd)
     {
+        health = stats.GetValue(Stat.MaxHealth);
         for (int i = 0; i < levelsToAdd; i++)
         {
             currentLevel++;
@@ -519,6 +524,7 @@ public class Player : Unit
             baseHealthRegen += bonusHealthRegenPerLevel;
             baseResourceRegen += bonusResourceRegenPerLevel;
         }
+        print($"current level is now {currentLevel}");
     }
 
     /// <summary>
@@ -557,8 +563,9 @@ public class Player : Unit
     /// </summary>
     private void UpdateExperienceRequiredForLevel ()
     {
-        experienceToNextLevel = GameManager.playerExperienceValues.startingXPPerLevel;
-        experienceToNextLevel += GameManager.playerExperienceValues.additionalMaxXPPerLevel * currentLevel;
+        print($"the experience needed to get to the last level was {experienceToNextLevel}");
+        experienceToNextLevel = currentLevel * currentLevel * GameManager.playerExperienceValues.additionalMaxXPAPerLevel + GameManager.playerExperienceValues.additionalMaxXPBPerLevel * currentLevel + GameManager.playerExperienceValues.startingXPPerLevel;
+        print($"the experience needed to get to the next level is now {experienceToNextLevel}");
     }
 
     /// <summary>

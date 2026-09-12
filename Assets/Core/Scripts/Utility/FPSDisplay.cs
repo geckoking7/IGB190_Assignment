@@ -25,7 +25,7 @@ public class FPSDisplay : MonoBehaviour
         }
 #if UNITY_EDITOR
         fpsText.text = $"FPS: {(int)(fps)}\n" +
-            $"Batches: {UnityStats.batches}\n" +
+            $"Batches: {UnityStats.dynamicBatches}\n" +
             $"Draw Calls: {UnityStats.drawCalls}\n" +
             $"Tris: {(int)(UnityStats.triangles / 1000)}k\n" +
             $"Verts: {(int)(UnityStats.vertices / 1000)}k";

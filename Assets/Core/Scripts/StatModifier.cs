@@ -29,9 +29,9 @@ public class StatModifier
         requiresUpdate = true;
     }
 
-    public void ModifyBaseValue(float change)
+    public void ModifyBaseValue(float change, float max = float.PositiveInfinity)
     {
-        this.baseValue += change;
+        baseValue = Mathf.Min(baseValue + change, max);
         requiresUpdate = true;
     }
 
@@ -73,6 +73,8 @@ public class StatModifier
         permanentModifiers.RemoveAll(x => x.Label == label);
         requiresUpdate = true;
     }
+    private const float armorAdjustment = 100.0f;
+    public static float GetArmorAdjustedDamage(float damage, float armor) => armorAdjustment * damage / (armorAdjustment + armor);
 
     public float GetValue()
     {

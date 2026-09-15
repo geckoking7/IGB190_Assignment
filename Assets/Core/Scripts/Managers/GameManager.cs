@@ -227,12 +227,10 @@ public class GameManager : MonoBehaviour
     {
         [Tooltip("The health modifier for empowered units. For example, a value of 4 means 400% of regular health.")]
         public float baseMonsterXP = 10;
-        [Tooltip("The level up function is x = ax^2 + bx + c, where c = startingXPPerLevel")]
-        public float startingXPPerLevel = 0;
-        [Tooltip("The level up function is x = ax^2 + bx + c, where b = additionalMaxXPBPerLevel")]
-        public float additionalMaxXPBPerLevel = 100;
-        [Tooltip("The level up function is x = ax^2 + bx + c, where a = additionalMaxXPAPerLevel")]
-        public float additionalMaxXPAPerLevel = 100;
+        [Tooltip("The experience required for the player to complete their FIRST level up.")]
+        public float startingXPPerLevel = 100;
+        [Tooltip("The additional experience required for the player to complete each subsequent level up.")]
+        public float additionalMaxXPPerLevel = 100;
     }
 
     [SerializeField] private MonsterScalingValues _monsterScalingValues;

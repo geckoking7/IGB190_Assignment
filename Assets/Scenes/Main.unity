@@ -12945,9 +12945,12 @@ MonoBehaviour:
   bonusMovementSpeedPerLevel: 0
   bonusResourcePerLevel: 0
   bonusArmorPerLevel: 0
+  maxCriticalStrikeChance: 0.8
   bonusCriticalChancePerLevel: 0
+  maxCriticalStrikeDamage: 2
   bonusCriticalDamagePerLevel: 0
   bonusHealthRegenPerLevel: 0
+  maxHealthRegen: 2
   bonusResourceRegenPerLevel: 0
 --- !u!195 &623941940
 NavMeshAgent:
@@ -21278,8 +21281,8 @@ MonoBehaviour:
   baseMaxHealth: 800
   baseMaxResource: 100
   baseMovementSpeed: 3
-  baseArmor: 0
-  baseCriticalStrikeChance: 0.2
+  baseArmor: 10
+  baseCriticalStrikeChance: 0.1
   baseCriticalStrikeDamage: 1.5
   baseHealthRegen: 20
   baseResourceRegen: 0
@@ -21321,15 +21324,18 @@ MonoBehaviour:
   levelUpFeedback: {fileID: 11400000, guid: 9cdaa1d98fc0cc4428a905e670a76812, type: 2}
   resourceName: Rage
   resourceMaterial: {fileID: 2100000, guid: b8286c3806406a74eaa1c5a1ac724e39, type: 2}
-  bonusDamagePerLevel: 0
+  bonusDamagePerLevel: 3
   bonusHealthPerLevel: 50
   bonusMovementSpeedPerLevel: 0.3
-  bonusResourcePerLevel: 0
-  bonusArmorPerLevel: 0
-  bonusCriticalChancePerLevel: 0
-  bonusCriticalDamagePerLevel: 0
-  bonusHealthRegenPerLevel: 0
-  bonusResourceRegenPerLevel: 0
+  bonusResourcePerLevel: 10
+  bonusArmorPerLevel: 2
+  maxCriticalStrikeChance: 0.8
+  bonusCriticalChancePerLevel: 0.05
+  maxCriticalStrikeDamage: 2
+  bonusCriticalDamagePerLevel: 0.1
+  bonusHealthRegenPerLevel: 10
+  maxHealthRegen: 100
+  bonusResourceRegenPerLevel: 5
 --- !u!195 &1043651115
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -40230,9 +40236,12 @@ MonoBehaviour:
   bonusMovementSpeedPerLevel: 0
   bonusResourcePerLevel: 0
   bonusArmorPerLevel: 0
+  maxCriticalStrikeChance: 0.8
   bonusCriticalChancePerLevel: 0
+  maxCriticalStrikeDamage: 2
   bonusCriticalDamagePerLevel: 0
   bonusHealthRegenPerLevel: 0
+  maxHealthRegen: 2
   bonusResourceRegenPerLevel: 0
 --- !u!195 &1806430105
 NavMeshAgent:
@@ -43555,8 +43564,7 @@ MonoBehaviour:
   _playerExperienceValues:
     baseMonsterXP: 10
     startingXPPerLevel: 50
-    additionalMaxXPBPerLevel: 25
-    additionalMaxXPAPerLevel: 1.05
+    additionalMaxXPPerLevel: 100
   _monsterScalingValues:
     increasedHealthPerPlayerLevel: 0.25
     increasedDamagePerPlayerLevel: 0.25

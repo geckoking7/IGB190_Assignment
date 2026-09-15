@@ -1,4 +1,3 @@
-//#define GOD_MODE
 using MyUtilities;
 using System;
 using System.Collections;
@@ -12,7 +11,7 @@ public class Player : Unit
     [HideInInspector] public float currentGold = 0;
     [HideInInspector] public int currentLevel = 1;
     [HideInInspector] public float currentExperience = 0;
-    public float experienceToNextLevel = 100;
+    [HideInInspector] public float experienceToNextLevel = 100;
     [HideInInspector] public Ability leftClickAbility;
     [HideInInspector] public bool rightClickAlsoMoves = false;
     [DoNotSerialize] public Inventory inventory;
@@ -29,9 +28,12 @@ public class Player : Unit
     public float bonusMovementSpeedPerLevel;
     public float bonusResourcePerLevel;
     public float bonusArmorPerLevel;
+    public float maxCriticalStrikeChance = .8f;
     public float bonusCriticalChancePerLevel;
+    public float maxCriticalStrikeDamage = 2.0f;
     public float bonusCriticalDamagePerLevel;
     public float bonusHealthRegenPerLevel;
+    public float maxHealthRegen = 70.0f;
     public float bonusResourceRegenPerLevel;
 
     //  Constants related to the player.
@@ -59,7 +61,7 @@ public class Player : Unit
         base.Start();
         SetOutline(OUTLINE_COLOR);
         CacheLeftClickAbility();
-        //UpdateExperienceRequiredForLevel();
+        UpdateExperienceRequiredForLevel();
         SetupPlayerInventory();
         SetupEquipment();
         SetupSellSlot();
@@ -126,9 +128,7 @@ public class Player : Unit
     /// </summary>
     public override void TakeDamage(float amount, bool isCritical, Unit damagingUnit, IVisualCodeHandler damageSource)
     {
-#if GOD_MODE
-        return;
-#endif
+        amount = StatModifier.GetArmorAdjustedDamage(amount, baseArmor);
         base.TakeDamage(amount, isCritical, damagingUnit, damageSource);
     }
 
@@ -519,12 +519,11 @@ public class Player : Unit
             stats[Stat.Damage].ModifyBaseValue(bonusDamagePerLevel);
             stats[Stat.MaxResource].ModifyBaseValue(bonusResourcePerLevel);
             stats[Stat.Armor].ModifyBaseValue(bonusArmorPerLevel);
-            stats[Stat.CriticalStrikeChance].ModifyBaseValue(bonusCriticalChancePerLevel);
-            stats[Stat.CriticalStrikeDamage].ModifyBaseValue(bonusCriticalDamagePerLevel);
-            baseHealthRegen += bonusHealthRegenPerLevel;
+            stats[Stat.CriticalStrikeChance].ModifyBaseValue(bonusCriticalChancePerLevel, maxCriticalStrikeChance);
+            stats[Stat.CriticalStrikeDamage].ModifyBaseValue(bonusCriticalDamagePerLevel, maxCriticalStrikeDamage);
+            baseHealthRegen = Mathf.Min(baseHealthRegen + bonusHealthRegenPerLevel, maxHealthRegen);
             baseResourceRegen += bonusResourceRegenPerLevel;
         }
-        print($"current level is now {currentLevel}");
     }
 
     /// <summary>
@@ -563,9 +562,8 @@ public class Player : Unit
     /// </summary>
     private void UpdateExperienceRequiredForLevel ()
     {
-        print($"the experience needed to get to the last level was {experienceToNextLevel}");
-        experienceToNextLevel = currentLevel * currentLevel * GameManager.playerExperienceValues.additionalMaxXPAPerLevel + GameManager.playerExperienceValues.additionalMaxXPBPerLevel * currentLevel + GameManager.playerExperienceValues.startingXPPerLevel;
-        print($"the experience needed to get to the next level is now {experienceToNextLevel}");
+        experienceToNextLevel = GameManager.playerExperienceValues.startingXPPerLevel;
+        experienceToNextLevel += GameManager.playerExperienceValues.additionalMaxXPPerLevel * currentLevel;
     }
 
     /// <summary>

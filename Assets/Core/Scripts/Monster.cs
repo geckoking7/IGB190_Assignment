@@ -234,6 +234,7 @@ public class Monster : Unit
     /// </summary>
     public override void TakeDamage(float amount, bool isCritical, Unit damagingUnit, IVisualCodeHandler damageSource)
     {
+        amount = StatModifier.GetArmorAdjustedDamage(amount, baseArmor);
         base.TakeDamage(amount, isCritical, damagingUnit, damageSource);
         if (GameManager.settings.showDamageNumbers && GetFaction() != Faction.Player)
         {

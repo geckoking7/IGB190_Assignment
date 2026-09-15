@@ -56,7 +56,6 @@
         <xs:attribute default="true" name="select-word-by-double-click" type="xs:boolean" use="optional" />
         <xs:attribute default="true" name="select-line-by-triple-click" type="xs:boolean" use="optional" />
         <xs:attribute default="true" name="emoji-fallback-support" type="xs:boolean" use="optional" />
-        <xs:attribute default="false" name="hide-soft-keyboard" type="xs:boolean" use="optional" />
         <xs:attribute default="false" name="hide-mobile-input" type="xs:boolean" use="optional" />
         <xs:attribute default="Default" name="keyboard-type" xmlns:q2="Unity.Profiling.Editor" type="q2:SelectableLabel_keyboard-type_Type" use="optional" />
         <xs:attribute default="false" name="auto-correction" type="xs:boolean" use="optional" />

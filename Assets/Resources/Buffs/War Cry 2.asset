@@ -1,0 +1,448 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6688e2940d1ee64894af667a197af7e, type: 3}
+  m_Name: War Cry 2
+  m_EditorClassIdentifier: Assembly-CSharp::Buff
+  buffDescription: Increase attack speed by 25% and damage by 25%.
+  buffFlavourText: 
+  buffTag: 
+  buffIcon: {fileID: 21300000, guid: fe2b8789f60c97a4aacdbab1610e4e51, type: 3}
+  buffType: 0
+  buffRemovedOnDeath: 1
+  buffVisibleInUI: 1
+  buffHasDuration: 1
+  addingStacksRefreshesDuration: 1
+  buffCurrentDuration: 0
+  buffMaxDuration: 30
+  buffCurrentStacks: 1
+  buffMaximumStacks: 1
+  buffEffectOnTarget: {fileID: 0}
+  buffAttachPoint: Cast Point
+  buffScale: 0
+  buffStatBonuses: []
+  visualEffect: {fileID: 0}
+  owner: {fileID: 0}
+  applier: {fileID: 0}
+  engine:
+    scripts:
+    - scriptName: Main
+      scriptUID: 817644986
+      hasWait: 0
+      reportErrors: 1
+      eventNodes:
+      - rid: 8267055672131321985
+      conditionNodes: []
+      actionNodes:
+      - rid: 8267055672131321986
+      - rid: 8267055672131321987
+      - rid: 8267055672131321988
+      - rid: 8267055672131321989
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 8267055672131321985
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: OnTimerFinished
+        functionDescription: Time/Do every X Seconds
+        functionDynamicDescription: Every $ seconds
+        functionEvaluators:
+        - rid: 8267055672131321990
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets: []
+    - rid: 8267055672131321986
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: RemoveResourcesfromUnits
+        functionDescription: Unit/Resources/Remove Resource from Unit(s)
+        functionDynamicDescription: Remove $ resource from $
+        functionEvaluators:
+        - rid: 8267055672131321991
+        - rid: 8267055672131321992
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 8267055672131321987
+      type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DoActionsIfBool
+        functionDescription: Flow/If Statement
+        functionDynamicDescription: Do actions if $
+        functionEvaluators:
+        - rid: 8267055672131321993
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 8267055672131321988
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: RemoveXStacksOfBuffToUnits
+        functionDescription: Unit/Buff/Remove Buff Stacks from Unit(s)
+        functionDynamicDescription: Remove $ stack(s) of $ from $
+        functionEvaluators:
+        - rid: 8267055672131321994
+        - rid: 8267055672131321995
+        - rid: 8267055672131321996
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 1
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 8267055672131321989
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: RemoveBuff
+        functionDescription: Unit/Combat/Remove Buff from Unit(s)
+        functionDynamicDescription: Remove buff named $ from $
+        functionEvaluators:
+        - rid: 8267055672131321997
+        - rid: 8267055672131321998
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 1
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 8267055672131321990
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 8267055672131321985
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 8267055672131321991
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 8267055672131321986
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 10
+    - rid: 8267055672131321992
+      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit(s)
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 8267055672131321986
+        parentNodeID: 1
+        indent: 0
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        allowSingleUnit: 0
+    - rid: 8267055672131321993
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Bool
+        functionName: NumberComparison
+        functionDescription: Comparisons/Number Comparison
+        functionDynamicDescription: $ $ $
+        functionEvaluators:
+        - rid: 8267055672131321999
+        - rid: 8267055672131322000
+        - rid: 8267055672131322001
+        parentNode:
+          rid: 8267055672131321987
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 8267055672131321994
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 8267055672131321988
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 8267055672131321995
+      type: {class: BuffNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Buff
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 8267055672131321988
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 11400000, guid: 47b49280f67c5b34ba6b6b6b71534bfe, type: 2}
+    - rid: 8267055672131321996
+      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit(s)
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 8267055672131321988
+        parentNodeID: 2
+        indent: 0
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        allowSingleUnit: 0
+    - rid: 8267055672131321997
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 8267055672131321989
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: War Cry 1
+        options: []
+    - rid: 8267055672131321998
+      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit(s)
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 8267055672131321989
+        parentNodeID: 1
+        indent: 0
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        allowSingleUnit: 0
+    - rid: 8267055672131321999
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: UnitResource
+        functionDescription: Unit/Unit Resource
+        functionDynamicDescription: $ Resource
+        functionEvaluators:
+        - rid: 8267055672131322002
+        parentNode:
+          rid: 8267055672131321993
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 8267055672131322000
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 8267055672131321993
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Less Than Or Equal To
+        options:
+        - Equal To
+        - Not Equal To
+        - Less Than
+        - Less Than Or Equal To
+        - Greater Than
+        - Greater Than Or Equal To
+    - rid: 8267055672131322001
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 8267055672131321993
+        parentNodeID: 2
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 8267055672131322002
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 8267055672131321999
+        parentNodeID: 0
+        indent: 0
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}

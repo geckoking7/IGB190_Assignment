@@ -99,9 +99,9 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 0, a: 0}
   colorFade: {r: 0, g: 0, b: 0, a: 0}
   unitName: Monster 3
-  baseDamage: 10
+  baseDamage: 20
   baseAttacksPerSecond: 2
-  baseMaxHealth: 200
+  baseMaxHealth: 100
   baseMaxResource: 100
   baseMovementSpeed: 1
   baseArmor: 0
@@ -136,7 +136,7 @@ MonoBehaviour:
   forceMoveLocation: {x: 0, y: 0, z: 0}
   spawnEffect: {fileID: -68291847361665647, guid: 221c9f3b6942c2b4ebfaeec8b89bb98a, type: 3}
   goldModifier: 1
-  experienceModifier: 1
+  experienceModifier: 2
   corpseDuration: 3.5
   monsterLabel: 
   isEmpowered: 0

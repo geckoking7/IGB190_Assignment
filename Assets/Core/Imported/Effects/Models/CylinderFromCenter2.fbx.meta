@@ -90,3 +90,10 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 173450
+  packageName: Sword slashes PRO
+  packageVersion: 3.0
+  assetPath: Assets/Core/Imported/Effects/Models/CylinderFromCenter2.fbx
+  uploadId: 865410

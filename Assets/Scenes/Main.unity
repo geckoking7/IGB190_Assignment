@@ -12536,7 +12536,7 @@ MonoBehaviour:
   playerGoldText: {fileID: 953769410}
   xpBar: {fileID: 734190709}
   healthGlobeMaterial: {fileID: 2100000, guid: 2bb56c658babbbb44a3aae48cc56a78c, type: 2}
-  resourceGlobeMaterial: {fileID: 2100000, guid: b8286c3806406a74eaa1c5a1ac724e39, type: 2}
+  resourceGlobeMaterial: {fileID: 2100000, guid: a9ac3b21fd7ebde4295839fc6e88229f, type: 2}
   healthBar: {fileID: 543590529}
   resourceBar: {fileID: 1366455516}
   buffs:
@@ -24180,7 +24180,7 @@ GameObject:
   - component: {fileID: 1177708132}
   - component: {fileID: 1177708134}
   m_Layer: 5
-  m_Name: ResourceBar
+  m_Name: StealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38287,10 +38287,18 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a9ac3b21fd7ebde4295839fc6e88229f, type: 2}
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: abilities.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
+      propertyPath: baseAttacksPerSecond
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: 'abilities.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 28ad1ebc9d6568d4fa98f49257363032, type: 2}
+    - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
+      propertyPath: 'abilities.Array.data[1]'
       value: 
       objectReference: {fileID: 11400000, guid: 28ad1ebc9d6568d4fa98f49257363032, type: 2}
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
@@ -43603,8 +43611,9 @@ MonoBehaviour:
     empoweredMonsterLegendaryDropChance: 0
   _playerExperienceValues:
     baseMonsterXP: 10
-    startingXPPerLevel: 50
-    additionalMaxXPPerLevel: 100
+    additionalMaxXPAPerLevel: 1.05
+    additionalMaxXPBPerLevel: 25
+    additionalMaxXPCPerLevel: 60
   _monsterScalingValues:
     increasedHealthPerPlayerLevel: 0.25
     increasedDamagePerPlayerLevel: 0.25

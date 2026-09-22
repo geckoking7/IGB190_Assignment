@@ -562,8 +562,7 @@ public class Player : Unit
     /// </summary>
     private void UpdateExperienceRequiredForLevel ()
     {
-        experienceToNextLevel = GameManager.playerExperienceValues.startingXPPerLevel;
-        experienceToNextLevel += GameManager.playerExperienceValues.additionalMaxXPPerLevel * currentLevel;
+        experienceToNextLevel = GameManager.playerExperienceValues.additionalMaxXPAPerLevel * currentLevel * currentLevel + GameManager.playerExperienceValues.additionalMaxXPBPerLevel * currentLevel + GameManager.playerExperienceValues.additionalMaxXPCPerLevel;
     }
 
     /// <summary>

@@ -12,14 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
   m_Name: Cursed ring of the Gecko King
   m_EditorClassIdentifier: Assembly-CSharp::Item
-  itemDescription: 'Monsters drop 3x gold
-
-    Regular monsters have a 5% drop chance
-    of items
-
-    x3 empowered enemies spawning'
+  itemDescription: Increased empowered enemies spawns
   itemTag: 
-  itemFlavourText: 
+  itemFlavourText: Ring cursed by the Gecko king, makes the game significantly harder
   classRequirement: 
   itemIcon: {fileID: 21300000, guid: 10d6f7d7600db8d418976f049cc4ac2a, type: 3}
   itemType: 0
@@ -34,7 +29,7 @@ MonoBehaviour:
     isPercent: 1
   randomisableStats: []
   minimumDropLevel: 0
-  canPurchaseInShop: 1
+  canPurchaseInShop: 0
   canDropOffMonster: 0
   template: {fileID: 0}
   engine:

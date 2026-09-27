@@ -16,7 +16,7 @@ MonoBehaviour:
   itemTag: 
   itemFlavourText: Ring cursed by the Gecko king, makes the game significantly harder
   classRequirement: 
-  itemIcon: {fileID: 21300000, guid: 10d6f7d7600db8d418976f049cc4ac2a, type: 3}
+  itemIcon: {fileID: 21300000, guid: e7eab74a3fb073e47b8ff5f06f8037e9, type: 3}
   itemType: 0
   itemRarity: 2
   itemCost: 0

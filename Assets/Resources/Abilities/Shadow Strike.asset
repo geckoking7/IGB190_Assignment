@@ -19,7 +19,7 @@ MonoBehaviour:
   targetMode: 4
   abilityDescription: 'Teleport to the closest enemy to the cursor in a medium sized
     range. Deal 100% damage to the target. On kill, gain 40% Shadow, and become Stealthed. '
-  abilityAnimation: None
+  abilityAnimation: Punch
   range: 999
   castTime: 0
   abilityCooldown: 5

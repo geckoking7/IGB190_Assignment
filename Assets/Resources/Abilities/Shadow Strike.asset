@@ -15,7 +15,7 @@ MonoBehaviour:
   engine:
     rid: 8267055672131321934
   abilityFlavourText: 
-  abilityIcon: {fileID: 21300000, guid: 7e5b9a5dea307ab4d9aad2a277180fb3, type: 3}
+  abilityIcon: {fileID: 21300000, guid: 02707f6c0ef84cd4db7f54d3bfeaa84f, type: 3}
   targetMode: 4
   abilityDescription: 'Teleport to the closest enemy to the cursor in a medium sized
     range. Deal 100% damage to the target. On kill, gain 40% Shadow, and become Stealthed. '

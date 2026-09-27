@@ -7071,7 +7071,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3707350415494921985, guid: caef50e694e10204c993186864e4cc23, type: 3}
       propertyPath: m_Name
-      value: Spawner 3 (1)
+      value: Spawner 4
       objectReference: {fileID: 0}
     - target: {fileID: 3707350415494921985, guid: caef50e694e10204c993186864e4cc23, type: 3}
       propertyPath: m_IsActive
@@ -12843,7 +12843,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3707350415494921985, guid: caef50e694e10204c993186864e4cc23, type: 3}
       propertyPath: m_Name
-      value: Spawner 3 (7)
+      value: Spawner 10 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 3707350415494921985, guid: caef50e694e10204c993186864e4cc23, type: 3}
       propertyPath: m_IsActive
@@ -15405,6 +15405,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 558e7799d998f4649aae2a5b8054f9cb, type: 3}
+--- !u!4 &658195497 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 63a9ac7cbff5d8f4ab9ff7f2905ed2ca, type: 3}
+  m_PrefabInstance: {fileID: 1961629210}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &658718390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16048,7 +16053,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3707350415494921985, guid: caef50e694e10204c993186864e4cc23, type: 3}
       propertyPath: m_Name
-      value: Spawner 3 (3)
+      value: Spawner 5
       objectReference: {fileID: 0}
     - target: {fileID: 3707350415494921985, guid: caef50e694e10204c993186864e4cc23, type: 3}
       propertyPath: m_IsActive
@@ -17304,7 +17309,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3707350415494921985, guid: caef50e694e10204c993186864e4cc23, type: 3}
       propertyPath: m_Name
-      value: Spawner 3 (6)
+      value: Spawner 10
       objectReference: {fileID: 0}
     - target: {fileID: 3707350415494921985, guid: caef50e694e10204c993186864e4cc23, type: 3}
       propertyPath: m_IsActive
@@ -19068,7 +19073,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3707350415494921985, guid: caef50e694e10204c993186864e4cc23, type: 3}
       propertyPath: m_Name
-      value: Spawner 3 (9)
+      value: Spawner 6
       objectReference: {fileID: 0}
     - target: {fileID: 3707350415494921985, guid: caef50e694e10204c993186864e4cc23, type: 3}
       propertyPath: m_IsActive
@@ -23294,7 +23299,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3707350415494921985, guid: caef50e694e10204c993186864e4cc23, type: 3}
       propertyPath: m_Name
-      value: Spawner 3 (4)
+      value: Spawner 9
       objectReference: {fileID: 0}
     - target: {fileID: 3707350415494921985, guid: caef50e694e10204c993186864e4cc23, type: 3}
       propertyPath: m_IsActive
@@ -23869,7 +23874,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3707350415494921985, guid: caef50e694e10204c993186864e4cc23, type: 3}
       propertyPath: m_Name
-      value: Spawner 3 (2)
+      value: Spawner 4 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 3707350415494921985, guid: caef50e694e10204c993186864e4cc23, type: 3}
       propertyPath: m_IsActive
@@ -26585,17 +26590,18 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 595191138}
+  - {fileID: 1929345704}
   - {fileID: 1336336558}
   - {fileID: 1487603675}
   - {fileID: 375133122}
   - {fileID: 2143742964}
+  - {fileID: 867461104}
+  - {fileID: 1101798566}
+  - {fileID: 1591881740}
   - {fileID: 1871197554}
   - {fileID: 784825898}
   - {fileID: 544607264}
-  - {fileID: 1101798566}
-  - {fileID: 867461104}
-  - {fileID: 1591881740}
-  - {fileID: 1929345704}
+  - {fileID: 658195497}
   - {fileID: 1982983365}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -28957,7 +28963,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3707350415494921985, guid: caef50e694e10204c993186864e4cc23, type: 3}
       propertyPath: m_Name
-      value: Spawner 3 (5)
+      value: Spawner 7
       objectReference: {fileID: 0}
     - target: {fileID: 3707350415494921985, guid: caef50e694e10204c993186864e4cc23, type: 3}
       propertyPath: m_IsActive
@@ -40595,7 +40601,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3707350415494921985, guid: caef50e694e10204c993186864e4cc23, type: 3}
       propertyPath: m_Name
-      value: Spawner 3 (8)
+      value: Spawner 8
       objectReference: {fileID: 0}
     - target: {fileID: 3707350415494921985, guid: caef50e694e10204c993186864e4cc23, type: 3}
       propertyPath: m_IsActive
@@ -42538,7 +42544,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a9ac3b21fd7ebde4295839fc6e88229f, type: 2}
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: abilities.Array.size
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: baseAttacksPerSecond
@@ -42547,11 +42553,23 @@ PrefabInstance:
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: 'abilities.Array.data[0]'
       value: 
-      objectReference: {fileID: 11400000, guid: 28ad1ebc9d6568d4fa98f49257363032, type: 2}
+      objectReference: {fileID: 11400000, guid: a64604ae66a51b647bbe2a985aff2588, type: 2}
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: 'abilities.Array.data[1]'
       value: 
+      objectReference: {fileID: 11400000, guid: 3145fb2a7f1be9b4399530dc10f1c7d7, type: 2}
+    - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
+      propertyPath: 'abilities.Array.data[2]'
+      value: 
       objectReference: {fileID: 11400000, guid: 28ad1ebc9d6568d4fa98f49257363032, type: 2}
+    - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
+      propertyPath: 'abilities.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 2021c3d22655cc54aa8fa67c3b2c7cce, type: 2}
+    - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
+      propertyPath: 'abilities.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 4a1e72e9d43b2e64883b97a4decde831, type: 2}
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: 'abilities.Array.data[5]'
       value: 
@@ -47088,7 +47106,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3707350415494921985, guid: caef50e694e10204c993186864e4cc23, type: 3}
       propertyPath: m_Name
-      value: Spawner 4
+      value: Spawner 2
       objectReference: {fileID: 0}
     - target: {fileID: 3707350415494921985, guid: caef50e694e10204c993186864e4cc23, type: 3}
       propertyPath: m_IsActive
@@ -47633,7 +47651,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1161926036}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 63a9ac7cbff5d8f4ab9ff7f2905ed2ca, type: 3}
       propertyPath: m_LocalPosition.x
@@ -47677,7 +47695,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 63a9ac7cbff5d8f4ab9ff7f2905ed2ca, type: 3}
       propertyPath: m_Name
-      value: training_dummy
+      value: Mini Boss/ Training
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -48589,9 +48607,9 @@ MonoBehaviour:
   monstersToSpawn:
   - {fileID: 5560953499317727810, guid: 3af91c814aab5ea4ca125fde32872b0a, type: 3}
   - {fileID: 1649265759049038220, guid: 02102f2f786a49d418694911eea0f16f, type: 3}
-  - {fileID: 1113393009475316218, guid: 95e79f8cd03667940b5af7531101d9f4, type: 3}
-  - {fileID: 4045445931512764774, guid: 1a31a156dd6e56c4882305330f6ae8e8, type: 3}
   - {fileID: 8381518871340125523, guid: 7aa0e3cc8a6eeef4d87717adf7b0e58d, type: 3}
+  - {fileID: 4045445931512764774, guid: 1a31a156dd6e56c4882305330f6ae8e8, type: 3}
+  - {fileID: 1113393009475316218, guid: 95e79f8cd03667940b5af7531101d9f4, type: 3}
 --- !u!1 &1999769325
 GameObject:
   m_ObjectHideFlags: 0
@@ -52690,4 +52708,3 @@ SceneRoots:
   - {fileID: 1699082357}
   - {fileID: 1806430108}
   - {fileID: 623941943}
-  - {fileID: 1961629210}

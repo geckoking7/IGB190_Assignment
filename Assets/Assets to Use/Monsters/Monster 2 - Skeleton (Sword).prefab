@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: -2174882988543051095}
   - component: {fileID: -2091711783338139730}
   m_Layer: 7
-  m_Name: Monster 2
+  m_Name: Monster 2 - Skeleton (Sword)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

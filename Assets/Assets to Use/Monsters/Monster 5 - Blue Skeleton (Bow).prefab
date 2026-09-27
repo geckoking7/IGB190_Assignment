@@ -5015,7 +5015,7 @@ GameObject:
   - component: {fileID: 2920441891713619784}
   - component: {fileID: -2612973871927634567}
   m_Layer: 7
-  m_Name: Monster 5
+  m_Name: Monster 5 - Blue Skeleton (Bow)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

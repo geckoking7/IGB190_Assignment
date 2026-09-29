@@ -18,11 +18,11 @@ MonoBehaviour:
   abilityIcon: {fileID: 21300000, guid: 58de83be232656345a3eaa1aaf271131, type: 3}
   targetMode: 0
   abilityDescription: Gain 100% Stealth, and become Stealthed. Gain 20% attack speed
-    for duration. Lasts until stealth is broken. Attacking will not remove stealth
-  abilityAnimation: Jump
+    for duration. Lasts until Stealth is broken. Attacking will not remove stealth
+  abilityAnimation: Shout
   range: 999
   castTime: 0
-  abilityCooldown: 10
+  abilityCooldown: 30
   abilityCost: 0
   movementLock: 1
   animationActivationPosition: 0.5
@@ -68,12 +68,13 @@ MonoBehaviour:
     - rid: 1001
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 0
+        returnType: 2
         tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
+        functionName: UnitMaxResource
+        functionDescription: Unit/Unit Max Resource
+        functionDynamicDescription: $ Max Resource
+        functionEvaluators:
+        - rid: 1017
         parentNode:
           rid: 1000
         parentNodeID: 0
@@ -241,11 +242,12 @@ MonoBehaviour:
       data:
         returnType: 2
         tempName: 
-        functionName: UnitResource
-        functionDescription: Unit/Unit Resource
-        functionDynamicDescription: $ Resource
+        functionName: GetBuffMaxDuration
+        functionDescription: Buff/Buff Total Duration on Unit
+        functionDynamicDescription: Total duration of $ on $
         functionEvaluators:
-        - rid: 1011
+        - rid: 1022
+        - rid: 1023
         parentNode:
           rid: 1003
         parentNodeID: 4
@@ -278,7 +280,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: None
+        value: Darkness Incarnate
         options: []
     - rid: 1010
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
@@ -302,26 +304,26 @@ MonoBehaviour:
         allowFunction: 1
         value: 1
     - rid: 1011
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
+        returnType: 2
+        tempName: 
+        functionName: DoActionsIfBool
+        functionDescription: Flow/If Statement
+        functionDynamicDescription: Do actions if $
+        functionEvaluators:
+        - rid: 1024
         parentNode:
           rid: -2
         parentNodeID: -1
         indent: 0
-        presetName: Player
+        presetName: 
         variableName: 
         stringSuffix: 
-        nodeIcon: 
-        allowValue: 0
+        nodeIcon: Condition
+        allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 0}
     - rid: 1012
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -408,7 +410,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 2
+        value: 1.5
     - rid: 1016
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
@@ -430,6 +432,395 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 1
+    - rid: 1017
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: Casting Unit
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 1018
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ApplyXStacksOfBuffToUnits
+        functionDescription: Unit/Buff/Apply Buff Stacks to Unit(s)
+        functionDynamicDescription: Apply $ stack(s) of $ to $
+        functionEvaluators:
+        - rid: 1019
+        - rid: 1020
+        - rid: 1021
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 1019
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1018
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 1020
+      type: {class: BuffNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Buff
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1018
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 11400000, guid: dfee6ee49001d884a971293cb6f63067, type: 2}
+    - rid: 1021
+      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit(s)
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1018
+        parentNodeID: 2
+        indent: 0
+        presetName: Casting Unit
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        allowSingleUnit: 0
+    - rid: 1022
+      type: {class: BuffNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Buff
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 11400000, guid: dfee6ee49001d884a971293cb6f63067, type: 2}
+    - rid: 1023
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: Casting Unit
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 1024
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Bool
+        functionName: IsBuffTimed
+        functionDescription: Buff/Buff Has Duration
+        functionDynamicDescription: Buff $ $ a duration
+        functionEvaluators:
+        - rid: 1025
+        - rid: 1026
+        parentNode:
+          rid: 1011
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 1025
+      type: {class: BuffNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 3
+        tempName: Buff
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 1026
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Has
+        options:
+        - Has
+        - Does Not Have
+    - rid: 1027
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: SetBoolVariable
+        functionDescription: Variables/Set Bool Variable
+        functionDynamicDescription: Set script bool variable named $ to $
+        functionEvaluators:
+        - rid: 1028
+        - rid: 1029
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 1
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Variable
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 1028
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1027
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Shadowform
+        options: []
+    - rid: 1029
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Bool
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1027
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 1030
+      type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DoActionsIfBool
+        functionDescription: Flow/If Statement
+        functionDynamicDescription: Do actions if $
+        functionEvaluators:
+        - rid: 1031
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 1
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 1031
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Bool
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1030
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 1032
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: SetBoolVariable
+        functionDescription: Variables/Set Bool Variable
+        functionDynamicDescription: Set script bool variable named $ to $
+        functionEvaluators:
+        - rid: 1033
+        - rid: 1034
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 2
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Variable
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 1033
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1032
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Shadowform
+        options: []
+    - rid: 1034
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Bool
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1032
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
     - rid: 6440872668980052111
       type: {class: LogicEngine, ns: , asm: Assembly-CSharp}
       data:
@@ -444,7 +835,12 @@ MonoBehaviour:
           actionNodes:
           - rid: 1000
           - rid: 1012
+          - rid: 1018
           - rid: 1003
+          - rid: 1011
+          - rid: 1027
+          - rid: 1030
+          - rid: 1032
     - rid: 6440872668980052112
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:

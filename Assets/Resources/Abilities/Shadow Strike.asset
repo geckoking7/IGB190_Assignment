@@ -20,8 +20,8 @@ MonoBehaviour:
   abilityDescription: 'Teleport to the closest enemy to the cursor in a medium sized
     range. Deal 100% damage to the target. On kill, gain 40% Shadow, and become Stealthed. '
   abilityAnimation: Punch
-  range: 999
-  castTime: 0
+  range: 40
+  castTime: 0.3
   abilityCooldown: 5
   abilityCost: 0
   movementLock: 1
@@ -107,6 +107,92 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {x: 0, y: 0, z: 0}
+    - rid: 1003
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ApplyXStacksOfBuffToUnits
+        functionDescription: Unit/Buff/Apply Buff Stacks to Unit(s)
+        functionDynamicDescription: Apply $ stack(s) of $ to $
+        functionEvaluators:
+        - rid: 1004
+        - rid: 1005
+        - rid: 1006
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 1004
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1003
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 1005
+      type: {class: BuffNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Buff
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1003
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 11400000, guid: dfee6ee49001d884a971293cb6f63067, type: 2}
+    - rid: 1006
+      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit(s)
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1003
+        parentNodeID: 2
+        indent: 0
+        presetName: Casting Unit
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        allowSingleUnit: 0
     - rid: 1010
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
@@ -465,7 +551,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 0.2
+        value: 0.4
     - rid: 1026
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
@@ -566,7 +652,7 @@ MonoBehaviour:
           actionNodes:
           - rid: 1000
           - rid: 1022
-        - scriptName: Script 76957
+        - scriptName: Monster Kill
           scriptUID: 544424821
           hasWait: 0
           reportErrors: 1
@@ -577,6 +663,7 @@ MonoBehaviour:
           - rid: 1015
           actionNodes:
           - rid: 1019
+          - rid: 1003
     - rid: 8267055672131321935
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:

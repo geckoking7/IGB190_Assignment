@@ -760,6 +760,39 @@ public partial class VisualCodeScript
     }
 
     [VisualScriptingFunction(
+        dropdownDescription = "Unit/Buff/Add Buff to Unit(s)",
+        dynamicDescription = "Apply $ to $ (Starting Stack Count: $)",
+        icon = unitIcon)]
+    [BuffArg(argType = ArgType.Temp)]
+    [UnitGroupArg(argType = ArgType.Temp, allowValue = false)]
+    [NumberArg(argType = ArgType.Value, defaultValue = 1)]
+    public void AddBuff (Buff buff, UnitGroup units, float startingStacks)
+    {
+        Error(buff == null, VisualCodeLabels.Errors.InvalidBuff);
+        Error(units == null, VisualCodeLabels.Errors.InvalidUnitGroup);
+        foreach (Unit unit in units)
+        {
+            unit.buffs.AddBuff(buff, GetOwner(), (int)startingStacks); 
+        }
+    }
+
+    [VisualScriptingFunction(
+        dropdownDescription = "Unit/Buff/Remove Buff from Unit(s)",
+        dynamicDescription = "Remove $ from $",
+        icon = unitIcon)]
+    [BuffArg(argType = ArgType.Temp)]
+    [UnitGroupArg(argType = ArgType.Temp, allowValue = false)]
+    public void RemoveBuff2 (Buff buff, UnitGroup units)
+    {
+        Error(buff == null, VisualCodeLabels.Errors.InvalidBuff);
+        Error(units == null, VisualCodeLabels.Errors.InvalidUnitGroup);
+        foreach (Unit unit in units)
+        {
+            unit.buffs.RemoveBuff(buff);
+        }
+    } 
+
+    [VisualScriptingFunction(
         dropdownDescription = "Unit/Buff/Apply Buff Stacks to Unit(s)",
         dynamicDescription = "Apply $ stack(s) of $ to $",
         icon = unitIcon)]

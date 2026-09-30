@@ -51,7 +51,7 @@ public class BuffEditor : BaseEditor
         statBonus.modifier.Value = EditorGUI.FloatField(maxRect, statBonus.modifier.Value * mod, LogicEngineEditor.windowStyle_TextField) / mod;
         if (EditorGUI.EndChangeCheck())
         {
-            EditorUtility.SetDirty(buff);
+            EditorUtility.SetDirty(buff); 
         }
     }
 

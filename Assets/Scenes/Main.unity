@@ -42901,7 +42901,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: d64f348df7d90c143895fcb0d9345eb0, type: 2}
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: resourceName
-      value: stealth
+      value: Shadow
       objectReference: {fileID: 0}
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: resourceMaterial
@@ -42926,7 +42926,7 @@ PrefabInstance:
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: 'abilities.Array.data[2]'
       value: 
-      objectReference: {fileID: 11400000, guid: 28ad1ebc9d6568d4fa98f49257363032, type: 2}
+      objectReference: {fileID: 11400000, guid: 79f88615c39f0e447aa910fa822aeb45, type: 2}
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: 'abilities.Array.data[3]'
       value: 
@@ -48869,26 +48869,26 @@ MonoBehaviour:
     baseGoldDropAmountMinimum: 10
     baseGoldDropAmountMaximum: 20
     goldDropChance: 0.2
-    unempoweredMonsterCommonDropChance: 0.134
+    unempoweredMonsterCommonDropChance: 0
     unempoweredMonsterRareDropChance: 0
     unempoweredMonsterLegendaryDropChance: 0
   _empoweredMonsterValues:
-    empoweredMonsterHealthModifier: 2
-    empoweredMonsterDamageModifier: 2
+    empoweredMonsterHealthModifier: 5
+    empoweredMonsterDamageModifier: 3
     empoweredMonsterAttackSpeedModifier: 1
     empoweredMonsterXPModifier: 5
     empoweredMonsterGoldModifier: 3
     empoweredMonsterCommonDropChance: 1
-    empoweredMonsterRareDropChance: 0.2
-    empoweredMonsterLegendaryDropChance: 0
+    empoweredMonsterRareDropChance: 0.3
+    empoweredMonsterLegendaryDropChance: 0.05
   _playerExperienceValues:
     baseMonsterXP: 10
     additionalMaxXPAPerLevel: 1.05
     additionalMaxXPBPerLevel: 25
     additionalMaxXPCPerLevel: 60
   _monsterScalingValues:
-    increasedHealthPerPlayerLevel: 0.25
-    increasedDamagePerPlayerLevel: 0.25
+    increasedHealthPerPlayerLevel: 0
+    increasedDamagePerPlayerLevel: 0
   _healthGlobeValues:
     baseHealthGlobeChance: 0
     reducedChancePerExistingGlobe: 0

@@ -69,11 +69,12 @@ MonoBehaviour:
       data:
         returnType: 2
         tempName: Bool
-        functionName: BuffExists
-        functionDescription: Validity/Buff Exists
-        functionDynamicDescription: $ exists
+        functionName: IsBuffTimed
+        functionDescription: Buff/Buff Has Duration
+        functionDynamicDescription: Buff $ $ a duration
         functionEvaluators:
-        - rid: 1003
+        - rid: 1018
+        - rid: 1020
         parentNode:
           rid: 1000
         parentNodeID: 0
@@ -216,7 +217,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 90
+        value: 45
     - rid: 1008
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
@@ -358,7 +359,7 @@ MonoBehaviour:
         parentNode:
           rid: -2
         parentNodeID: -1
-        indent: 1
+        indent: 0
         presetName: 
         variableName: 
         stringSuffix: 
@@ -369,12 +370,14 @@ MonoBehaviour:
     - rid: 1015
       type: {class: BoolNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 0
+        returnType: 2
         tempName: Bool
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
+        functionName: IsBuffTimed
+        functionDescription: Buff/Buff Has Duration
+        functionDynamicDescription: Buff $ $ a duration
+        functionEvaluators:
+        - rid: 1003
+        - rid: 1019
         parentNode:
           rid: 1014
         parentNodeID: 0
@@ -432,6 +435,75 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 0
+    - rid: 1018
+      type: {class: BuffNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Buff
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 11400000, guid: dfee6ee49001d884a971293cb6f63067, type: 2}
+    - rid: 1019
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Does Not Have
+        options:
+        - Has
+        - Does Not Have
+    - rid: 1020
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Has
+        options:
+        - Has
+        - Does Not Have
     - rid: 1021
       type: {class: BoolNode, ns: , asm: Assembly-CSharp}
       data:
@@ -898,7 +970,7 @@ MonoBehaviour:
         parentNode:
           rid: -2
         parentNodeID: -1
-        indent: 2
+        indent: 1
         presetName: 
         variableName: 
         stringSuffix: 
@@ -993,7 +1065,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 90
+        value: 45
     - rid: 3532775475806733261
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
@@ -1183,12 +1255,12 @@ MonoBehaviour:
           conditionNodes: []
           actionNodes:
           - rid: 3532775480752079318
+          - rid: 1014
+          - rid: 3532775475806733171
           - rid: 1000
           - rid: 1002
           - rid: 1016
           - rid: 1010
-          - rid: 1014
-          - rid: 3532775475806733171
         - scriptName: Monster Death
           scriptUID: 253552288
           hasWait: 0

@@ -120,7 +120,7 @@ public static class StatExtensions
             Stat.ResourceCostReduction => isPercent,
             Stat.ResourceGeneration => isPercent,
             Stat.CooldownReduction => isPercent,
-            Stat.DamageTaken => false,
+            Stat.DamageTaken => isPercent,
             _ => true
         };
     }

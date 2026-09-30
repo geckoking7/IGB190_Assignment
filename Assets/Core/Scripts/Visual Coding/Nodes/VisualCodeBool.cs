@@ -340,10 +340,11 @@ public partial class VisualCodeScript
     [StringArg(argType = ArgType.Value, choicePreset = PresetChoices.IsIsNot, allowPreset = false, allowFunction = false)]
     public bool KeyIsHeld(string keyString, string comparator)
     {
+        if (!Enum.TryParse<KeyCode>(keyString, out KeyCode keyCode)) return false;
         switch (comparator)
         {
-            case PresetStrings.Is: return Input.GetKey(keyString);
-            case PresetStrings.IsNot: return !Input.GetKey(keyString);
+            case PresetStrings.Is: return Input.GetKey(keyCode);
+            case PresetStrings.IsNot: return !Input.GetKey(keyCode);
             default: return false;
         }
     }
@@ -356,10 +357,11 @@ public partial class VisualCodeScript
     [StringArg(argType = ArgType.Value, choicePreset = PresetChoices.IsIsNot, allowPreset = false, allowFunction = false)]
     public bool KeyPressedThisFrame(string keyString, string comparator)
     {
+        if (!Enum.TryParse<KeyCode>(keyString, out KeyCode keyCode)) return false;
         switch (comparator)
         {
-            case PresetStrings.Is: return Input.GetKeyDown(keyString);
-            case PresetStrings.IsNot: return !Input.GetKeyDown(keyString);
+            case PresetStrings.Is: return Input.GetKeyDown(keyCode);
+            case PresetStrings.IsNot: return !Input.GetKeyDown(keyCode);
             default: return false;
         }
     }
@@ -372,10 +374,11 @@ public partial class VisualCodeScript
     [StringArg(argType = ArgType.Value, choicePreset = PresetChoices.IsIsNot, allowPreset = false, allowFunction = false)]
     public bool KeyReleasedThisFrame(string keyString, string comparator)
     {
+        if (!Enum.TryParse<KeyCode>(keyString, out KeyCode keyCode)) return false;
         switch (comparator)
         {
-            case PresetStrings.Is: return Input.GetKeyUp(keyString);
-            case PresetStrings.IsNot: return !Input.GetKeyUp(keyString);
+            case PresetStrings.Is: return Input.GetKeyUp(keyCode);
+            case PresetStrings.IsNot: return !Input.GetKeyUp(keyCode);
             default: return false;
         }
     }

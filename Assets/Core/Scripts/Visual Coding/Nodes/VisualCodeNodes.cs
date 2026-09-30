@@ -238,7 +238,10 @@ public class GeneralNode
             else
             {
                 MethodInfo methodInfo = (typeof(VisualCodeScript)).GetMethod(VisualCodeLabels.Presets.Events.Dynamic.DYNAMIC_PRESETS[presetName]);
-                if (methodInfo == null) Debug.Log($"No method named {VisualCodeLabels.Presets.Events.Dynamic.DYNAMIC_PRESETS[presetName]} found!");
+                if (methodInfo == null)
+                {
+                    throw new VisualCodeException($"No preset named '{presetName}' was provided with the event trigger. Ensure you have the correct event on the script.");
+                } 
                 return methodInfo.Invoke(script, null);
             }
         }

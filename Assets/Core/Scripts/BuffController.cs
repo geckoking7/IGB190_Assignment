@@ -54,10 +54,14 @@ public class BuffController
             AddStacks(buff, stacks);
         }
         else
-        { 
+        {
             Buff buffCopy = buff.ShallowCopy();
+            buffCopy.applier = unitApplyingBuff;
+            buffCopy.SetOwner(unit);
+
+            stacks = Mathf.Min(stacks, buffCopy.buffMaximumStacks);
             TemplateToUnitSpecificBuff[buffCopy.template] = buffCopy;
-            buffCopy.buffCurrentStacks = Mathf.Min(stacks, buffCopy.buffMaximumStacks);
+            buffCopy.buffCurrentStacks = stacks;
             buffs.Add(buffCopy);
 
             foreach (var buffStatBonus in buffCopy.buffStatBonuses)
@@ -102,7 +106,7 @@ public class BuffController
     {
         Buff unitBuff = GetUnitBuff(buff);
         if (unitBuff == null) return;
-        unitBuff.buffCurrentStacks += stacks;
+        unitBuff.buffCurrentStacks = Mathf.Min(unitBuff.buffCurrentStacks + stacks, unitBuff.buffMaximumStacks);
         if (unitBuff.addingStacksRefreshesDuration) unitBuff.buffCurrentDuration = unitBuff.buffMaxDuration; 
         foreach (var buffStatBonus in buff.buffStatBonuses)
         {
@@ -120,7 +124,8 @@ public class BuffController
     {
         Buff unitBuff = GetUnitBuff(buff);
         if (unitBuff == null) return;
-        unitBuff.buffCurrentStacks -= stacks;
+        unitBuff.buffCurrentStacks = Mathf.Clamp(unitBuff.buffCurrentStacks - stacks, 0, unitBuff.buffMaximumStacks);
+
         foreach (var buffStatBonus in buff.buffStatBonuses)
         {
             unit.stats[buffStatBonus.stat].SetStackCount(buff.name, buff.buffCurrentStacks);
@@ -131,6 +136,7 @@ public class BuffController
     {
         Buff unitBuff = GetUnitBuff(buff);
         if (unitBuff == null) return;
+        stacks = Mathf.Clamp(stacks, 0, unitBuff.buffMaximumStacks);
         unitBuff.buffCurrentStacks = stacks;
         foreach (var buffStatBonus in buff.buffStatBonuses)
         {
@@ -143,6 +149,10 @@ public class BuffController
         Buff unitBuff = GetUnitBuff(buff);
         if (unitBuff == null) return;
         unitBuff.buffMaximumStacks = stacks;
+        if (unitBuff.buffCurrentStacks > unitBuff.buffMaximumStacks)
+        {
+            SetStacks(buff, unitBuff.buffMaximumStacks);
+        }
     }
 
     public void ModifyBuffDuration (Buff buff, float change)
@@ -172,11 +182,6 @@ public class BuffController
         if (unitBuff == null) return;
         unitBuff.buffCurrentDuration = unitBuff.buffMaxDuration;
     }
-
-
-
-
-    
 
     public Buff GetUnitBuffMatchingTemplate (Buff buffTemplate)
     {

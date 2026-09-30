@@ -42,10 +42,10 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 1005
+    - rid: 1002
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 3
+        returnType: 0
         tempName: Range
         functionName: 
         functionDescription: 
@@ -62,11 +62,11 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 0
-    - rid: 1006
+        value: 12
+    - rid: 1003
       type: {class: VectorNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 3
+        returnType: 4
         tempName: Location
         functionName: 
         functionDescription: 
@@ -76,7 +76,7 @@ MonoBehaviour:
           rid: -2
         parentNodeID: -1
         indent: 0
-        presetName: 
+        presetName: Casting Unit
         variableName: 
         stringSuffix: 
         nodeIcon: 
@@ -223,8 +223,8 @@ MonoBehaviour:
         functionDescription: Random/Random Point Near Point
         functionDynamicDescription: Random point within $ of $
         functionEvaluators:
-        - rid: 1005
-        - rid: 1006
+        - rid: 1002
+        - rid: 1003
         parentNode:
           rid: 3532775480752079099
         parentNodeID: 3

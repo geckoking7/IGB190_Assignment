@@ -74,7 +74,7 @@ public class StatModifier
         requiresUpdate = true;
     }
     private const float armorAdjustment = 100.0f;
-    public static float GetArmorAdjustedDamage(float damage, float armor) => armorAdjustment * damage / (armorAdjustment + armor);
+    public static float GetArmorAdjustedDamage(float damage, float armor) => damage * damage / (damage + armor);
 
     public float GetValue()
     {

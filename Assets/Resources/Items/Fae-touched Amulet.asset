@@ -10,44 +10,56 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
-  m_Name: silver ring
-  m_EditorClassIdentifier: 
-  itemDescription: A silver ring imbued with a small amount of magical properties.
+  m_Name: Fae-touched Amulet
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  itemDescription: 
   itemTag: 
   itemFlavourText: 
   classRequirement: 
-  itemIcon: {fileID: 21300000, guid: a8bc19c7daadb6044b071d234a1d62a3, type: 3}
-  itemType: 0
-  itemRarity: 0
-  itemCost: 700
+  itemIcon: {fileID: 21300000, guid: dec0e5c63c493a445bae12790f311f74, type: 3}
+  itemType: 1
+  itemRarity: 1
+  itemCost: 0
   itemSet: {fileID: 0}
-  randomStatCount: 1
-  guaranteedStats:
+  randomStatCount: 3
+  guaranteedStats: []
+  randomisableStats:
   - stat: 0
-    minimum: 7
-    maximum: 15
+    minimum: 12
+    maximum: 18
     isPercent: 0
-  randomisableStats: []
+  - stat: 4
+    minimum: 80
+    maximum: 112
+    isPercent: 0
+  - stat: 5
+    minimum: 48
+    maximum: 72
+    isPercent: 0
+  - stat: 1
+    minimum: 4
+    maximum: 6
+    isPercent: 0
   minimumDropLevel: 0
-  canPurchaseInShop: 1
+  canPurchaseInShop: 0
   canDropOffMonster: 1
   template: {fileID: 0}
   engine:
     scripts:
     - scriptName: Item Equipped
-      scriptUID: 1867767527
+      scriptUID: 1308290142
       hasWait: 0
       reportErrors: 1
       eventNodes:
-      - rid: 248813236419559487
+      - rid: 6331963905290010699
       conditionNodes: []
       actionNodes: []
     - scriptName: Item Unequipped
-      scriptUID: 708064494
+      scriptUID: 798155215
       hasWait: 0
       reportErrors: 1
       eventNodes:
-      - rid: 248813236419559488
+      - rid: 6331963905290010700
       conditionNodes: []
       actionNodes: []
   references:
@@ -55,7 +67,7 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 248813236419559487
+    - rid: 6331963905290010699
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -76,7 +88,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 248813236419559488
+    - rid: 6331963905290010700
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2

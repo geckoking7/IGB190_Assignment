@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 /// <summary>
 /// Handles all logic for a Monster (a hostile unit to the player), including AI,
@@ -87,6 +88,12 @@ public class Monster : Unit
         CalculateMonsterTargeting();
         FaceTowardsAttackTarget();
         HandleMovement();
+
+        if (target == GameManager.player && !GameManager.player.isTargetable)
+        {
+            target = null;
+            targetPosition = new Vector3(float.MaxValue, float.MaxValue, float.MaxValue);
+        }
     }
 
     /// <summary>
@@ -163,6 +170,10 @@ public class Monster : Unit
         else if (isForceMoving)
         {
             agentNavigation.SetDestination(forceMoveLocation);
+        }
+        else if (target == GameManager.player && !GameManager.player.isTargetable)
+        {
+            StopMoving();
         }
         else if (target != null && Vector3.Distance(transform.position, target.transform.position) > UNIT_DEACTIVATION_DISTANCE)
         {

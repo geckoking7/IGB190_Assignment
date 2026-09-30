@@ -121,6 +121,7 @@ public class Unit : Interactable
     /// </summary>
     protected virtual void Start()
     {
+        SetTargetableStatus(true);
         CacheComponents();
         SetupStats(); 
         SetupAbilities();

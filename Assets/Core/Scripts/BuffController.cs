@@ -92,8 +92,8 @@ public class BuffController
                 unit.stats[buffStatBonus.stat].RemoveModifiersWithLabel(buff.name);
             }
 
-            GameManager.events.OnBuffRemoved.Invoke((new GameEvents.OnBuffRemovedInfo(buff, unitRemovingBuff, unit, buff.buffCurrentStacks)));
-            GameManager.logicEngine.RemoveEngine(buff.engine);
+            GameManager.events.OnBuffRemoved.Invoke((new GameEvents.OnBuffRemovedInfo(unitBuff, unitRemovingBuff, unit, unitBuff.buffCurrentStacks)));
+            GameManager.logicEngine.RemoveEngine(unitBuff.engine);
 
             if (unitBuff.visualEffect != null)
             {

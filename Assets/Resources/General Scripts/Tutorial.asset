@@ -312,7 +312,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 0
         allowFunction: 0
-        value: {fileID: 11400000, guid: 28ad1ebc9d6568d4fa98f49257363032, type: 2}
+        value: {fileID: 11400000, guid: 79f88615c39f0e447aa910fa822aeb45, type: 2}
     - rid: 1013
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:

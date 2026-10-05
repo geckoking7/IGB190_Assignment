@@ -14741,6 +14741,7 @@ MonoBehaviour:
   bonusHealthRegenPerLevel: 0
   maxHealthRegen: 2
   bonusResourceRegenPerLevel: 0
+  B_GOD_MODE: 0
 --- !u!195 &623941940
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -23896,6 +23897,7 @@ MonoBehaviour:
   bonusHealthRegenPerLevel: 10
   maxHealthRegen: 100
   bonusResourceRegenPerLevel: 5
+  B_GOD_MODE: 0
 --- !u!195 &1043651115
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -42984,12 +42986,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: a9ac3b21fd7ebde4295839fc6e88229f, type: 2}
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
+      propertyPath: bonusArmorPerLevel
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
+      propertyPath: bonusDamagePerLevel
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
+      propertyPath: bonusHealthPerLevel
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: abilities.Array.size
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: baseAttacksPerSecond
-      value: 0.6
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
+      propertyPath: bonusResourcePerLevel
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: 'abilities.Array.data[0]'
@@ -43031,6 +43049,26 @@ PrefabInstance:
       propertyPath: 'abilities.Array.data[9]'
       value: 
       objectReference: {fileID: 11400000, guid: 61fbdcd667accc340854d77f7f1715b2, type: 2}
+    - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
+      propertyPath: bonusHealthRegenPerLevel
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
+      propertyPath: bonusMovementSpeedPerLevel
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
+      propertyPath: bonusResourceRegenPerLevel
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
+      propertyPath: bonusCriticalChancePerLevel
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
+      propertyPath: bonusCriticalDamagePerLevel
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8997837897730470077, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: m_Name
       value: Player (Rogue)
@@ -45154,6 +45192,7 @@ MonoBehaviour:
   bonusHealthRegenPerLevel: 0
   maxHealthRegen: 2
   bonusResourceRegenPerLevel: 0
+  B_GOD_MODE: 0
 --- !u!195 &1806430105
 NavMeshAgent:
   m_ObjectHideFlags: 0

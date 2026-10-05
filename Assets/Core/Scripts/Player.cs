@@ -35,6 +35,7 @@ public class Player : Unit
     public float bonusHealthRegenPerLevel;
     public float maxHealthRegen = 70.0f;
     public float bonusResourceRegenPerLevel;
+    public bool B_GOD_MODE;
 
     //  Constants related to the player.
     public const int MAX_INVENTORY_SIZE = 28;
@@ -59,6 +60,10 @@ public class Player : Unit
     protected override void Start()
     {
         base.Start();
+#if !UNIT_EDITOR
+        B_GOD_MODE = false;
+#endif
+        if (B_GOD_MODE) AddLevels(1);
         SetOutline(OUTLINE_COLOR);
         CacheLeftClickAbility();
         UpdateExperienceRequiredForLevel();
@@ -72,6 +77,7 @@ public class Player : Unit
     /// </summary>
     protected override void Update()
     {
+        print($"resource is at {resource}");
         base.Update();
         if (!isDead)
         {
@@ -129,6 +135,7 @@ public class Player : Unit
     public override void TakeDamage(float amount, bool isCritical, Unit damagingUnit, IVisualCodeHandler damageSource)
     {
         amount = StatModifier.GetArmorAdjustedDamage(amount, stats[Stat.Armor].GetValue());
+        if (B_GOD_MODE) amount = .0f;
         base.TakeDamage(amount, isCritical, damagingUnit, damageSource);
     }
 
@@ -517,6 +524,8 @@ public class Player : Unit
             stats[Stat.MovementSpeed].ModifyBaseValue(bonusMovementSpeedPerLevel);
             stats[Stat.MaxHealth].ModifyBaseValue(bonusHealthPerLevel);
             stats[Stat.Damage].ModifyBaseValue(bonusDamagePerLevel);
+            const int god_damage = int.MaxValue;
+            if (B_GOD_MODE) stats[Stat.Damage].ModifyBaseValue(god_damage);
             stats[Stat.MaxResource].ModifyBaseValue(bonusResourcePerLevel);
             stats[Stat.Armor].ModifyBaseValue(bonusArmorPerLevel);
             stats[Stat.CriticalStrikeChance].ModifyBaseValue(bonusCriticalChancePerLevel, maxCriticalStrikeChance);

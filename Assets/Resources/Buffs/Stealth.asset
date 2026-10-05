@@ -22,7 +22,7 @@ MonoBehaviour:
   buffHasDuration: 0
   addingStacksRefreshesDuration: 1
   buffCurrentDuration: 0
-  buffMaxDuration: 5.5
+  buffMaxDuration: 10
   buffCurrentStacks: 1
   buffMaximumStacks: 1
   buffEffectOnTarget: {fileID: 0}

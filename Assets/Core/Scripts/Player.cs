@@ -128,7 +128,7 @@ public class Player : Unit
     /// </summary>
     public override void TakeDamage(float amount, bool isCritical, Unit damagingUnit, IVisualCodeHandler damageSource)
     {
-        amount = StatModifier.GetArmorAdjustedDamage(amount, baseArmor);
+        amount = StatModifier.GetArmorAdjustedDamage(amount, stats[Stat.Armor].GetValue());
         base.TakeDamage(amount, isCritical, damagingUnit, damageSource);
     }
 

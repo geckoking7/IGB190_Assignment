@@ -26,9 +26,20 @@ public class VisualCodeManager : MonoBehaviour
     /// </summary>
     void Update()
     {
-        foreach (LogicEngine engine in engines)
-            foreach (VisualCodeTimer timer in engine.activeTimers)
-                timer.Update(engine);
+        try
+        {
+            foreach (LogicEngine engine in engines)
+                foreach (VisualCodeTimer timer in engine.activeTimers)
+                    timer.Update(engine);
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError(e);
+        }
+        finally
+        {
+
+        }
 
         
         foreach (KeyCode key in keys)

@@ -6,6 +6,13 @@ using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 
+[Serializable]
+public struct LogisticData
+{
+    public float limit;
+    public float xScale;
+    public float xOffset;
+}
 public class Player : Unit
 {
     [HideInInspector] public float currentGold = 0;
@@ -28,10 +35,18 @@ public class Player : Unit
     public float bonusMovementSpeedPerLevel;
     public float bonusResourcePerLevel;
     public float bonusArmorPerLevel;
-    public float maxCriticalStrikeChance = .8f;
-    public float bonusCriticalChancePerLevel;
-    public float maxCriticalStrikeDamage = 2.0f;
-    public float bonusCriticalDamagePerLevel;
+    public LogisticData criticalStrikeChanceData = new LogisticData
+    {
+        limit = .4f,
+        xScale = .3f,
+        xOffset = 10.0f,
+    };
+    public LogisticData criticalStrikeDmgData = new LogisticData
+    {
+        limit = 30.0f,
+        xScale = .08f,
+        xOffset = 30.0f,
+    };
     public float bonusHealthRegenPerLevel;
     public float maxHealthRegen = 70.0f;
     public float bonusResourceRegenPerLevel;
@@ -533,8 +548,8 @@ public class Player : Unit
             if (B_GOD_MODE) stats[Stat.Damage].ModifyBaseValue(god_damage);
             stats[Stat.MaxResource].ModifyBaseValue(bonusResourcePerLevel);
             stats[Stat.Armor].ModifyBaseValue(bonusArmorPerLevel);
-            stats[Stat.CriticalStrikeChance].ModifyBaseValue(bonusCriticalChancePerLevel, maxCriticalStrikeChance);
-            stats[Stat.CriticalStrikeDamage].ModifyBaseValue(bonusCriticalDamagePerLevel, maxCriticalStrikeDamage);
+            stats[Stat.CriticalStrikeChance].SetBaseValue(StatModifier.GetLogistic(currentLevel, in criticalStrikeChanceData));
+            stats[Stat.CriticalStrikeDamage].SetBaseValue(StatModifier.GetLogistic(currentLevel, in criticalStrikeDmgData));
             baseHealthRegen = Mathf.Min(baseHealthRegen + bonusHealthRegenPerLevel, maxHealthRegen);
             baseResourceRegen += bonusResourceRegenPerLevel;
         }

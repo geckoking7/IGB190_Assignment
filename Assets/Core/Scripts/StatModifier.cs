@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -27,6 +28,11 @@ public class StatModifier
     {
         this.baseValue = baseValue;
         requiresUpdate = true;
+    }
+
+    public static float GetLogistic(float x, in LogisticData logisticData)
+    {
+        return logisticData.limit / (1.0f + Mathf.Pow((float)Math.E, -logisticData.xScale * (x - logisticData.xOffset)));
     }
 
     public void ModifyBaseValue(float change, float max = float.PositiveInfinity)

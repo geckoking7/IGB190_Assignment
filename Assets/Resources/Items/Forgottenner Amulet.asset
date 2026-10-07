@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
-  m_Name: Forgotten Amulet
+  m_Name: Forgottenner Amulet
   m_EditorClassIdentifier: Assembly-CSharp::Item
   itemDescription: 
   itemTag: 
@@ -19,47 +19,47 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: ec888f7f279932d479dd9d2f3047a4ba, type: 3}
   itemType: 1
   itemRarity: 0
-  itemCost: 300
+  itemCost: 200
   itemSet: {fileID: 0}
   randomStatCount: 2
   guaranteedStats: []
   randomisableStats:
   - stat: 0
     minimum: 8
-    maximum: 12
+    maximum: 8
     isPercent: 0
   - stat: 1
     minimum: 2
-    maximum: 4
+    maximum: 2
     isPercent: 0
   - stat: 4
     minimum: 48
-    maximum: 80
+    maximum: 48
     isPercent: 0
   - stat: 5
     minimum: 32
-    maximum: 48
+    maximum: 32
     isPercent: 0
   minimumDropLevel: 0
-  canPurchaseInShop: 0
-  canDropOffMonster: 1
+  canPurchaseInShop: 1
+  canDropOffMonster: 0
   template: {fileID: 0}
   engine:
     scripts:
     - scriptName: Item Equipped
-      scriptUID: 1890580967
+      scriptUID: 1409645041
       hasWait: 0
       reportErrors: 1
       eventNodes:
-      - rid: 4660473780534771801
+      - rid: 4949314317412728919
       conditionNodes: []
       actionNodes: []
     - scriptName: Item Unequipped
-      scriptUID: 670680619
+      scriptUID: 1006874307
       hasWait: 0
       reportErrors: 1
       eventNodes:
-      - rid: 4660473780534771802
+      - rid: 4949314317412728920
       conditionNodes: []
       actionNodes: []
   references:
@@ -67,7 +67,7 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 4660473780534771801
+    - rid: 4949314317412728919
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -88,7 +88,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 4660473780534771802
+    - rid: 4949314317412728920
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2

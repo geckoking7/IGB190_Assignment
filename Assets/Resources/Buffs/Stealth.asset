@@ -28,7 +28,14 @@ MonoBehaviour:
   buffEffectOnTarget: {fileID: 0}
   buffAttachPoint: Cast Point
   buffScale: 0
-  buffStatBonuses: []
+  buffStatBonuses:
+  - stat: 0
+    modifier:
+      Value: 0.01
+      RemoveAt: 28.609142
+      IsPercentage: 1
+      Label: 
+      Stacks: 1
   visualEffect: {fileID: 4353791369601176701, guid: 2917d8af520ee8747814171415a53c40, type: 3}
   owner: {fileID: 0}
   applier: {fileID: 0}

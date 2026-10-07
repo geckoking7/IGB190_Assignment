@@ -4,7 +4,6 @@ using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Color = UnityEngine.Color;
 
 public partial class VisualCodeScript
 {
@@ -22,5 +21,13 @@ public partial class VisualCodeScript
             if (unit == null) continue;
             unit.SetTargetableStatus(targetable);
         }
+    }
+
+    [VisualScriptingFunction(
+        dropdownDescription = "Random/Random Unit",
+        dynamicDescription = "Random Spawnable Unit")]
+    public Unit RandomSpawnableUnit ()
+    {
+        return GameManager.spawner.monstersToSpawn[UnityEngine.Random.Range(0, GameManager.spawner.monstersToSpawn.Count)];
     }
 }

@@ -131,7 +131,7 @@ public partial class VisualCodeScript
         dynamicDescription = "Spawn $ $ for $ faction at $",
         icon = unitIcon)]
     [NumberArg(argType = ArgType.Value, defaultValue = 1)]
-    [UnitArg(argType = ArgType.Temp, allowPreset = false, allowFunction = false)]
+    [UnitArg(argType = ArgType.Temp, allowPreset = false, allowFunction = true)]
     [StringArg(argType = ArgType.Value, choicePreset = PresetChoices.Factions, allowFunction = false, allowPreset = false)]
     [VectorArg(argType = ArgType.Temp)]
     public void SpawnUnits(float count, Unit unit, string faction, Vector3 position)
@@ -151,7 +151,7 @@ public partial class VisualCodeScript
         dynamicDescription = "Spawn $ empowered $ for $ faction at $",
         icon = unitIcon)]
     [NumberArg(argType = ArgType.Value, defaultValue = 1)]
-    [UnitArg(argType = ArgType.Temp, allowPreset = false, allowFunction = false)]
+    [UnitArg(argType = ArgType.Temp, allowPreset = false, allowFunction = true)]
     [StringArg(argType = ArgType.Value, choicePreset = PresetChoices.Factions, allowFunction = false, allowPreset = false)]
     [VectorArg(argType = ArgType.Temp)]
     public void SpawnEmpoweredUnits(float count, Unit unit, string faction, Vector3 position)
@@ -1283,16 +1283,40 @@ public partial class VisualCodeScript
         CircleEffectGuide.Spawn(location, radius, duration);
     }
 
+    [VisualScriptingFunction(
+        dropdownDescription = "Feedback/Create Line Effect Guide Between Points",
+        dynamicDescription = "Create a line guide from $ to $ with width $ for $",
+        icon = unitIcon)]
+    [VectorArg(argType = ArgType.Temp)]
+    [VectorArg(argType = ArgType.Temp)]
+    [NumberArg(argType = ArgType.Value, defaultValue = 2, suffix = "m")]
+    [NumberArg(argType = ArgType.Value, defaultValue = 2, suffix = "s")]
     public void CreateLineGuide(Vector3 location1, Vector3 location2, float width, float duration)
     {
         LineEffectGuide.Spawn(location1, location2, width, duration);
     }
 
+    [VisualScriptingFunction(
+    dropdownDescription = "Feedback/Create Line Effect Guide from Unit",
+    dynamicDescription = "Create a line guide from $ extending $ with width $ for $",
+    icon = unitIcon)]
+    [UnitArg(argType = ArgType.Temp)]
+    [NumberArg(argType = ArgType.Value, defaultValue = 2, suffix = "m")]
+    [NumberArg(argType = ArgType.Value, defaultValue = 2, suffix = "m")]
+    [NumberArg(argType = ArgType.Value, defaultValue = 2, suffix = "s")]
     public void CreateLineGuide2(Unit unit, float width, float length, float duration)
     {
         LineEffectGuide.Spawn(unit, width, length, duration);
     }
 
+    [VisualScriptingFunction(
+    dropdownDescription = "Feedback/Create Arc Effect Guide from Unit",
+    dynamicDescription = "Create a line guide with $ arc from $ with radius $ for $",
+    icon = unitIcon)]
+    [NumberArg(argType = ArgType.Value, defaultValue = 90, suffix = "")]
+    [UnitArg(argType = ArgType.Temp)]
+    [NumberArg(argType = ArgType.Value, defaultValue = 2, suffix = "m")]
+    [NumberArg(argType = ArgType.Value, defaultValue = 2, suffix = "s")]
     public void CreateArcGuide(float arc, Unit unit, float radius, float duration)
     {
         ArcEffectGuide.Spawn(arc, unit, radius, duration);

@@ -73,9 +73,9 @@ MonoBehaviour:
         functionDescription: Unit/Unit Has Buff
         functionDynamicDescription: $ $ buff labeled $
         functionEvaluators:
+        - rid: 1018
         - rid: 1024
         - rid: 1026
-        - rid: 1027
         parentNode:
           rid: 1000
         parentNodeID: 0
@@ -287,12 +287,13 @@ MonoBehaviour:
       data:
         returnType: 2
         tempName: Bool
-        functionName: IsBuffTimed
-        functionDescription: Buff/Buff Has Duration
-        functionDynamicDescription: Buff $ $ a duration
+        functionName: UnitHasBuff
+        functionDescription: Unit/Unit Has Buff
+        functionDynamicDescription: $ $ buff labeled $
         functionEvaluators:
         - rid: 1016
         - rid: 1017
+        - rid: 1027
         parentNode:
           rid: 1010
         parentNodeID: 0
@@ -393,10 +394,10 @@ MonoBehaviour:
         allowFunction: 1
         value: 0
     - rid: 1016
-      type: {class: BuffNode, ns: , asm: Assembly-CSharp}
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 0
-        tempName: Buff
+        returnType: 4
+        tempName: Unit
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
@@ -405,14 +406,14 @@ MonoBehaviour:
           rid: -2
         parentNodeID: -1
         indent: 0
-        presetName: 
+        presetName: Casting Unit
         variableName: 
         stringSuffix: 
         nodeIcon: 
-        allowValue: 1
+        allowValue: 0
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 11400000, guid: 0cc824ef645fe424081bb06223598da1, type: 2}
+        value: {fileID: 0}
     - rid: 1017
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
@@ -438,10 +439,10 @@ MonoBehaviour:
         - Has
         - Does Not Have
     - rid: 1018
-      type: {class: BuffNode, ns: , asm: Assembly-CSharp}
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 0
-        tempName: Buff
+        returnType: 4
+        tempName: Unit
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
@@ -450,14 +451,14 @@ MonoBehaviour:
           rid: -2
         parentNodeID: -1
         indent: 0
-        presetName: 
+        presetName: Casting Unit
         variableName: 
         stringSuffix: 
         nodeIcon: 
-        allowValue: 1
+        allowValue: 0
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 11400000, guid: dfee6ee49001d884a971293cb6f63067, type: 2}
+        value: {fileID: 0}
     - rid: 1019
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
@@ -547,27 +548,6 @@ MonoBehaviour:
         value: wejiksy ghbweiukbujkgse gbjkasegbjkakwegbjbjkaeghbkj
         options: []
     - rid: 1024
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: Casting Unit
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 1026
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -591,16 +571,15 @@ MonoBehaviour:
         options:
         - Has
         - Does Not Have
-    - rid: 1027
+    - rid: 1026
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 2
+        returnType: 0
         tempName: Buff Name
-        functionName: GetBuffName
-        functionDescription: Buff/Buff Name
-        functionDynamicDescription: Name of $
-        functionEvaluators:
-        - rid: 1018
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -612,7 +591,29 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 
+        value: Stealth
+        options: []
+    - rid: 1027
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Buff Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Shadowform
         options: []
     - rid: 1028
       type: {class: EventNode, ns: , asm: Assembly-CSharp}

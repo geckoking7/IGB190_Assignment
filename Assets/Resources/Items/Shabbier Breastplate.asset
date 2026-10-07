@@ -10,56 +10,68 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
-  m_Name: Forgotten Amulet
+  m_Name: Shabbier Breastplate
   m_EditorClassIdentifier: Assembly-CSharp::Item
   itemDescription: 
   itemTag: 
   itemFlavourText: 
   classRequirement: 
-  itemIcon: {fileID: 21300000, guid: ec888f7f279932d479dd9d2f3047a4ba, type: 3}
-  itemType: 1
+  itemIcon: {fileID: 21300000, guid: b9ff5a91fb0b29f4d86d7000bf7a0b7c, type: 3}
+  itemType: 3
   itemRarity: 0
-  itemCost: 300
+  itemCost: 200
   itemSet: {fileID: 0}
-  randomStatCount: 2
-  guaranteedStats: []
-  randomisableStats:
-  - stat: 0
-    minimum: 8
-    maximum: 12
-    isPercent: 0
-  - stat: 1
-    minimum: 2
-    maximum: 4
-    isPercent: 0
+  randomStatCount: 1
+  guaranteedStats:
   - stat: 4
     minimum: 48
-    maximum: 80
-    isPercent: 0
-  - stat: 5
-    minimum: 32
     maximum: 48
     isPercent: 0
+  randomisableStats:
+  - stat: 1
+    minimum: 2
+    maximum: 2
+    isPercent: 0
+  - stat: 5
+    minimum: 24
+    maximum: 24
+    isPercent: 0
+  - stat: 7
+    minimum: 0.05
+    maximum: 0.05
+    isPercent: 1
+  - stat: 8
+    minimum: 0.05
+    maximum: 0.05
+    isPercent: 1
+  - stat: 10
+    minimum: 0.03
+    maximum: 0.03
+    isPercent: 0
+  - stat: 11
+    minimum: 0.14
+    maximum: 0.14
+    isPercent: 0
   minimumDropLevel: 0
-  canPurchaseInShop: 0
-  canDropOffMonster: 1
+  canPurchaseInShop: 1
+  canDropOffMonster: 0
   template: {fileID: 0}
   engine:
     scripts:
     - scriptName: Item Equipped
-      scriptUID: 1890580967
+      scriptUID: 679255712
       hasWait: 0
       reportErrors: 1
       eventNodes:
-      - rid: 4660473780534771801
+      - rid: 4949314317412728913
       conditionNodes: []
       actionNodes: []
     - scriptName: Item Unequipped
-      scriptUID: 670680619
+      scriptUID: 1230642416
       hasWait: 0
       reportErrors: 1
       eventNodes:
-      - rid: 4660473780534771802
+      - rid: 4949314317412728914
       conditionNodes: []
       actionNodes: []
   references:
@@ -67,7 +79,7 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 4660473780534771801
+    - rid: 4949314317412728913
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -88,7 +100,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         presets: []
-    - rid: 4660473780534771802
+    - rid: 4949314317412728914
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2

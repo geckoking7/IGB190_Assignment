@@ -47,6 +47,7 @@ MonoBehaviour:
       - rid: 1005
       - rid: 1027
       - rid: 1024
+      - rid: 1011
   references:
     version: 2
     RefIds:
@@ -298,6 +299,70 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 0}
+    - rid: 1011
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: RemoveBuff2
+        functionDescription: Unit/Buff/Remove Buff from Unit(s)
+        functionDynamicDescription: Remove $ from $
+        functionEvaluators:
+        - rid: 1012
+        - rid: 1013
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 1
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 1012
+      type: {class: BuffNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Buff
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1011
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 11400000, guid: 0cc824ef645fe424081bb06223598da1, type: 2}
+    - rid: 1013
+      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit(s)
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1011
+        parentNodeID: 1
+        indent: 0
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        allowSingleUnit: 0
     - rid: 1015
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
@@ -397,7 +462,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 0.025
+        value: 0.05
     - rid: 1019
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:

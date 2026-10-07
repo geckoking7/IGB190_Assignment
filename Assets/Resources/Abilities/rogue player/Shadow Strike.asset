@@ -30,7 +30,7 @@ MonoBehaviour:
   hasSpecificCastTime: 1
   cooldownIsAtackSpeed: 0
   abilityGeneratesResource: 0
-  requiresLineOfSight: 1
+  requiresLineOfSight: 0
   canUpdateTargetWhileCasting: 1
   castAtClosestPointInRange: 0
   castCompleteSound: {fileID: 8300000, guid: a0143336ab501b34e94c677c87fb6599, type: 3}
@@ -328,7 +328,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 0.5
+        value: 1
     - rid: 1013
       type: {class: VectorNode, ns: , asm: Assembly-CSharp}
       data:

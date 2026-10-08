@@ -109,7 +109,7 @@ MonoBehaviour:
   baseCriticalStrikeDamage: 2
   baseHealthRegen: 0
   baseResourceRegen: 0
-  baseAttackRange: 2.2
+  baseAttackRange: 1.95
   health: 100
   resource: 0
   abilities:

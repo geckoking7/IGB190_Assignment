@@ -99,7 +99,7 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 0, a: 0}
   colorFade: {r: 0, g: 0, b: 0, a: 0}
   unitName: Monster 4
-  baseDamage: 15
+  baseDamage: 10
   baseAttacksPerSecond: 1
   baseMaxHealth: 80
   baseMaxResource: 100

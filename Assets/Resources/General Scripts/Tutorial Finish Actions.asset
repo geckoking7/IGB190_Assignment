@@ -29,6 +29,7 @@ MonoBehaviour:
       - rid: 1011
       - rid: 1015
       - rid: 1006
+      - rid: 1021
   references:
     version: 2
     RefIds:
@@ -489,6 +490,27 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 0
+    - rid: 1021
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: CreateQuest2
+        functionDescription: Quests/Create Quest
+        functionDynamicDescription: Give the player a quest named $
+        functionEvaluators:
+        - rid: 1023
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: QuestNew
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
     - rid: 1022
       type: {class: ItemNode, ns: , asm: Assembly-CSharp}
       data:
@@ -510,6 +532,28 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 11400000, guid: e875568681576aa4bb15eb218935a734, type: 2}
+    - rid: 1023
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Quest Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1021
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Delving Deeper
+        options: []
     - rid: 1025
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:

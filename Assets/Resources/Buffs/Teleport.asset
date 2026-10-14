@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6688e2940d1ee64894af667a197af7e, type: 3}
   m_Name: Teleport
   m_EditorClassIdentifier: 
-  buffDescription: Increase attack speed by 25% and reduce damage taken by 25%.
+  buffDescription: 'Immune
+
+'
   buffFlavourText: 
   buffTag: 
   buffIcon: {fileID: 21300000, guid: db065e997da876d48b41e76e95d3e7b7, type: 3}

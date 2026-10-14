@@ -110,27 +110,6 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 1003
-      type: {class: BuffNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Buff
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 11400000, guid: dfee6ee49001d884a971293cb6f63067, type: 2}
     - rid: 1004
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
@@ -375,12 +354,13 @@ MonoBehaviour:
       data:
         returnType: 2
         tempName: Bool
-        functionName: IsBuffTimed
-        functionDescription: Buff/Buff Has Duration
-        functionDynamicDescription: Buff $ $ a duration
+        functionName: UnitHasBuff
+        functionDescription: Unit/Unit Has Buff
+        functionDynamicDescription: $ $ buff labeled $
         functionEvaluators:
-        - rid: 1003
-        - rid: 1019
+        - rid: 1020
+        - rid: 1025
+        - rid: 1032
         parentNode:
           rid: 1014
         parentNodeID: 0
@@ -459,11 +439,11 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 0}
-    - rid: 1019
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+    - rid: 1020
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 0
-        tempName: 
+        returnType: 4
+        tempName: Unit
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
@@ -472,17 +452,14 @@ MonoBehaviour:
           rid: -2
         parentNodeID: -1
         indent: 0
-        presetName: 
+        presetName: Casting Unit
         variableName: 
         stringSuffix: 
         nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: Does Not Have
-        options:
-        - Has
-        - Does Not Have
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
     - rid: 1021
       type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
       data:
@@ -568,6 +545,30 @@ MonoBehaviour:
         allowPreset: 0
         allowFunction: 0
         value: Has
+        options:
+        - Has
+        - Does Not Have
+    - rid: 1025
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Does Not Have
         options:
         - Has
         - Does Not Have
@@ -708,6 +709,28 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         allowSingleUnit: 0
+    - rid: 1032
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Buff Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Stealth
+        options: []
     - rid: 1036
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:

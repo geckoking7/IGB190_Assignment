@@ -17,8 +17,7 @@ MonoBehaviour:
   abilityFlavourText: 
   abilityIcon: {fileID: 21300000, guid: db065e997da876d48b41e76e95d3e7b7, type: 3}
   targetMode: 4
-  abilityDescription: Instantly teleport towards the target location, and become
-    immune to all damage for 2 seconds.
+  abilityDescription: Instantly teleport towards the target location
   abilityAnimation: None
   range: 20
   castTime: 0

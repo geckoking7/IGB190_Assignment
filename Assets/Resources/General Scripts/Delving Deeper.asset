@@ -18,11 +18,12 @@ MonoBehaviour:
       scriptUID: 121574399
       hasWait: 0
       reportErrors: 1
-      eventNodes:
-      - rid: 5672604951366336625
-      conditionNodes: []
+      eventNodes: []
+      conditionNodes:
+      - rid: 1004
       actionNodes:
       - rid: 1000
+      - rid: 1007
   references:
     version: 2
     RefIds:
@@ -71,7 +72,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 
+        value: Destory Spawner
         options: []
     - rid: 1002
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
@@ -115,15 +116,84 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 1
-    - rid: 5672604951366336625
-      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+        value: 0
+    - rid: 1004
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: ScriptLoaded
-        functionDescription: Time/On script loaded
-        functionDynamicDescription: On script loaded
+        functionName: QuestIsActive
+        functionDescription: Quest/Quest Is Active
+        functionDynamicDescription: Quest named $ $ currently active
+        functionEvaluators:
+        - rid: 1005
+        - rid: 1006
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 1005
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Quest Name
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1004
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Delving Deeper
+        options: []
+    - rid: 1006
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1004
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Is
+        options:
+        - Is
+        - Is Not
+    - rid: 1007
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DisableScript
+        functionDescription: Flow/Disable This Script
+        functionDynamicDescription: Disable this script
         functionEvaluators: []
         parentNode:
           rid: -2
@@ -132,8 +202,7 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        nodeIcon: Timer
+        nodeIcon: Cancel
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        presets: []

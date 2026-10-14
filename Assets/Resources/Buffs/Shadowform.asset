@@ -19,8 +19,8 @@ MonoBehaviour:
   buffType: 0
   buffRemovedOnDeath: 1
   buffVisibleInUI: 1
-  buffHasDuration: 1
-  addingStacksRefreshesDuration: 1
+  buffHasDuration: 0
+  addingStacksRefreshesDuration: 0
   buffCurrentDuration: 0
   buffMaxDuration: 10
   buffCurrentStacks: 1

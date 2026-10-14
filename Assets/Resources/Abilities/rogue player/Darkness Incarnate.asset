@@ -303,6 +303,29 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 1
+    - rid: 1011
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: AddBuff
+        functionDescription: Unit/Buff/Add Buff to Unit(s)
+        functionDynamicDescription: 'Apply $ to $ (Starting Stack Count: $)'
+        functionEvaluators:
+        - rid: 1024
+        - rid: 1025
+        - rid: 1026
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
     - rid: 1012
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -560,6 +583,69 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 0}
+    - rid: 1024
+      type: {class: BuffNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Buff
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1011
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 11400000, guid: 0cc824ef645fe424081bb06223598da1, type: 2}
+    - rid: 1025
+      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit(s)
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1011
+        parentNodeID: 1
+        indent: 0
+        presetName: Casting Unit
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        allowSingleUnit: 0
+    - rid: 1026
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1011
+        parentNodeID: 2
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
     - rid: 6440872668980052111
       type: {class: LogicEngine, ns: , asm: Assembly-CSharp}
       data:
@@ -576,6 +662,7 @@ MonoBehaviour:
           - rid: 1012
           - rid: 1018
           - rid: 1003
+          - rid: 1011
     - rid: 6440872668980052112
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:

@@ -171,7 +171,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 11400000, guid: dfee6ee49001d884a971293cb6f63067, type: 2}
+        value: {fileID: 11400000, guid: 8b4a73b1160dbcd4589490f016dd4995, type: 2}
     - rid: 1006
       type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
       data:
@@ -185,7 +185,7 @@ MonoBehaviour:
           rid: 1003
         parentNodeID: 2
         indent: 0
-        presetName: Casting Unit
+        presetName: Player
         variableName: 
         stringSuffix: 
         nodeIcon: 

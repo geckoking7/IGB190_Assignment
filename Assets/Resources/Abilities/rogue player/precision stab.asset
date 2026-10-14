@@ -29,7 +29,7 @@ MonoBehaviour:
   canMoveWhileCasting: 1
   hasSpecificCastTime: 0
   cooldownIsAtackSpeed: 1
-  abilityGeneratesResource: 1
+  abilityGeneratesResource: 0
   requiresLineOfSight: 1
   canUpdateTargetWhileCasting: 0
   castAtClosestPointInRange: 1
@@ -99,6 +99,28 @@ MonoBehaviour:
         functionEvaluators:
         - rid: 1004
         - rid: 1005
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 1
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 1003
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: SetTargetable
+        functionDescription: Unit/Combat/Set Unit(s) Targetable
+        functionDynamicDescription: Set $ targetting status to $
+        functionEvaluators:
+        - rid: 1019
+        - rid: 1022
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -253,7 +275,7 @@ MonoBehaviour:
         parentNode:
           rid: -2
         parentNodeID: -1
-        indent: 1
+        indent: 0
         presetName: 
         variableName: 
         stringSuffix: 
@@ -299,7 +321,7 @@ MonoBehaviour:
         parentNode:
           rid: -2
         parentNodeID: -1
-        indent: 2
+        indent: 1
         presetName: 
         variableName: 
         stringSuffix: 
@@ -327,7 +349,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 11400000, guid: dfee6ee49001d884a971293cb6f63067, type: 2}
+        value: {fileID: 11400000, guid: 8b4a73b1160dbcd4589490f016dd4995, type: 2}
     - rid: 1014
       type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -414,7 +436,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 0
         allowFunction: 0
-        value: Has
+        value: Does Not Have
         options:
         - Has
         - Does Not Have
@@ -439,6 +461,27 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 0}
+    - rid: 1019
+      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit(s)
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1003
+        parentNodeID: 0
+        indent: 0
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        allowSingleUnit: 0
     - rid: 1020
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
@@ -482,38 +525,17 @@ MonoBehaviour:
         allowFunction: 1
         allowSingleUnit: 0
     - rid: 1022
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: ShowDebugMessage
-        functionDescription: Debug/Show Debug Message
-        functionDynamicDescription: Show a debug message printing $
-        functionEvaluators:
-        - rid: 1023
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 2
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: UI
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 1023
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
-        tempName: Message
+        tempName: Bool
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 1022
-        parentNodeID: 0
+          rid: 1003
+        parentNodeID: 1
         indent: 0
         presetName: 
         variableName: 
@@ -522,8 +544,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: wejiksy ghbweiukbujkgse gbjkasegbjkakwegbjbjkaeghbkj
-        options: []
+        value: 1
     - rid: 1024
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
@@ -1210,13 +1231,13 @@ MonoBehaviour:
           conditionNodes: []
           actionNodes:
           - rid: 3532775480752079318
+          - rid: 1010
+          - rid: 1012
+          - rid: 1003
           - rid: 1014
           - rid: 3532775475806733171
           - rid: 1000
           - rid: 1002
-          - rid: 1010
-          - rid: 1012
-          - rid: 1022
         - scriptName: Monster Death
           scriptUID: 253552288
           hasWait: 0

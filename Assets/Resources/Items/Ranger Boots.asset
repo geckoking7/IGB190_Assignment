@@ -24,7 +24,7 @@ MonoBehaviour:
   randomStatCount: 0
   guaranteedStats: []
   randomisableStats: []
-  minimumDropLevel: 0
+  minimumDropLevel: 2
   canPurchaseInShop: 1
   canDropOffMonster: 1
   template: {fileID: 0}
@@ -78,7 +78,7 @@ MonoBehaviour:
     - rid: 1001
       type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 3
+        returnType: 0
         tempName: Ability
         functionName: 
         functionDescription: 
@@ -95,7 +95,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 0
-        value: {fileID: 0}
+        value: {fileID: 11400000, guid: cac980cd59484ca43b8570ef72643544, type: 2}
     - rid: 1002
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:

@@ -43,6 +43,201 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
+    - rid: 1000
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: CreateLineGuide
+        functionDescription: Feedback/Create Line Effect Guide Between Points
+        functionDynamicDescription: Create a line guide from $ to $ with width $
+          for $
+        functionEvaluators:
+        - rid: 1001
+        - rid: 1002
+        - rid: 1003
+        - rid: 1004
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 1001
+      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Location
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1000
+        parentNodeID: 0
+        indent: 0
+        presetName: Casting Unit
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {x: 0, y: 0, z: 0}
+    - rid: 1002
+      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Location
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1000
+        parentNodeID: 1
+        indent: 0
+        presetName: Ability Target Location
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {x: 0, y: 0, z: 0}
+    - rid: 1003
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1000
+        parentNodeID: 2
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: m
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 1004
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1000
+        parentNodeID: 3
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: s
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1.5
+    - rid: 1005
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: MoveUnitsOverTime
+        functionDescription: Unit/Movement/Move Unit(s) Over Time
+        functionDynamicDescription: Move $ to $ over $
+        functionEvaluators:
+        - rid: 1006
+        - rid: 1007
+        - rid: 1008
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 1006
+      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit(s)
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1005
+        parentNodeID: 0
+        indent: 0
+        presetName: Casting Unit
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        allowSingleUnit: 0
+    - rid: 1007
+      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Location
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1005
+        parentNodeID: 1
+        indent: 0
+        presetName: Ability Target Location
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {x: 0, y: 0, z: 0}
+    - rid: 1008
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1005
+        parentNodeID: 2
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: s
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0.25
     - rid: 6440872668980051968
       type: {class: LogicEngine, ns: , asm: Assembly-CSharp}
       data:
@@ -57,7 +252,9 @@ MonoBehaviour:
           actionNodes:
           - rid: 6440872668980051970
           - rid: 6440872668980051971
+          - rid: 1000
           - rid: 6440872668980051973
+          - rid: 1005
           - rid: 6440872668980051974
           - rid: 6440872668980051976
     - rid: 6440872668980051969
@@ -264,7 +461,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 5
+        value: 3
     - rid: 6440872668980051980
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
@@ -352,7 +549,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 0.2
+        value: 1
     - rid: 6440872668980051984
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
@@ -394,7 +591,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 0.2
+        value: 1.25
     - rid: 6440872668980051989
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
@@ -524,7 +721,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 125
+        value: 150
     - rid: 6440872668980051996
       type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
       data:

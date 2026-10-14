@@ -19,7 +19,6 @@ MonoBehaviour:
       hasWait: 0
       reportErrors: 1
       eventNodes:
-      - rid: 4949314317412728832
       - rid: 1000
       conditionNodes: []
       actionNodes:
@@ -464,24 +463,3 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 1
-    - rid: 4949314317412728832
-      type: {class: EventNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: ScriptLoaded
-        functionDescription: Time/On script loaded
-        functionDynamicDescription: On script loaded
-        functionEvaluators: []
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Timer
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        presets: []

@@ -104,8 +104,8 @@ MonoBehaviour:
   baseMaxHealth: 100
   baseMaxResource: 100
   baseMovementSpeed: 1
-  baseArmor: 1
-  baseCriticalStrikeChance: 0.1
+  baseArmor: 5
+  baseCriticalStrikeChance: 0
   baseCriticalStrikeDamage: 1.15
   baseHealthRegen: 0
   baseResourceRegen: 0
@@ -115,7 +115,6 @@ MonoBehaviour:
   abilities:
   - {fileID: 11400000, guid: 78a26e0a386159c468fb4ad26178fd34, type: 2}
   - {fileID: 11400000, guid: 74a6fedb2ceaf4c43a4809aea255a4f7, type: 2}
-  - {fileID: 11400000, guid: 8aa3eeeb3fac3f4449ba6b01067b3a03, type: 2}
   lastAbilityCast: {fileID: 0}
   unitCanBeForceMoved: 1
   handPoint: {fileID: 0}

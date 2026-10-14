@@ -21,7 +21,7 @@ MonoBehaviour:
   itemRarity: 0
   itemCost: 200
   itemSet: {fileID: 0}
-  randomStatCount: 0
+  randomStatCount: 1
   guaranteedStats:
   - stat: 6
     minimum: 0.11

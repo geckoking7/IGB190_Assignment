@@ -22,16 +22,16 @@ MonoBehaviour:
   buffHasDuration: 0
   addingStacksRefreshesDuration: 1
   buffCurrentDuration: 0
-  buffMaxDuration: 10
+  buffMaxDuration: 9999
   buffCurrentStacks: 1
   buffMaximumStacks: 1
   buffEffectOnTarget: {fileID: 0}
-  buffAttachPoint: Cast Point
+  buffAttachPoint: Center
   buffScale: 0
   buffStatBonuses:
   - stat: 0
     modifier:
-      Value: 0.01
+      Value: 0
       RemoveAt: 28.609142
       IsPercentage: 1
       Label: 

@@ -806,7 +806,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 0
         allowFunction: 0
-        value: {fileID: 1113393009475316218, guid: 95e79f8cd03667940b5af7531101d9f4, type: 3}
+        value: {fileID: 5560953499317727810, guid: 3af91c814aab5ea4ca125fde32872b0a, type: 3}
     - rid: 1044
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:

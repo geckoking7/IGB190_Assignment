@@ -110,6 +110,30 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
+    - rid: 1003
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: UnitComparison
+        functionDescription: Comparisons/Unit Comparison
+        functionDynamicDescription: $ $ $
+        functionEvaluators:
+        - rid: 1019
+        - rid: 1033
+        - rid: 1034
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
     - rid: 1004
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
@@ -327,7 +351,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 11400000, guid: dfee6ee49001d884a971293cb6f63067, type: 2}
+        value: {fileID: 11400000, guid: 8b4a73b1160dbcd4589490f016dd4995, type: 2}
     - rid: 1014
       type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -439,6 +463,27 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 0}
+    - rid: 1019
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1003
+        parentNodeID: 0
+        indent: 0
+        presetName: Killing Unit
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
     - rid: 1020
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
@@ -731,6 +776,51 @@ MonoBehaviour:
         allowFunction: 1
         value: Stealth
         options: []
+    - rid: 1033
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1003
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Equal To
+        options:
+        - Equal To
+        - Not Equal To
+    - rid: 1034
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1003
+        parentNodeID: 2
+        indent: 0
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
     - rid: 1036
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
@@ -1224,6 +1314,7 @@ MonoBehaviour:
           eventNodes:
           - rid: 1028
           conditionNodes:
+          - rid: 1003
           - rid: 1050
           actionNodes:
           - rid: 1029

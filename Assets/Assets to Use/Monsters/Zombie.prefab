@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 3743862632844906365}
   - component: {fileID: 985321657848592395}
   m_Layer: 7
-  m_Name: Monster 1 - Zombie
+  m_Name: Zombie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -128,14 +128,14 @@ MonoBehaviour:
   outline: {fileID: 0}
   color: {r: 0, g: 0, b: 0, a: 0}
   colorFade: {r: 0, g: 0, b: 0, a: 0}
-  unitName: Monster 1
+  unitName: Zombie
   baseDamage: 15
   baseAttacksPerSecond: 1
   baseMaxHealth: 50
   baseMaxResource: 100
   baseMovementSpeed: 0.85
   baseArmor: 0
-  baseCriticalStrikeChance: 0.1
+  baseCriticalStrikeChance: 0
   baseCriticalStrikeDamage: 1.4
   baseHealthRegen: 0
   baseResourceRegen: 0
@@ -144,7 +144,6 @@ MonoBehaviour:
   resource: 0
   abilities:
   - {fileID: 11400000, guid: 78a26e0a386159c468fb4ad26178fd34, type: 2}
-  - {fileID: 11400000, guid: 74a6fedb2ceaf4c43a4809aea255a4f7, type: 2}
   lastAbilityCast: {fileID: 0}
   unitCanBeForceMoved: 1
   handPoint: {fileID: 0}

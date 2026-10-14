@@ -51,6 +51,16 @@ public partial class VisualCodeScript
     }
 
     [VisualScriptingFunction(
+        dropdownDescription = "Math/Distance between points",
+        dynamicDescription = "Distance between $ and $")]
+    [VectorArg(argType = ArgType.Temp)]
+    [VectorArg(argType = ArgType.Temp)]
+    public float DistanceBetweenPoints2(Vector3 v1, Vector3 v2)
+    {
+        return Vector3.Distance(v1, v2);
+    }
+
+    [VisualScriptingFunction(
         dropdownDescription = "One Input Math/Square Root",
         dynamicDescription = "Square Root of $")]
     [NumberArg(argType = ArgType.Temp)]

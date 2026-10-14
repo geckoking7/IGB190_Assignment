@@ -22,7 +22,7 @@ MonoBehaviour:
   abilityAnimation: Bow Shoot
   range: 8
   castTime: 0.1
-  abilityCooldown: 0
+  abilityCooldown: 7
   abilityCost: 0
   movementLock: 1
   animationActivationPosition: 0.5
@@ -108,7 +108,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 3
+        value: 2
     - rid: 1003
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
@@ -279,7 +279,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 3
+        value: 5
     - rid: 1011
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -497,6 +497,73 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         allowSingleUnit: 0
+    - rid: 1021
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: StunUnits
+        functionDescription: Unit/Combat/Stun Unit(s)
+        functionDynamicDescription: Stun $ for $
+        functionEvaluators:
+        - rid: 1022
+        - rid: 1023
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 1022
+      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Unit(s)
+        functionName: FilterUnitsWithinRangeOfPoint
+        functionDescription: Units Near Point
+        functionDynamicDescription: $ within $ of $
+        functionEvaluators:
+        - rid: 1030
+        - rid: 1031
+        - rid: 1032
+        parentNode:
+          rid: 1021
+        parentNodeID: 0
+        indent: 0
+        presetName: All Enemies
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        allowSingleUnit: 0
+    - rid: 1023
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1021
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: s
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 2
     - rid: 1024
       type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
       data:
@@ -538,8 +605,71 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 3
+        value: 2
     - rid: 1026
+      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Location
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: Ability Target Location
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {x: 0, y: 0, z: 0}
+    - rid: 1030
+      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit(s)
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: All Enemies
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        allowSingleUnit: 0
+    - rid: 1031
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: m
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 2
+    - rid: 1032
       type: {class: VectorNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 4
@@ -579,6 +709,7 @@ MonoBehaviour:
           - rid: 1011
           - rid: 1013
           - rid: 1018
+          - rid: 1021
     - rid: 6440872668980052014
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:

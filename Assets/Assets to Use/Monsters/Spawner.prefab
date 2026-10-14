@@ -196,7 +196,7 @@ MonoBehaviour:
   unitName: Spawner
   baseDamage: 40
   baseAttacksPerSecond: 1
-  baseMaxHealth: 400
+  baseMaxHealth: 500
   baseMaxResource: 100
   baseMovementSpeed: 0
   baseArmor: 0
@@ -209,6 +209,7 @@ MonoBehaviour:
   resource: 0
   abilities:
   - {fileID: 11400000, guid: a39d42e88a196084f979c0593f8a8433, type: 2}
+  - {fileID: 11400000, guid: 423c9b0d78369384fbab5c8e4857b2ce, type: 2}
   lastAbilityCast: {fileID: 0}
   unitCanBeForceMoved: 0
   handPoint: {fileID: 0}

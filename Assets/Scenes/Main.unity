@@ -54005,6 +54005,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9100000, guid: d64f348df7d90c143895fcb0d9345eb0, type: 2}
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
+      propertyPath: B_GOD_MODE
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: resourceName
       value: Shadow
       objectReference: {fileID: 0}

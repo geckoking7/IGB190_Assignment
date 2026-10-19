@@ -82,7 +82,7 @@ public class Player : Unit
         {
             AddLevels(1);
             //this value was used since it is high enough for a developer to move around the map with ease and still have enough control over where he is going
-            const float god_speed_add = 8.0f;
+            const float god_speed_add = 5.0f;
             stats[Stat.MovementSpeed].ModifyBaseValue(god_speed_add);
         }
         SetOutline(OUTLINE_COLOR);

@@ -25,6 +25,7 @@ MonoBehaviour:
       actionNodes:
       - rid: 1006
       - rid: 1012
+      - rid: 1010
   references:
     version: 2
     RefIds:
@@ -253,6 +254,26 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 1
+    - rid: 1010
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DisableScript
+        functionDescription: Flow/Disable This Script
+        functionDynamicDescription: Disable this script
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Cancel
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
     - rid: 1012
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:

@@ -10,35 +10,44 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76ef298ccb713614cb4f11ef9d2c39cd, type: 3}
-  m_Name: Auto equip skills
+  m_Name: '[Miniboss] Death'
   m_EditorClassIdentifier: Assembly-CSharp::LogicContainer
   engine:
     scripts:
-    - scriptName: Main
-      scriptUID: 359069139
+    - scriptName: Boss - Killed
+      scriptUID: 1070499844
       hasWait: 0
       reportErrors: 1
       eventNodes:
+      - rid: 5672604951366336617
+      conditionNodes:
+      - rid: 5672604951366336618
+      actionNodes:
       - rid: 1000
+    - scriptName: Miniboss Trigger Condition
+      scriptUID: 1969880776
+      hasWait: 0
+      reportErrors: 1
+      eventNodes:
+      - rid: 1002
       conditionNodes: []
       actionNodes:
-      - rid: 1002
+      - rid: 1004
       - rid: 1006
       - rid: 1010
-      - rid: 1014
   references:
     version: 2
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
     - rid: 1000
-      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: OnKeyDown
-        functionDescription: Input/On Key Down
-        functionDynamicDescription: When the $ key is pressed down
+        functionName: CompleteQuest
+        functionDescription: Quests/Complete Quest
+        functionDynamicDescription: Complete quest named $
         functionEvaluators:
         - rid: 1001
         parentNode:
@@ -48,16 +57,15 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        nodeIcon: Keyboard
+        nodeIcon: QuestNew
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        presets: []
     - rid: 1001
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
-        tempName: 
+        tempName: Quest Name
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
@@ -71,66 +79,21 @@ MonoBehaviour:
         stringSuffix: 
         nodeIcon: 
         allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: Space
-        options:
-        - A
-        - B
-        - C
-        - D
-        - E
-        - F
-        - G
-        - H
-        - I
-        - J
-        - K
-        - L
-        - M
-        - N
-        - O
-        - P
-        - Q
-        - R
-        - S
-        - T
-        - U
-        - V
-        - W
-        - X
-        - Y
-        - Z
-        - F1
-        - F2
-        - F3
-        - F4
-        - F5
-        - F6
-        - F7
-        - F8
-        - F9
-        - F10
-        - F11
-        - F12
-        - Tab
-        - Escape
-        - LeftShift
-        - LeftAlt
-        - LeftControl
-        - Space
+        allowPreset: 1
+        allowFunction: 1
+        value: Defeat Big Bones
+        options: []
     - rid: 1002
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: EnableAbility
-        functionDescription: Unit/Ability/Enable Ability on Unit
-        functionDynamicDescription: 'Enable $ on $ (Show UI Message: $)'
+        functionName: UnitEntersRegion
+        functionDescription: Region/Unit enters region
+        functionDynamicDescription: 'Unit enters region named $ (Presets: <color=yellow>Triggering
+          Unit</color>, <color=yellow>Unique Region ID</color>)'
         functionEvaluators:
         - rid: 1003
-        - rid: 1004
-        - rid: 1005
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -138,15 +101,18 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        nodeIcon: Unit
+        nodeIcon: Region
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
+        presets:
+        - Triggering Unit
+        - Unique Region ID
     - rid: 1003
-      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
-        tempName: Ability
+        tempName: Region Name
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
@@ -160,42 +126,43 @@ MonoBehaviour:
         stringSuffix: 
         nodeIcon: 
         allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: {fileID: 11400000, guid: 79f88615c39f0e447aa910fa822aeb45, type: 2}
-    - rid: 1004
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1002
-        parentNodeID: 1
-        indent: 0
-        presetName: Player
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 0
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 0}
+        value: 
+        options: []
+    - rid: 1004
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: CreateQuest2
+        functionDescription: Quests/Create Quest
+        functionDynamicDescription: Give the player a quest named $
+        functionEvaluators:
+        - rid: 1005
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: QuestNew
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
     - rid: 1005
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
-        tempName: Bool
+        tempName: Quest Name
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 1002
-        parentNodeID: 2
+          rid: 1004
+        parentNodeID: 0
         indent: 0
         presetName: 
         variableName: 
@@ -204,15 +171,16 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 1
+        value: Defeat Big Bones
+        options: []
     - rid: 1006
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: EnableAbility
-        functionDescription: Unit/Ability/Enable Ability on Unit
-        functionDynamicDescription: 'Enable $ on $ (Show UI Message: $)'
+        functionName: AddQuestRequirement2
+        functionDescription: Quests/Add Quest Requirement
+        functionDynamicDescription: Add $ requirement to $ with $ progress increments
         functionEvaluators:
         - rid: 1007
         - rid: 1008
@@ -224,15 +192,15 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        nodeIcon: Unit
+        nodeIcon: QuestNew
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
     - rid: 1007
-      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
-        tempName: Ability
+        tempName: Requirement
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
@@ -246,14 +214,15 @@ MonoBehaviour:
         stringSuffix: 
         nodeIcon: 
         allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: {fileID: 11400000, guid: 3145fb2a7f1be9b4399530dc10f1c7d7, type: 2}
+        allowPreset: 1
+        allowFunction: 1
+        value: Kill Him
+        options: []
     - rid: 1008
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 4
-        tempName: Unit
+        returnType: 0
+        tempName: Quest Name
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
@@ -262,19 +231,20 @@ MonoBehaviour:
           rid: 1006
         parentNodeID: 1
         indent: 0
-        presetName: Player
+        presetName: 
         variableName: 
         stringSuffix: 
         nodeIcon: 
-        allowValue: 0
+        allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 0}
+        value: Defeat Big Bones
+        options: []
     - rid: 1009
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
-        tempName: Bool
+        tempName: 
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
@@ -296,13 +266,10 @@ MonoBehaviour:
       data:
         returnType: 2
         tempName: 
-        functionName: EnableAbility
-        functionDescription: Unit/Ability/Enable Ability on Unit
-        functionDynamicDescription: 'Enable $ on $ (Show UI Message: $)'
-        functionEvaluators:
-        - rid: 1011
-        - rid: 1012
-        - rid: 1013
+        functionName: DisableScript
+        functionDescription: Flow/Disable This Script
+        functionDynamicDescription: Disable this script
+        functionEvaluators: []
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -310,85 +277,21 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        nodeIcon: Unit
+        nodeIcon: Cancel
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 1011
-      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Ability
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1010
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: {fileID: 11400000, guid: cac980cd59484ca43b8570ef72643544, type: 2}
-    - rid: 1012
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1010
-        parentNodeID: 1
-        indent: 0
-        presetName: Player
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 1013
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Bool
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1010
-        parentNodeID: 2
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 1
-    - rid: 1014
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+    - rid: 5672604951366336617
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: EnableAbility
-        functionDescription: Unit/Ability/Enable Ability on Unit
-        functionDynamicDescription: 'Enable $ on $ (Show UI Message: $)'
-        functionEvaluators:
-        - rid: 1015
-        - rid: 1016
-        - rid: 1017
+        functionName: WhenUnitIsKilled
+        functionDescription: Unit/Unit is killed
+        functionDynamicDescription: 'When a unit is killed (Presets: <color=yellow>Killed
+          Unit</color>, <color=yellow>Killing Unit</color>, <color=yellow>Killing
+          Ability</color>, <color=yellow>Is Critical</color>)'
+        functionEvaluators: []
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -396,32 +299,40 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        nodeIcon: Unit
+        nodeIcon: Event
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 1015
-      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
+        presets:
+        - Killed Unit
+        - Killing Unit
+        - Killing Ability
+        - Is Critical
+    - rid: 5672604951366336618
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 0
-        tempName: Ability
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
+        returnType: 2
+        tempName: 
+        functionName: UnitTypeMatch
+        functionDescription: Unit/Unit Matches Template
+        functionDynamicDescription: $ type $ $
+        functionEvaluators:
+        - rid: 5672604951366336621
+        - rid: 5672604951366336622
+        - rid: 5672604951366336623
         parentNode:
-          rid: 1014
-        parentNodeID: 0
+          rid: -2
+        parentNodeID: -1
         indent: 0
         presetName: 
         variableName: 
         stringSuffix: 
-        nodeIcon: 
+        nodeIcon: Condition
         allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: {fileID: 11400000, guid: 2021c3d22655cc54aa8fa67c3b2c7cce, type: 2}
-    - rid: 1016
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 5672604951366336621
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 4
@@ -431,28 +342,52 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 1014
-        parentNodeID: 1
+          rid: 5672604951366336618
+        parentNodeID: 0
         indent: 0
-        presetName: Player
+        presetName: Killed Unit
         variableName: 
         stringSuffix: 
         nodeIcon: 
-        allowValue: 0
+        allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 0}
-    - rid: 1017
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+        value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
+    - rid: 5672604951366336622
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
-        tempName: Bool
+        tempName: 
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 1014
+          rid: 5672604951366336618
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Matches
+        options:
+        - Matches
+        - Does Not Match
+    - rid: 5672604951366336623
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 5672604951366336618
         parentNodeID: 2
         indent: 0
         presetName: 
@@ -462,4 +397,4 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 1
+        value: {fileID: 243147159722867909, guid: 6510495f74fa4b04ba36c49542609363, type: 3}

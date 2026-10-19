@@ -27882,7 +27882,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Regicide: Echos of Extinction'
+  m_text: Going Rogue
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2a25f6ce1fe07f44985ab8f3ee0b99b0, type: 2}
   m_sharedMaterial: {fileID: 8071695384262653234, guid: 2a25f6ce1fe07f44985ab8f3ee0b99b0, type: 2}

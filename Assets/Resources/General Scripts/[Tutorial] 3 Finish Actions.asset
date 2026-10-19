@@ -581,7 +581,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Use Cloak (E) to become Stealthy.
+        value: Use Cloak (E) to become Fast and Stealthy.
         options: []
     - rid: 1025
       type: {class: StringNode, ns: , asm: Assembly-CSharp}

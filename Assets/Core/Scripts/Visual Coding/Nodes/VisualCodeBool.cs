@@ -675,6 +675,21 @@ public partial class VisualCodeScript
             default: return false;
         }
     }
+    [VisualScriptingFunction(
+        dropdownDescription = "Player/Player Is in god mode",
+        dynamicDescription = "Player $ in god mode",
+        icon = conditionIcon)]
+    [StringArg(argType = ArgType.Value, choicePreset = PresetChoices.IsIsNot, allowPreset = false, allowFunction = false)]
+    public bool PlayerIsGodMode(string comparator)
+    {
+        Error(GameManager.player == null, VisualCodeLabels.Errors.InvalidPlayer);
+        switch (comparator)
+        {
+            case PresetStrings.Is: return GameManager.player.B_GOD_MODE;
+            case PresetStrings.IsNot: return !GameManager.player.B_GOD_MODE;
+            default: return false;
+        }
+    }
 
     [VisualScriptingFunction(
         dropdownDescription = "Quest/Quest Is Active",

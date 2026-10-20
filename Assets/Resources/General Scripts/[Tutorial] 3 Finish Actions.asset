@@ -20,7 +20,8 @@ MonoBehaviour:
       reportErrors: 1
       eventNodes:
       - rid: 1000
-      conditionNodes: []
+      conditionNodes:
+      - rid: 1041
       actionNodes:
       - rid: 1019
       - rid: 1011
@@ -927,3 +928,49 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 5
+    - rid: 1041
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: PlayerIsGodMode
+        functionDescription: Player/Player Is in god mode
+        functionDynamicDescription: Player $ in god mode
+        functionEvaluators:
+        - rid: 1042
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 1042
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1041
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Is Not
+        options:
+        - Is
+        - Is Not

@@ -1,8 +1,10 @@
+using FastFeedback;
 using MyUtilities;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UIElements;
 
 /// <summary>
@@ -51,6 +53,7 @@ public class Monster : Unit
 
     // Cached components
     protected AudioSource source;
+    public static UnityAction increaseEnemyDifficulty;
 
     private float TIME_BETWEEN_RETARGETS = 5.0f;
     private float nextRetargetAt;
@@ -72,8 +75,22 @@ public class Monster : Unit
         CreateHealthBar();
         ApplySpawnDelay();
         SetInitialFacing();
+        increaseEnemyDifficulty += IncreaseEnemyDifficulty;
         //SetOutline(OutlineColor, 3, 0.06f);
         if (source != null) source.Play();
+    }
+
+    private const float damage_increase_factor = .2f;
+    private const float crit_strike_chance_increase_factor = .2f;
+    private const float crit_strike_dmg_increase_factor = .2f;
+    private const float health_increase_factor = .2f;
+    public void IncreaseEnemyDifficulty()
+    {
+        System.Action<Stat, float> ScaleStat = (Stat statType, float scale) => stats[statType].ModifyBaseValue(stats[statType].GetValue() * scale);
+        ScaleStat(Stat.Damage, damage_increase_factor);
+        ScaleStat(Stat.Damage, crit_strike_chance_increase_factor);
+        ScaleStat(Stat.Damage, crit_strike_dmg_increase_factor);
+        ScaleStat(Stat.Damage, health_increase_factor);
     }
 
     /// <summary>
@@ -287,6 +304,8 @@ public class Monster : Unit
     public override void Kill(Unit killingUnit, IVisualCodeHandler killingSource, bool isCritical)
     {
         if (isDead) return;
+
+        increaseEnemyDifficulty -= IncreaseEnemyDifficulty;
 
         base.Kill(killingUnit, killingSource, isCritical);
         HandleKillCleanup();

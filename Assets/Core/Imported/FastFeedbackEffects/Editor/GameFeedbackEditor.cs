@@ -120,6 +120,9 @@ public class GameFeedbackEditor : Editor
             menu.AddItem(new GUIContent("Game Object - Create"), false,
                 () => { AddItem(feedback, new CreateGameObject()); });
 
+            menu.AddItem(new GUIContent("Increase enemy difficulty"), false,
+                () => { AddItem(feedback, new IncreaseEnemyDifficulty()); });
+
             menu.AddItem(new GUIContent("Game Object - Destroy"), false,
                 () => { AddItem(feedback, new DestroyGameObject()); });
 

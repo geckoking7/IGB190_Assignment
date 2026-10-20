@@ -24,15 +24,14 @@ MonoBehaviour:
       - rid: 1041
       actionNodes:
       - rid: 1019
+      - rid: 1031
+      - rid: 1034
       - rid: 1011
       - rid: 1015
       - rid: 1028
       - rid: 1007
       - rid: 1018
       - rid: 1030
-      - rid: 1031
-      - rid: 1035
-      - rid: 1039
       - rid: 1001
       - rid: 1004
       - rid: 1006
@@ -107,8 +106,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: You will need to explore further to uncover what is summoning the
-          undead.
+        value: Continue to find out what is summoning the undead.
         options: []
     - rid: 1003
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
@@ -130,7 +128,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 10
+        value: 15
     - rid: 1004
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -430,7 +428,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 30
+        value: 15
     - rid: 1018
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -560,7 +558,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Delving Deeper
+        value: Explore the castle.
         options: []
     - rid: 1024
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
@@ -649,7 +647,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 30
+        value: 15
     - rid: 1028
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -718,98 +716,12 @@ MonoBehaviour:
       data:
         returnType: 2
         tempName: 
-        functionName: EnableAbility
-        functionDescription: Unit/Ability/Enable Ability on Unit
-        functionDynamicDescription: 'Enable $ on $ (Show UI Message: $)'
-        functionEvaluators:
-        - rid: 1032
-        - rid: 1033
-        - rid: 1034
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 1
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Unit
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 1032
-      type: {class: AbilityNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Ability
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1031
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: {fileID: 11400000, guid: cac980cd59484ca43b8570ef72643544, type: 2}
-    - rid: 1033
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1031
-        parentNodeID: 1
-        indent: 0
-        presetName: Player
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 1034
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Bool
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1031
-        parentNodeID: 2
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 1
-    - rid: 1035
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
         functionName: ShowTutorialMessage
         functionDescription: UI Actions/Show Tutorial Message
         functionDynamicDescription: Show a tutorial message printing $ for $ seconds
         functionEvaluators:
-        - rid: 1036
-        - rid: 1037
+        - rid: 1032
+        - rid: 1033
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -821,7 +733,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 1036
+    - rid: 1032
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -831,7 +743,7 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 1035
+          rid: 1031
         parentNodeID: 0
         indent: 0
         presetName: 
@@ -841,10 +753,10 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Your strongest ability is Darkness Incarnate (R). Use it to slow time
-          and get the advantage.
+        value: You will collect many items, which will improve your fighting stats.
+          You can sell extras in shop, in your inventory, for gold.
         options: []
-    - rid: 1037
+    - rid: 1033
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -854,7 +766,7 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 1035
+          rid: 1031
         parentNodeID: 1
         indent: 0
         presetName: 
@@ -864,29 +776,8 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 30
-    - rid: 1038
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1030
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 5
-    - rid: 1039
+        value: 15
+    - rid: 1034
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -895,7 +786,7 @@ MonoBehaviour:
         functionDescription: Flow/Wait
         functionDynamicDescription: Wait for $ second(s)
         functionEvaluators:
-        - rid: 1040
+        - rid: 1035
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -907,7 +798,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 1040
+    - rid: 1035
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -917,7 +808,28 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 1039
+          rid: 1034
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 5
+    - rid: 1038
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1030
         parentNodeID: 0
         indent: 0
         presetName: 

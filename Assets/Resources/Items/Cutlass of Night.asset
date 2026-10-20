@@ -1,0 +1,127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
+  m_Name: Cutlass of Night
+  m_EditorClassIdentifier: Assembly-CSharp::Item
+  itemDescription: Killing an enemy when invisible does 1.5x damage
+  itemTag: 
+  itemFlavourText: 
+  classRequirement: 
+  itemIcon: {fileID: 21300000, guid: ad67fbf89b619144bbf2d4c25e955344, type: 3}
+  itemType: 2
+  itemRarity: 2
+  itemCost: 2500
+  itemSet: {fileID: 0}
+  randomStatCount: 2
+  guaranteedStats:
+  - stat: 0
+    minimum: 20
+    maximum: 30
+    isPercent: 0
+  randomisableStats:
+  - stat: 5
+    minimum: 60
+    maximum: 100
+    isPercent: 0
+  - stat: 6
+    minimum: 0.06
+    maximum: 0.1
+    isPercent: 1
+  - stat: 7
+    minimum: 0.12
+    maximum: 0.2
+    isPercent: 1
+  - stat: 9
+    minimum: 0.12
+    maximum: 0.2
+    isPercent: 1
+  - stat: 3
+    minimum: 0.08
+    maximum: 0.12
+    isPercent: 1
+  - stat: 10
+    minimum: 0.08
+    maximum: 0.12
+    isPercent: 0
+  - stat: 11
+    minimum: 0.3
+    maximum: 0.5
+    isPercent: 0
+  minimumDropLevel: 2
+  canPurchaseInShop: 0
+  canDropOffMonster: 1
+  template: {fileID: 0}
+  engine:
+    scripts:
+    - scriptName: Item Equipped
+      scriptUID: 1482797040
+      hasWait: 0
+      reportErrors: 1
+      eventNodes:
+      - rid: 5785483313375608910
+      conditionNodes: []
+      actionNodes: []
+    - scriptName: Item Unequipped
+      scriptUID: 1369239673
+      hasWait: 0
+      reportErrors: 1
+      eventNodes:
+      - rid: 5785483313375608911
+      conditionNodes: []
+      actionNodes: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 5785483313375608910
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ScriptLoaded
+        functionDescription: Time/On script loaded
+        functionDynamicDescription: On script loaded
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets: []
+    - rid: 5785483313375608911
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ScriptUnloaded
+        functionDescription: Time/On script unloaded
+        functionDynamicDescription: On script unloaded
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets: []

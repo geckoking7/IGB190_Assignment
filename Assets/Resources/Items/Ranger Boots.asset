@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
   m_Name: Ranger Boots
   m_EditorClassIdentifier: Assembly-CSharp::Item
-  itemDescription: 
+  itemDescription: Gain an addition charge of cloak
   itemTag: 
   itemFlavourText: 
   classRequirement: 
@@ -21,10 +21,38 @@ MonoBehaviour:
   itemRarity: 2
   itemCost: 2500
   itemSet: {fileID: 0}
-  randomStatCount: 0
+  randomStatCount: 3
   guaranteedStats: []
-  randomisableStats: []
-  minimumDropLevel: 2
+  randomisableStats:
+  - stat: 5
+    minimum: 48
+    maximum: 80
+    isPercent: 0
+  - stat: 7
+    minimum: 0.1
+    maximum: 0.16
+    isPercent: 1
+  - stat: 8
+    minimum: 0.1
+    maximum: 0.16
+    isPercent: 1
+  - stat: 3
+    minimum: 0.12
+    maximum: 0.2
+    isPercent: 1
+  - stat: 10
+    minimum: 0.06
+    maximum: 0.1
+    isPercent: 0
+  - stat: 11
+    minimum: 0.24
+    maximum: 0.4
+    isPercent: 0
+  - stat: 6
+    minimum: 0.2
+    maximum: 0.32
+    isPercent: 1
+  minimumDropLevel: 8
   canPurchaseInShop: 1
   canDropOffMonster: 1
   template: {fileID: 0}
@@ -99,7 +127,7 @@ MonoBehaviour:
     - rid: 1002
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 3
+        returnType: 4
         tempName: Unit
         functionName: 
         functionDescription: 
@@ -109,7 +137,7 @@ MonoBehaviour:
           rid: 1000
         parentNodeID: 1
         indent: 0
-        presetName: 
+        presetName: Player
         variableName: 
         stringSuffix: 
         nodeIcon: 

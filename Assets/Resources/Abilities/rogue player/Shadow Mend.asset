@@ -17,7 +17,7 @@ MonoBehaviour:
   abilityFlavourText: 
   abilityIcon: {fileID: 21300000, guid: 485172507593f1740bd23a4a4e0df8db, type: 3}
   targetMode: 0
-  abilityDescription: Consume all current Stealth to gain 3 Health per Shadow
+  abilityDescription: Consume all current Stealth to gain 2 Health per Shadow
   abilityAnimation: None
   range: 999
   castTime: 0
@@ -261,7 +261,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 3
+        value: 2
     - rid: 1010
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:

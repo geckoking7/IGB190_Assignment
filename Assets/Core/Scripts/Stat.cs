@@ -78,6 +78,7 @@ public static class StatExtensions
             Stat.ResourceCostReduction => AbilityCostReductionLabel,
             Stat.DamageTaken => DamageTakenLabel,
             Stat.ResourceGeneration => ResourceGenerationLabel,
+            Stat.Vitality => "Regeneration",
             _ => stat.ToString()
         };
     }

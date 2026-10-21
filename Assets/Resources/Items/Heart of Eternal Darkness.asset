@@ -21,10 +21,30 @@ MonoBehaviour:
   itemRarity: 2
   itemCost: 2500
   itemSet: {fileID: 0}
-  randomStatCount: 0
-  guaranteedStats: []
-  randomisableStats: []
-  minimumDropLevel: 2
+  randomStatCount: 2
+  guaranteedStats:
+  - stat: 5
+    minimum: 64
+    maximum: 96
+    isPercent: 0
+  randomisableStats:
+  - stat: 1
+    minimum: 5
+    maximum: 7
+    isPercent: 0
+  - stat: 4
+    minimum: 112
+    maximum: 144
+    isPercent: 0
+  - stat: 10
+    minimum: 0.06
+    maximum: 0.1
+    isPercent: 0
+  - stat: 11
+    minimum: 0.24
+    maximum: 0.4
+    isPercent: 0
+  minimumDropLevel: 8
   canPurchaseInShop: 0
   canDropOffMonster: 1
   template: {fileID: 0}

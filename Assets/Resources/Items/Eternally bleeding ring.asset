@@ -20,15 +20,35 @@ MonoBehaviour:
   itemType: 0
   itemRarity: 2
   itemCost: 2000
-  itemSet: {fileID: 0}
-  randomStatCount: 0
+  itemSet: {fileID: 11400000, guid: 631d926d4d185d048a440ca5721685e7, type: 2}
+  randomStatCount: 2
   guaranteedStats:
   - stat: 12
     minimum: -10
     maximum: -10
     isPercent: 0
-  randomisableStats: []
-  minimumDropLevel: 2
+  randomisableStats:
+  - stat: 4
+    minimum: 0.1
+    maximum: 0.15
+    isPercent: 1
+  - stat: 6
+    minimum: 0.05
+    maximum: 0.07
+    isPercent: 1
+  - stat: 7
+    minimum: 0.1
+    maximum: 0.16
+    isPercent: 1
+  - stat: 8
+    minimum: 0.1
+    maximum: 0.16
+    isPercent: 1
+  - stat: 3
+    minimum: 0.06
+    maximum: 0.1
+    isPercent: 1
+  minimumDropLevel: 8
   canPurchaseInShop: 0
   canDropOffMonster: 1
   template: {fileID: 0}
@@ -38,8 +58,7 @@ MonoBehaviour:
       scriptUID: 551948515
       hasWait: 0
       reportErrors: 1
-      eventNodes:
-      - rid: 5785483326905384960
+      eventNodes: []
       conditionNodes: []
       actionNodes: []
     - scriptName: Item Unequipped
@@ -55,27 +74,6 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 5785483326905384960
-      type: {class: EventNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: ScriptLoaded
-        functionDescription: Time/On script loaded
-        functionDynamicDescription: On script loaded
-        functionEvaluators: []
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Timer
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        presets: []
     - rid: 5785483326905384961
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:

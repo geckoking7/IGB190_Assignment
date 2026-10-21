@@ -666,7 +666,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: One Hand Stab
-  m_Speed: 1.5
+  m_Speed: 2.4
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 3759034216535518193}
@@ -680,7 +680,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 4d4ad1323cb15f449b3fb62d38f5f5e4, type: 3}
+  m_Motion: {fileID: -203655887218126122, guid: 941f1ad90e5700b4284b9ef215d845c1, type: 3}
   m_Tag: 
   m_SpeedParameter: AbilityCastSpeed
   m_MirrorParameter: 
@@ -1385,7 +1385,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 5828c7958a7cb4d41ba2d434280b92e4, type: 3}
+  m_Motion: {fileID: 1827226128182048838, guid: c7e31f70aaf3b2d429c088ef83572070, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

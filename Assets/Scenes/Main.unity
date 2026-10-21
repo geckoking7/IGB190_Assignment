@@ -12031,7 +12031,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5184449006530483668, guid: caef50e694e10204c993186864e4cc23, type: 3}
       propertyPath: spawnLevel
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5184449006530483668, guid: caef50e694e10204c993186864e4cc23, type: 3}
       propertyPath: baseMaxHealth
@@ -24309,7 +24309,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5184449006530483668, guid: caef50e694e10204c993186864e4cc23, type: 3}
       propertyPath: spawnLevel
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5184449006530483668, guid: caef50e694e10204c993186864e4cc23, type: 3}
       propertyPath: baseMaxHealth
@@ -53273,7 +53273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5184449006530483668, guid: caef50e694e10204c993186864e4cc23, type: 3}
       propertyPath: spawnLevel
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5184449006530483668, guid: caef50e694e10204c993186864e4cc23, type: 3}
       propertyPath: baseMaxHealth
@@ -64145,7 +64145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5184449006530483668, guid: caef50e694e10204c993186864e4cc23, type: 3}
       propertyPath: spawnLevel
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5184449006530483668, guid: caef50e694e10204c993186864e4cc23, type: 3}
       propertyPath: baseMaxHealth

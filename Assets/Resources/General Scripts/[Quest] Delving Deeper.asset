@@ -448,7 +448,7 @@ MonoBehaviour:
     - rid: 1018
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 4
+        returnType: 0
         tempName: Unit
         functionName: 
         functionDescription: 
@@ -465,7 +465,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
+        value: {fileID: 5184449006530483668, guid: caef50e694e10204c993186864e4cc23, type: 3}
     - rid: 1019
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
@@ -493,7 +493,7 @@ MonoBehaviour:
     - rid: 1020
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 0
+        returnType: 4
         tempName: Unit
         functionName: 
         functionDescription: 
@@ -503,7 +503,7 @@ MonoBehaviour:
           rid: 1017
         parentNodeID: 2
         indent: 0
-        presetName: 
+        presetName: Killed Unit
         variableName: 
         stringSuffix: 
         nodeIcon: 

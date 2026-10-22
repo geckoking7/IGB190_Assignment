@@ -57,7 +57,7 @@ MonoBehaviour:
         parentNode:
           rid: -2
         parentNodeID: -1
-        indent: 0
+        indent: 1
         presetName: 
         variableName: 
         stringSuffix: 
@@ -123,7 +123,7 @@ MonoBehaviour:
         parentNode:
           rid: -2
         parentNodeID: -1
-        indent: 0
+        indent: 1
         presetName: 
         variableName: 
         stringSuffix: 
@@ -235,7 +235,7 @@ MonoBehaviour:
         parentNode:
           rid: -2
         parentNodeID: -1
-        indent: 0
+        indent: 1
         presetName: 
         variableName: 
         stringSuffix: 
@@ -866,7 +866,7 @@ MonoBehaviour:
         parentNode:
           rid: -2
         parentNodeID: -1
-        indent: 0
+        indent: 1
         presetName: 
         variableName: 
         stringSuffix: 
@@ -979,6 +979,73 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 0.7
+    - rid: 1042
+      type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DoActionsIfBool
+        functionDescription: Flow/If Statement
+        functionDynamicDescription: Do actions if $
+        functionEvaluators:
+        - rid: 1043
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 1043
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Bool
+        functionName: PlayerIsDead
+        functionDescription: Player/Player Is Dead
+        functionDynamicDescription: Player $ dead
+        functionEvaluators:
+        - rid: 1044
+        parentNode:
+          rid: 1042
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 1044
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Is Not
+        options:
+        - Is
+        - Is Not
     - rid: 8267055672131321936
       type: {class: LogicEngine, ns: , asm: Assembly-CSharp}
       data:
@@ -994,6 +1061,7 @@ MonoBehaviour:
           - rid: 1030
           - rid: 1024
           - rid: 1040
+          - rid: 1042
           - rid: 1000
           - rid: 1003
           - rid: 1008

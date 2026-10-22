@@ -344,7 +344,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 36fa4b0ac6d5d424bbb7ddeeb8d79950, type: 2}
+  m_Motion: {fileID: -203655887218126122, guid: 6cc0f32c6c4f92641ac6469388ac23c7, type: 3}
   m_Tag: 
   m_SpeedParameter: AbilityCastSpeed
   m_MirrorParameter: 
@@ -665,7 +665,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: One Hand Stab (UpThrust)
+  m_Name: One Hand Stab
   m_Speed: 2.4
   m_CycleOffset: 0
   m_Transitions:
@@ -906,14 +906,14 @@ AnimatorState:
   - {fileID: -6986374411192943614}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
+  m_IKOnFeet: 1
   m_WriteDefaultValues: 1
   m_Mirror: 0
   m_SpeedParameterActive: 1
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 989a3973fae84e344a37d7925b9f7b10, type: 3}
+  m_Motion: {fileID: 1827226128182048838, guid: f28f627f692756d48aaac2a1787de8f1, type: 3}
   m_Tag: 
   m_SpeedParameter: Speed
   m_MirrorParameter: 
@@ -1385,7 +1385,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 5828c7958a7cb4d41ba2d434280b92e4, type: 3}
+  m_Motion: {fileID: 1827226128182048838, guid: c7e31f70aaf3b2d429c088ef83572070, type: 3}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -1691,7 +1691,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: One Hand Slash (Finisher)
+  m_Name: One Hand Slash
   m_Speed: 2.4
   m_CycleOffset: 0
   m_Transitions:

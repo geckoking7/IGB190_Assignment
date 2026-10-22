@@ -226,11 +226,11 @@ NavMeshAgent:
   m_Acceleration: 9999
   avoidancePriority: 1
   m_AngularSpeed: 9999
-  m_StoppingDistance: 0
+  m_StoppingDistance: 0.01
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 2
+  m_Height: 1.8
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
@@ -250,25 +250,25 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 0, a: 0}
   colorFade: {r: 0, g: 0, b: 0, a: 0}
   unitName: Rogue
-  baseDamage: 50
-  baseAttacksPerSecond: 0.6
-  baseMaxHealth: 220
+  baseDamage: 35
+  baseAttacksPerSecond: 1
+  baseMaxHealth: 200
   baseMaxResource: 100
   baseMovementSpeed: 4
   baseArmor: 1
-  baseCriticalStrikeChance: 0.2
+  baseCriticalStrikeChance: 0.1
   baseCriticalStrikeDamage: 1.5
-  baseHealthRegen: 20
+  baseHealthRegen: 5
   baseResourceRegen: 0
   baseAttackRange: 3
   health: 500
   resource: 0
   abilities:
-  - {fileID: 11400000, guid: 40208595edbf6a34cba5d5963c5c95fa, type: 2}
-  - {fileID: 11400000, guid: 6b1509e44423b9f469a97570f6b085a0, type: 2}
-  - {fileID: 11400000, guid: 797ba2aabecb9b445a6ca37ebb6f8ebd, type: 2}
-  - {fileID: 11400000, guid: a140df8ffdf47524199545119dfae186, type: 2}
-  - {fileID: 11400000, guid: 61fbdcd667accc340854d77f7f1715b2, type: 2}
+  - {fileID: 11400000, guid: a64604ae66a51b647bbe2a985aff2588, type: 2}
+  - {fileID: 11400000, guid: 3145fb2a7f1be9b4399530dc10f1c7d7, type: 2}
+  - {fileID: 11400000, guid: 79f88615c39f0e447aa910fa822aeb45, type: 2}
+  - {fileID: 11400000, guid: 2021c3d22655cc54aa8fa67c3b2c7cce, type: 2}
+  - {fileID: 11400000, guid: cac980cd59484ca43b8570ef72643544, type: 2}
   lastAbilityCast: {fileID: 0}
   unitCanBeForceMoved: 1
   handPoint: {fileID: 0}
@@ -297,20 +297,20 @@ MonoBehaviour:
   rightClickAlsoMoves: 0
   levelUpFeedback: {fileID: 11400000, guid: 9cdaa1d98fc0cc4428a905e670a76812, type: 2}
   resourceName: Shadow
-  resourceMaterial: {fileID: 2100000, guid: 0a09ab3e12ff704499f9c060550688ea, type: 2}
-  bonusDamagePerLevel: 0
-  bonusHealthPerLevel: 0
+  resourceMaterial: {fileID: 2100000, guid: a9ac3b21fd7ebde4295839fc6e88229f, type: 2}
+  bonusDamagePerLevel: 5
+  bonusHealthPerLevel: 25
   bonusMovementSpeedPerLevel: 0
   bonusResourcePerLevel: 0
-  bonusArmorPerLevel: 0
+  bonusArmorPerLevel: 1
   criticalStrikeChanceData:
-    limit: 0.4
-    xScale: 0.3
-    xOffset: 10
+    limit: 0.2
+    xScale: 0.01
+    xOffset: 0
   criticalStrikeDmgData:
-    limit: 30
-    xScale: 0.08
-    xOffset: 30
+    limit: 3
+    xScale: 0.04
+    xOffset: 0
   bonusHealthRegenPerLevel: 0
   maxHealthRegen: 70
   bonusResourceRegenPerLevel: 0
@@ -323,14 +323,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1362417032811899940}
     m_Modifications:
-    - target: {fileID: -1380278294497770569, guid: e82e64f25eecc5a459bdb1c3bdde8536, type: 3}
-      propertyPath: m_Name
-      value: RogueBody
-      objectReference: {fileID: 0}
-    - target: {fileID: 1082271958561512970, guid: e82e64f25eecc5a459bdb1c3bdde8536, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a687a766121a1f54280b09953bd10384, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -390,9 +382,21 @@ PrefabInstance:
     - target: {fileID: 5866666021909216657, guid: a687a766121a1f54280b09953bd10384, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 7fc484527f7352a49a5990317e5de029, type: 2}
+      objectReference: {fileID: 9100000, guid: d64f348df7d90c143895fcb0d9345eb0, type: 2}
+    - target: {fileID: 5866666021909216657, guid: a687a766121a1f54280b09953bd10384, type: 3}
+      propertyPath: m_CullingMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: a687a766121a1f54280b09953bd10384, type: 3}
       propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1380278294497770569, guid: e82e64f25eecc5a459bdb1c3bdde8536, type: 3}
+      propertyPath: m_Name
+      value: RogueBody
+      objectReference: {fileID: 0}
+    - target: {fileID: 1082271958561512970, guid: e82e64f25eecc5a459bdb1c3bdde8536, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -447,43 +451,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 550a61d9929e19749851330ea8c46ecd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.087
+      value: 0.1738
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 550a61d9929e19749851330ea8c46ecd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.024
+      value: 0.0064
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 550a61d9929e19749851330ea8c46ecd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.132
+      value: 0.1034
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 550a61d9929e19749851330ea8c46ecd, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9659259
+      value: 0.9361168
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 550a61d9929e19749851330ea8c46ecd, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.08189965
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 550a61d9929e19749851330ea8c46ecd, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.3407186
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 550a61d9929e19749851330ea8c46ecd, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.258819
+      value: 0.029809028
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 550a61d9929e19749851330ea8c46ecd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 550a61d9929e19749851330ea8c46ecd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 550a61d9929e19749851330ea8c46ecd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -30
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9500000, guid: 550a61d9929e19749851330ea8c46ecd, type: 3}
       propertyPath: m_Enabled

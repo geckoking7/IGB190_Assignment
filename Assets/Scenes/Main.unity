@@ -57205,6 +57205,46 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 643216114923244895, guid: 4e21e22814367324d994666b3b00c467, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.1738
+      objectReference: {fileID: 0}
+    - target: {fileID: 643216114923244895, guid: 4e21e22814367324d994666b3b00c467, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0064
+      objectReference: {fileID: 0}
+    - target: {fileID: 643216114923244895, guid: 4e21e22814367324d994666b3b00c467, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.1034
+      objectReference: {fileID: 0}
+    - target: {fileID: 643216114923244895, guid: 4e21e22814367324d994666b3b00c467, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9361168
+      objectReference: {fileID: 0}
+    - target: {fileID: 643216114923244895, guid: 4e21e22814367324d994666b3b00c467, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.08189965
+      objectReference: {fileID: 0}
+    - target: {fileID: 643216114923244895, guid: 4e21e22814367324d994666b3b00c467, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.3407186
+      objectReference: {fileID: 0}
+    - target: {fileID: 643216114923244895, guid: 4e21e22814367324d994666b3b00c467, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.029809028
+      objectReference: {fileID: 0}
+    - target: {fileID: 643216114923244895, guid: 4e21e22814367324d994666b3b00c467, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 643216114923244895, guid: 4e21e22814367324d994666b3b00c467, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 643216114923244895, guid: 4e21e22814367324d994666b3b00c467, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1362417032811899940, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -57246,10 +57286,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3217806892749674034, guid: 4e21e22814367324d994666b3b00c467, type: 3}
-      propertyPath: m_Speed
-      value: 3.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3217806892749674034, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: m_Height
       value: 1.8
       objectReference: {fileID: 0}
@@ -57257,21 +57293,9 @@ PrefabInstance:
       propertyPath: m_StoppingDistance
       value: 0.01
       objectReference: {fileID: 0}
-    - target: {fileID: 6228529445303724056, guid: 4e21e22814367324d994666b3b00c467, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: d64f348df7d90c143895fcb0d9345eb0, type: 2}
-    - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
-      propertyPath: B_GOD_MODE
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: baseDamage
       value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
-      propertyPath: resourceName
-      value: Shadow
       objectReference: {fileID: 0}
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: baseMaxHealth
@@ -57286,10 +57310,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: a9ac3b21fd7ebde4295839fc6e88229f, type: 2}
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
-      propertyPath: baseMovementSpeed
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: bonusArmorPerLevel
       value: 1
       objectReference: {fileID: 0}
@@ -57302,16 +57322,8 @@ PrefabInstance:
       value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
-      propertyPath: abilities.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: baseAttacksPerSecond
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
-      propertyPath: bonusResourcePerLevel
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: 'abilities.Array.data[0]'
@@ -57334,47 +57346,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: cac980cd59484ca43b8570ef72643544, type: 2}
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
-      propertyPath: 'abilities.Array.data[5]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 61fbdcd667accc340854d77f7f1715b2, type: 2}
-    - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
-      propertyPath: 'abilities.Array.data[6]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 61fbdcd667accc340854d77f7f1715b2, type: 2}
-    - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
-      propertyPath: 'abilities.Array.data[7]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 61fbdcd667accc340854d77f7f1715b2, type: 2}
-    - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
-      propertyPath: 'abilities.Array.data[8]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 61fbdcd667accc340854d77f7f1715b2, type: 2}
-    - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
-      propertyPath: 'abilities.Array.data[9]'
-      value: 
-      objectReference: {fileID: 11400000, guid: 61fbdcd667accc340854d77f7f1715b2, type: 2}
-    - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: baseCriticalStrikeChance
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
-      propertyPath: bonusHealthRegenPerLevel
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
-      propertyPath: bonusMovementSpeedPerLevel
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
-      propertyPath: bonusResourceRegenPerLevel
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
-      propertyPath: bonusCriticalChancePerLevel
-      value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
-      propertyPath: bonusCriticalDamagePerLevel
       value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
@@ -57404,10 +57376,6 @@ PrefabInstance:
     - target: {fileID: 8997837897730470077, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: m_Name
       value: Player (Rogue)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8997837897730470077, guid: 4e21e22814367324d994666b3b00c467, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

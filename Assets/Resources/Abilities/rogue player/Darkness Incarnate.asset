@@ -17,8 +17,9 @@ MonoBehaviour:
   abilityFlavourText: 
   abilityIcon: {fileID: 21300000, guid: 58de83be232656345a3eaa1aaf271131, type: 3}
   targetMode: 0
-  abilityDescription: Gain 100% Stealth, and become Stealthed. Gain 20% attack speed
-    for duration. Lasts until Stealth is broken. Attacking will not remove stealth
+  abilityDescription: Gain Stealth and 100% Shadow. Attacking no longer removes Stealth
+    until it is broken by running out of Shadow. Additionally gain 20% Attack Speed
+    for the duration.
   abilityAnimation: Shout
   range: 999
   castTime: 0
@@ -433,7 +434,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 1
+        value: 2
     - rid: 1017
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:

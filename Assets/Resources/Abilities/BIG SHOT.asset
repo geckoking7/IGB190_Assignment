@@ -180,7 +180,7 @@ MonoBehaviour:
     - rid: 1006
       type: {class: EffectNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 3
+        returnType: 0
         tempName: Effect
         functionName: 
         functionDescription: 
@@ -197,7 +197,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 0
         allowFunction: 0
-        value: {fileID: 0}
+        value: {fileID: 7212254496135200019, guid: d077338fd03742547afac76615d78715, type: 3}
     - rid: 1007
       type: {class: VectorNode, ns: , asm: Assembly-CSharp}
       data:
@@ -273,9 +273,9 @@ MonoBehaviour:
           - rid: 5672604951366336600
           conditionNodes: []
           actionNodes:
+          - rid: 1005
           - rid: 1000
           - rid: 5672604951366336601
-          - rid: 1005
           - rid: 5672604951366336602
         - scriptName: Unit Collision
           scriptUID: 982900900

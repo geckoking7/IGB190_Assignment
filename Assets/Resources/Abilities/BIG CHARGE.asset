@@ -17,8 +17,7 @@ MonoBehaviour:
   abilityFlavourText: 
   abilityIcon: {fileID: 21300000, guid: c46d7d28f1fafaf46ad6115bb92d4f1e, type: 3}
   targetMode: 2
-  abilityDescription: Charge towards the target location, dealing 150% weapon damage
-    to all enemies near the point of impact.
+  abilityDescription: Charge up and make your way towards the target.
   abilityAnimation: Roll
   range: 30
   castTime: 0.5

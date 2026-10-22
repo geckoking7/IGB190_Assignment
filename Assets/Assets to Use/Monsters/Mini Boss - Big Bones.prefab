@@ -252,6 +252,7 @@ Transform:
   m_Children:
   - {fileID: 9115202550754743930}
   - {fileID: 2212080615744919026}
+  - {fileID: 4176577774944732055}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &6773343702762155168
@@ -388,6 +389,72 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1001 &4991362058097496201
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 498993261086472550}
+    m_Modifications:
+    - target: {fileID: 8644974699713694116, guid: 08d7387ab0788f8459ea5cdf8205d158, type: 3}
+      propertyPath: m_Name
+      value: Axe_Proj
+      objectReference: {fileID: 0}
+    - target: {fileID: 8644974699713694116, guid: 08d7387ab0788f8459ea5cdf8205d158, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985470719611425566, guid: 08d7387ab0788f8459ea5cdf8205d158, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.615
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985470719611425566, guid: 08d7387ab0788f8459ea5cdf8205d158, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.805
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985470719611425566, guid: 08d7387ab0788f8459ea5cdf8205d158, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.23528
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985470719611425566, guid: 08d7387ab0788f8459ea5cdf8205d158, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985470719611425566, guid: 08d7387ab0788f8459ea5cdf8205d158, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985470719611425566, guid: 08d7387ab0788f8459ea5cdf8205d158, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985470719611425566, guid: 08d7387ab0788f8459ea5cdf8205d158, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985470719611425566, guid: 08d7387ab0788f8459ea5cdf8205d158, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985470719611425566, guid: 08d7387ab0788f8459ea5cdf8205d158, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8985470719611425566, guid: 08d7387ab0788f8459ea5cdf8205d158, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 08d7387ab0788f8459ea5cdf8205d158, type: 3}
+--- !u!4 &4176577774944732055 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8985470719611425566, guid: 08d7387ab0788f8459ea5cdf8205d158, type: 3}
+  m_PrefabInstance: {fileID: 4991362058097496201}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8787944617028219281
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -438,12 +505,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 2051407c7eae095489bfef440e8f9166, type: 3}
       propertyPath: m_Name
-      value: Pumpkinhulk L Shaw
+      value: BigBones
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 2051407c7eae095489bfef440e8f9166, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 7fc484527f7352a49a5990317e5de029, type: 2}
+      objectReference: {fileID: 22100000, guid: 92b821ab97c774b408dd47eea65fb9f4, type: 2}
     - target: {fileID: 5866666021909216657, guid: 2051407c7eae095489bfef440e8f9166, type: 3}
       propertyPath: m_AnimatePhysics
       value: 0

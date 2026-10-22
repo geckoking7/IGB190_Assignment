@@ -20,7 +20,7 @@ MonoBehaviour:
   itemType: 2
   itemRarity: 2
   itemCost: 5000
-  itemSet: {fileID: 0}
+  itemSet: {fileID: 11400000, guid: 61a5d8fe0fa262f428def47bc523b58e, type: 2}
   randomStatCount: 0
   guaranteedStats: []
   randomisableStats:

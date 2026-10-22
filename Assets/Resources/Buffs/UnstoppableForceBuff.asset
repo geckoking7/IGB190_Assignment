@@ -18,7 +18,7 @@ MonoBehaviour:
   buffIcon: {fileID: 21300000, guid: 03600ad3ec7edc44693cdf9278e9821f, type: 3}
   buffType: 0
   buffRemovedOnDeath: 0
-  buffVisibleInUI: 1
+  buffVisibleInUI: 0
   buffHasDuration: 1
   addingStacksRefreshesDuration: 0
   buffCurrentDuration: 0

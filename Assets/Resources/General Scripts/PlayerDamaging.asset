@@ -30,8 +30,8 @@ MonoBehaviour:
       - rid: 1015
       - rid: 1060
       - rid: 1046
-      - rid: 1056
       - rid: 1053
+      - rid: 1056
       - rid: 1027
       - rid: 1031
       - rid: 1033
@@ -1328,13 +1328,13 @@ MonoBehaviour:
     - rid: 1058
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 0
+        returnType: 2
         tempName: 
         functionName: GetNumberVariable
         functionDescription: Variable/Number Variable
         functionDynamicDescription: 'Number Variable: $'
         functionEvaluators:
-        - rid: 1059
+        - rid: 1066
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -1347,28 +1347,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 125125130
-    - rid: 1059
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: NumberVar
-        options: []
     - rid: 1060
       type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -1503,3 +1481,25 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 11400000, guid: d3bcf338b577d964d9066f526679f694, type: 2}
+    - rid: 1066
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Heal
+        options: []

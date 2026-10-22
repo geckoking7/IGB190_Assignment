@@ -230,7 +230,7 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         allowSingleUnit: 0
-    - rid: 1009
+    - rid: 1011
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
@@ -241,50 +241,6 @@ MonoBehaviour:
         functionEvaluators:
         - rid: 1013
         - rid: 1014
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0
-    - rid: 1010
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 10
-    - rid: 1011
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: Addition
-        functionDescription: Math/Addition
-        functionDynamicDescription: $ + $
-        functionEvaluators:
-        - rid: 1009
-        - rid: 1010
         parentNode:
           rid: -2
         parentNodeID: -1

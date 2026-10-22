@@ -56293,7 +56293,7 @@ MonoBehaviour:
   m_TileSize: 256
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.1
-  m_MinRegionArea: 2200000
+  m_MinRegionArea: 1
   m_NavMeshData: {fileID: 23800000, guid: bfd91bbfd4e51a848bf8341fb2435aae, type: 2}
   m_BuildHeightMesh: 1
 --- !u!1001 &1671587338
@@ -57164,7 +57164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: baseHealthRegen
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: resourceMaterial
@@ -57235,6 +57235,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 61fbdcd667accc340854d77f7f1715b2, type: 2}
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
+      propertyPath: baseCriticalStrikeChance
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: bonusHealthRegenPerLevel
       value: 0
       objectReference: {fileID: 0}
@@ -57256,7 +57260,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: criticalStrikeDmgData.limit
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: criticalStrikeDmgData.xScale
@@ -57268,7 +57272,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: criticalStrikeChanceData.limit
-      value: 0.4
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: criticalStrikeChanceData.xScale
@@ -65511,8 +65515,8 @@ MonoBehaviour:
     empoweredMonsterLegendaryDropChance: 0.05
   _playerExperienceValues:
     baseMonsterXP: 10
-    additionalMaxXPAPerLevel: 1.05
-    additionalMaxXPBPerLevel: 25
+    additionalMaxXPAPerLevel: 5
+    additionalMaxXPBPerLevel: 30
     additionalMaxXPCPerLevel: 60
   _monsterScalingValues:
     increasedHealthPerPlayerLevel: 0

@@ -323,7 +323,7 @@ public class Unit : Interactable
     /// </summary>
     public bool IsMoving()
     {
-        return (agentNavigation.velocity.magnitude > 0);
+        return (agentNavigation.velocity.magnitude > float.Epsilon);
     }
 
     /// <summary>
@@ -376,7 +376,9 @@ public class Unit : Interactable
     public void StopMoving()
     {
         if (agentNavigation.isOnNavMesh)
+        {
             agentNavigation.SetDestination(transform.position);
+        }
     }
 
     /// <summary>
@@ -472,7 +474,9 @@ public class Unit : Interactable
     private void UpdateAnimations()
     {
         if (!hasAnimations) return;
-        animator.SetFloat("Speed", agentNavigation.velocity.magnitude / baseMovementSpeed);
+        var agentVel = agentNavigation.velocity;
+        Vector3 agentVelDisregardY = new(agentVel.x, .0f, agentVel.z);
+        animator.SetFloat("Speed", agentVelDisregardY.magnitude / baseMovementSpeed);
         animator.SetBool("Stunned", IsStunned());
     }
 

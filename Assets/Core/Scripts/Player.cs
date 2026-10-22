@@ -312,7 +312,9 @@ public class Player : Unit
         {
             float range = leftClickAbility.GetAbilityRange(this);
             if (Vector3.Distance(transform.position, targetPosition) > range)
+            {
                 agentNavigation.SetDestination(targetPosition);
+            }
             else
                 StopMoving();
         }

@@ -57058,6 +57058,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3217806892749674034, guid: 4e21e22814367324d994666b3b00c467, type: 3}
+      propertyPath: m_Speed
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217806892749674034, guid: 4e21e22814367324d994666b3b00c467, type: 3}
+      propertyPath: m_Height
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3217806892749674034, guid: 4e21e22814367324d994666b3b00c467, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 6228529445303724056, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: m_Controller
       value: 
@@ -57086,6 +57098,10 @@ PrefabInstance:
       propertyPath: resourceMaterial
       value: 
       objectReference: {fileID: 2100000, guid: a9ac3b21fd7ebde4295839fc6e88229f, type: 2}
+    - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
+      propertyPath: baseMovementSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: bonusArmorPerLevel
       value: 1

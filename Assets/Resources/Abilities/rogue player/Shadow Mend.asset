@@ -17,22 +17,17 @@ MonoBehaviour:
   abilityFlavourText: 
   abilityIcon: {fileID: 21300000, guid: 485172507593f1740bd23a4a4e0df8db, type: 3}
   targetMode: 0
-<<<<<<< Updated upstream
   abilityDescription: Consume all current Stealth to gain 2 Health per Shadow. Ability
     cost reduction improves heal rate.
   abilityAnimation: None
-=======
-  abilityDescription: Consume all current Stealth to gain 2 Health per Shadow
-  abilityAnimation: Cheer
->>>>>>> Stashed changes
   range: 999
   castTime: 0
   abilityCooldown: 10
   abilityCost: 0
   movementLock: 1
   animationActivationPosition: 0
-  canMoveWhileCasting: 0
-  hasSpecificCastTime: 0
+  canMoveWhileCasting: 1
+  hasSpecificCastTime: 1
   cooldownIsAtackSpeed: 0
   abilityGeneratesResource: 0
   requiresLineOfSight: 0

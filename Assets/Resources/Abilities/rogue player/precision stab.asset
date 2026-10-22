@@ -17,9 +17,8 @@ MonoBehaviour:
   abilityFlavourText: 
   abilityIcon: {fileID: 21300000, guid: e1be5c24ac7f3c846a4bf2c3639ca650, type: 3}
   targetMode: 3
-  abilityDescription: "Stab in a short line, dealing 100% Damage. Gaining 20% Shadow
-    on Kill. If under Stealth buff, instead deal 150% Damage, and remove Stealth.
-    \r\n"
+  abilityDescription: Stab with precision, dealing 100% attack damage to all units
+    in front of the caster. 150% if Slealth is active. Removes Slealth.
   abilityAnimation: One Hand Stab
   range: 2
   castTime: 0.25

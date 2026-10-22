@@ -18,7 +18,8 @@ MonoBehaviour:
   abilityIcon: {fileID: 21300000, guid: 64c1850cd37f43a4a82287111dd25fea, type: 3}
   targetMode: 4
   abilityDescription: Roll a short distance and Gain 100% Shadow, and become Stealthed.
-    Additionally gain 20% movement speed for 3 seconds.
+    Additionally gain 20% movement speed for 3 seconds. Shadow is consumed during
+    stealth.
   abilityAnimation: Roll
   range: 8
   castTime: 0
@@ -263,92 +264,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 1
-    - rid: 1010
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: AddResourceToUnits
-        functionDescription: Unit/Resources/Add Resource to Unit(s)
-        functionDynamicDescription: Add $ resource to $
-        functionEvaluators:
-        - rid: 1011
-        - rid: 1012
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Unit
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 1011
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: UnitMaxResource
-        functionDescription: Unit/Unit Max Resource
-        functionDynamicDescription: $ Max Resource
-        functionEvaluators:
-        - rid: 1013
-        parentNode:
-          rid: 1010
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 100
-    - rid: 1012
-      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit(s)
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1010
-        parentNodeID: 1
-        indent: 0
-        presetName: Ability Owner
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        allowSingleUnit: 0
-    - rid: 1013
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: Casting Unit
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
     - rid: 1014
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -628,6 +543,181 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 0.3
+    - rid: 1026
+      type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DoActionsIfBool
+        functionDescription: Flow/If Statement
+        functionDynamicDescription: Do actions if $
+        functionEvaluators:
+        - rid: 1028
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 1027
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: AddResourceToUnits
+        functionDescription: Unit/Resources/Add Resource to Unit(s)
+        functionDynamicDescription: Add $ resource to $
+        functionEvaluators:
+        - rid: 1029
+        - rid: 1030
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 1
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Unit
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 1028
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Bool
+        functionName: PlayerHasItemEquipped
+        functionDescription: Player/Player Has Item Equipped
+        functionDynamicDescription: Player $ $ equipped
+        functionEvaluators:
+        - rid: 1031
+        - rid: 1032
+        parentNode:
+          rid: 1026
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 1029
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: UnitMaxResource
+        functionDescription: Unit/Unit Max Resource
+        functionDynamicDescription: $ Max Resource
+        functionEvaluators:
+        - rid: 1033
+        parentNode:
+          rid: 1027
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 100
+    - rid: 1030
+      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit(s)
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1027
+        parentNodeID: 1
+        indent: 0
+        presetName: Ability Owner
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        allowSingleUnit: 0
+    - rid: 1031
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1028
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Does Not Have
+        options:
+        - Has
+        - Does Not Have
+    - rid: 1032
+      type: {class: ItemNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Item
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1028
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 11400000, guid: 4c0a04b8350dc94469672b6ab6d6ae61, type: 2}
+    - rid: 1033
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1029
+        parentNodeID: 0
+        indent: 0
+        presetName: Casting Unit
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
     - rid: 8267055672131321943
       type: {class: LogicEngine, ns: , asm: Assembly-CSharp}
       data:
@@ -640,7 +730,8 @@ MonoBehaviour:
           - rid: 8267055672131321944
           conditionNodes: []
           actionNodes:
-          - rid: 1010
+          - rid: 1026
+          - rid: 1027
           - rid: 1000
           - rid: 1006
           - rid: 1022

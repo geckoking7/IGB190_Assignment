@@ -24,8 +24,8 @@ MonoBehaviour:
   randomStatCount: 2
   guaranteedStats:
   - stat: 12
-    minimum: -10
-    maximum: -10
+    minimum: -6
+    maximum: -6
     isPercent: 0
   randomisableStats:
   - stat: 4

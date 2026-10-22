@@ -17,7 +17,8 @@ MonoBehaviour:
   abilityFlavourText: 
   abilityIcon: {fileID: 21300000, guid: 485172507593f1740bd23a4a4e0df8db, type: 3}
   targetMode: 0
-  abilityDescription: Consume all current Stealth to gain 2 Health per Shadow
+  abilityDescription: Consume all current Stealth to gain 2 Health per Shadow. Ability
+    cost reduction improves heal rate.
   abilityAnimation: None
   range: 999
   castTime: 0
@@ -135,11 +136,12 @@ MonoBehaviour:
       data:
         returnType: 2
         tempName: 
-        functionName: UnitResource
-        functionDescription: Unit/Unit Resource
-        functionDynamicDescription: $ Resource
+        functionName: Multiplication
+        functionDescription: Math/Multiplication
+        functionDynamicDescription: $ x $
         functionEvaluators:
-        - rid: 1007
+        - rid: 1016
+        - rid: 1017
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -196,10 +198,10 @@ MonoBehaviour:
         allowFunction: 1
         allowSingleUnit: 0
     - rid: 1007
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 4
-        tempName: Unit
+        returnType: 0
+        tempName: 
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
@@ -208,14 +210,14 @@ MonoBehaviour:
           rid: -2
         parentNodeID: -1
         indent: 0
-        presetName: Casting Unit
+        presetName: 
         variableName: 
         stringSuffix: 
         nodeIcon: 
-        allowValue: 0
+        allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 0}
+        value: 100
     - rid: 1008
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -387,6 +389,195 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: x
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 1016
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: UnitResource
+        functionDescription: Unit/Unit Resource
+        functionDynamicDescription: $ Resource
+        functionEvaluators:
+        - rid: 1018
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 1017
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: Division
+        functionDescription: Math/Division
+        functionDynamicDescription: $ / $
+        functionEvaluators:
+        - rid: 1007
+        - rid: 1019
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 1018
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: Casting Unit
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 1019
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: Subtraction
+        functionDescription: Math/Subtraction
+        functionDynamicDescription: $ - $
+        functionEvaluators:
+        - rid: 1022
+        - rid: 1023
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 1020
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: Casting Unit
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 1021
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Ability Cost Reduction
+        options:
+        - Damage
+        - Armor
+        - Damage Taken
+        - Attack Speed
+        - Max Health
+        - Max Resource
+        - Movement Speed
+        - Cooldown Reduction
+        - Ability Cost Reduction
+        - Resource Generation
+        - Critical Chance
+        - Critical Damage
+        - Regeneration
+    - rid: 1022
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 100
+    - rid: 1023
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: UnitStat
+        functionDescription: Unit/Unit Stat
+        functionDynamicDescription: $ $
+        functionEvaluators:
+        - rid: 1020
+        - rid: 1021
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
         nodeIcon: 
         allowValue: 1
         allowPreset: 1

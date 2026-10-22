@@ -257,6 +257,7 @@ public class Unit : Interactable
         stats.TrackStat(Stat.CriticalStrikeDamage, "Critical Strike Damage", baseCriticalStrikeDamage);
         stats.TrackStat(Stat.ResourceGeneration, "Resource Generation", 1);
         stats.TrackStat(Stat.DamageTaken, "Damage Taken Modifier", 1);
+        stats.TrackStat(Stat.Vitality, "Regeneration", baseHealthRegen);
 
         // Track any remaining stats, but use a default value of zero as none was given.
         foreach (Stat stat in Enum.GetValues(typeof(Stat)))
@@ -446,7 +447,7 @@ public class Unit : Interactable
     /// </summary>
     private void ApplyHealthRegeneration(float duration)
     {
-        if (baseHealthRegen != 0) AddHealth(baseHealthRegen * duration);
+        if (stats.GetValue(Stat.Vitality) != 0) AddHealth(stats.GetValue(Stat.Vitality) * duration);
     }
 
     /// <summary>

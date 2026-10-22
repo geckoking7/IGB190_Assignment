@@ -34,6 +34,7 @@ public static class StatExtensions
     private const string AbilityCostReductionLabel = "Ability Cost Reduction";
     private const string DamageTakenLabel = "Damage Taken";
     private const string ResourceGenerationLabel = "Resource Generation";
+    private const string RegenerationLabel = "Regeneration";
     private const string StatNotFoundLabel = "Stat not found.";
 
     /// <summary>
@@ -55,6 +56,7 @@ public static class StatExtensions
             AbilityCostReductionLabel => Stat.ResourceCostReduction,
             DamageTakenLabel => Stat.DamageTaken,
             ResourceGenerationLabel => Stat.ResourceGeneration,
+            RegenerationLabel => Stat.Vitality,
             _ => (Stat)Enum.Parse(typeof(Stat), label)
         };
     }
@@ -78,7 +80,7 @@ public static class StatExtensions
             Stat.ResourceCostReduction => AbilityCostReductionLabel,
             Stat.DamageTaken => DamageTakenLabel,
             Stat.ResourceGeneration => ResourceGenerationLabel,
-            Stat.Vitality => "Regeneration",
+            Stat.Vitality => RegenerationLabel,
             _ => stat.ToString()
         };
     }

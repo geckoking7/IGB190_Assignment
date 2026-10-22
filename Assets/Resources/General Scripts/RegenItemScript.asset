@@ -25,6 +25,7 @@ MonoBehaviour:
       - rid: 1002
       - rid: 1006
       - rid: 1015
+      - rid: 1022
       - rid: 1019
   references:
     version: 2
@@ -73,7 +74,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 0.2
+        value: 0.1
     - rid: 1002
       type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -272,7 +273,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 5
+        value: 10
     - rid: 1011
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
@@ -316,7 +317,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 0.2
+        value: 0.1
     - rid: 1013
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
@@ -358,7 +359,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 0
         allowFunction: 0
-        value: Vitality
+        value: Regeneration
         options:
         - Damage
         - Armor
@@ -372,7 +373,7 @@ MonoBehaviour:
         - Resource Generation
         - Critical Chance
         - Critical Damage
-        - Vitality
+        - Regeneration
     - rid: 1015
       type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -476,7 +477,7 @@ MonoBehaviour:
         parentNode:
           rid: -2
         parentNodeID: -1
-        indent: 1
+        indent: 2
         presetName: 
         variableName: 
         stringSuffix: 
@@ -487,12 +488,14 @@ MonoBehaviour:
     - rid: 1020
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 0
+        returnType: 2
         tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
+        functionName: Multiplication
+        functionDescription: Math/Multiplication
+        functionDynamicDescription: $ x $
+        functionEvaluators:
+        - rid: 1028
+        - rid: 1029
         parentNode:
           rid: 1019
         parentNodeID: 0
@@ -504,7 +507,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 0.1
+        value: 0.04
     - rid: 1021
       type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
       data:
@@ -526,3 +529,192 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         allowSingleUnit: 0
+    - rid: 1022
+      type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DoActionsIfBool
+        functionDescription: Flow/If Statement
+        functionDynamicDescription: Do actions if $
+        functionEvaluators:
+        - rid: 1023
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 1
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 1023
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Bool
+        functionName: UnitIsMoving
+        functionDescription: Unit/Unit Is Moving
+        functionDynamicDescription: $ $ moving
+        functionEvaluators:
+        - rid: 1024
+        - rid: 1025
+        parentNode:
+          rid: 1022
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 1024
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 1025
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Is
+        options:
+        - Is
+        - Is Not
+    - rid: 1028
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: UnitStat
+        functionDescription: Unit/Unit Stat
+        functionDynamicDescription: $ $
+        functionEvaluators:
+        - rid: 1030
+        - rid: 1031
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 1029
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0.0025
+    - rid: 1030
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 1031
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Movement Speed
+        options:
+        - Damage
+        - Armor
+        - Damage Taken
+        - Attack Speed
+        - Max Health
+        - Max Resource
+        - Movement Speed
+        - Cooldown Reduction
+        - Ability Cost Reduction
+        - Resource Generation
+        - Critical Chance
+        - Critical Damage
+        - Regeneration

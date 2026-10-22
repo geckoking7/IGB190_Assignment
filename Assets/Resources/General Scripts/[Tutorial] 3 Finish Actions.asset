@@ -558,7 +558,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Explore the castle.
+        value: Delving Deeper
         options: []
     - rid: 1024
       type: {class: StringNode, ns: , asm: Assembly-CSharp}

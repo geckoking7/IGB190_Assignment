@@ -17,8 +17,7 @@ MonoBehaviour:
   abilityFlavourText: 
   abilityIcon: {fileID: 21300000, guid: db065e997da876d48b41e76e95d3e7b7, type: 3}
   targetMode: 4
-  abilityDescription: Teleport to a random nearby location and become immune to all
-    damage for 2 seconds.
+  abilityDescription: 'Teleport to a random nearby location '
   abilityAnimation: None
   range: 20
   castTime: 0
@@ -113,7 +112,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 8
+        value: 10
     - rid: 1003
       type: {class: VectorNode, ns: , asm: Assembly-CSharp}
       data:

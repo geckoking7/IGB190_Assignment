@@ -275,7 +275,7 @@ public class Item : ScriptableObject, IVisualCodeHandler
     public static Item GetRandomItemOfRarity(ItemRarity rarity)
     {
         GenerateLootTable();
-        if (!itemLootTable.ContainsKey(rarity) || itemLootTable[rarity].Count == 0) return null;
+        if (!itemLootTable.ContainsKey(rarity) || itemLootTable[rarity].Count == 0) return GetRandomItemOfRarity(ItemRarity.Common);
         return itemLootTable[rarity].RandomItem();
     }
 

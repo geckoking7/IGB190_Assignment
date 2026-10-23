@@ -29,16 +29,23 @@ MonoBehaviour:
       hasWait: 0
       reportErrors: 1
       eventNodes:
-      - rid: 1012
+      - rid: 1044
       conditionNodes:
-      - rid: 1017
+      - rid: 1048
       actionNodes:
       - rid: 1010
       - rid: 1028
       - rid: 1016
       - rid: 1025
+      - rid: 1018
       - rid: 1007
-      - rid: 1036
+    - scriptName: Even Deeper
+      scriptUID: 183711212
+      hasWait: 0
+      reportErrors: 1
+      eventNodes: []
+      conditionNodes: []
+      actionNodes: []
   references:
     version: 2
     RefIds:
@@ -87,7 +94,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Destroy Spawner
+        value: Destroy Spawners
         options: []
     - rid: 1002
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
@@ -306,18 +313,16 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Destroy Spawner
+        value: Destroy Spawners
         options: []
     - rid: 1012
-      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 2
-        tempName: 
-        functionName: WhenUnitIsKilled
-        functionDescription: Unit/Unit is killed
-        functionDynamicDescription: 'When a unit is killed (Presets: <color=yellow>Killed
-          Unit</color>, <color=yellow>Killing Unit</color>, <color=yellow>Killing
-          Ability</color>, <color=yellow>Is Critical</color>)'
+        returnType: 3
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
           rid: -2
@@ -326,15 +331,11 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        nodeIcon: Event
-        allowValue: 1
+        nodeIcon: 
+        allowValue: 0
         allowPreset: 1
         allowFunction: 1
-        presets:
-        - Killed Unit
-        - Killing Unit
-        - Killing Ability
-        - Is Critical
+        value: {fileID: 0}
     - rid: 1013
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
@@ -398,7 +399,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Destroy Spawner
+        value: Destroy Spawners
         options: []
     - rid: 1016
       type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
@@ -422,30 +423,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
     - rid: 1017
-      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: UnitComparison
-        functionDescription: Comparisons/Unit Comparison
-        functionDynamicDescription: $ $ $
-        functionEvaluators:
-        - rid: 1018
-        - rid: 1019
-        - rid: 1020
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Condition
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 0
-    - rid: 1018
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 4
@@ -455,28 +432,73 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 1017
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 1018
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: AddQuestRequirement2
+        functionDescription: Quests/Add Quest Requirement
+        functionDynamicDescription: Add $ requirement to $ with $ progress increments
+        functionEvaluators:
+        - rid: 1019
+        - rid: 1020
+        - rid: 1033
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 1
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: QuestNew
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 1019
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Requirement
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1018
         parentNodeID: 0
         indent: 0
-        presetName: Killed Unit
+        presetName: 
         variableName: 
         stringSuffix: 
         nodeIcon: 
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 5184449006530483668, guid: caef50e694e10204c993186864e4cc23, type: 3}
-    - rid: 1019
+        value: Destroy 3 More Spawners
+        options: []
+    - rid: 1020
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
-        tempName: 
+        tempName: Quest Name
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 1017
+          rid: 1018
         parentNodeID: 1
         indent: 0
         presetName: 
@@ -484,33 +506,10 @@ MonoBehaviour:
         stringSuffix: 
         nodeIcon: 
         allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: Equal To
-        options:
-        - Equal To
-        - Not Equal To
-    - rid: 1020
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Unit
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1017
-        parentNodeID: 2
-        indent: 0
-        presetName: Killed Unit
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 5184449006530483668, guid: caef50e694e10204c993186864e4cc23, type: 3}
+        value: Delving Deeper
+        options: []
     - rid: 1021
       type: {class: BoolNode, ns: , asm: Assembly-CSharp}
       data:
@@ -601,7 +600,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Destroy Spawner
+        value: Destroy Spawners
         options: []
     - rid: 1025
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
@@ -628,12 +627,13 @@ MonoBehaviour:
     - rid: 1026
       type: {class: VectorNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 4
+        returnType: 2
         tempName: Location
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
+        functionName: PositionOfUnit
+        functionDescription: Unit/Position of Unit
+        functionDynamicDescription: Position of $
+        functionEvaluators:
+        - rid: 1017
         parentNode:
           rid: 1025
         parentNodeID: 0
@@ -722,16 +722,16 @@ MonoBehaviour:
       data:
         returnType: 4
         tempName: Location
-        functionName: GetUnitVariable
-        functionDescription: Unit Variable
-        functionDynamicDescription: 'Unit Variable: $'
+        functionName: PositionOfUnit
+        functionDescription: Unit/Position of Unit
+        functionDynamicDescription: Position of $
         functionEvaluators:
-        - rid: 1035
+        - rid: 1012
         parentNode:
           rid: 1028
         parentNodeID: 0
         indent: 0
-        presetName: Killing Unit
+        presetName: Killed Unit
         variableName: 
         stringSuffix: 
         nodeIcon: 
@@ -782,96 +782,7 @@ MonoBehaviour:
         allowFunction: 1
         value: Quest Progressed!
         options: []
-    - rid: 1035
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: UnitVar
-        options: []
-    - rid: 1036
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: AddQuestRequirement2
-        functionDescription: Quests/Add Quest Requirement
-        functionDynamicDescription: Add $ requirement to $ with $ progress increments
-        functionEvaluators:
-        - rid: 1037
-        - rid: 1038
-        - rid: 1039
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 1
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: QuestNew
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 1037
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Requirement
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1036
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: Defeat Big Bones
-        options: []
-    - rid: 1038
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Quest Name
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1036
-        parentNodeID: 1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: Delving Deeper
-        options: []
-    - rid: 1039
+    - rid: 1033
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -881,7 +792,7 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 1036
+          rid: 1018
         parentNodeID: 2
         indent: 0
         presetName: 
@@ -891,4 +802,121 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 1
+        value: 4
+    - rid: 1044
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: WhenUnitIsKilled
+        functionDescription: Unit/Unit is killed
+        functionDynamicDescription: 'When a unit is killed (Presets: <color=yellow>Killed
+          Unit</color>, <color=yellow>Killing Unit</color>, <color=yellow>Killing
+          Ability</color>, <color=yellow>Is Critical</color>)'
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Event
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets:
+        - Killed Unit
+        - Killing Unit
+        - Killing Ability
+        - Is Critical
+    - rid: 1048
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: UnitTypeMatch
+        functionDescription: Unit/Unit Matches Template
+        functionDynamicDescription: $ type $ $
+        functionEvaluators:
+        - rid: 1049
+        - rid: 1050
+        - rid: 1051
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 1049
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1048
+        parentNodeID: 0
+        indent: 0
+        presetName: Killed Unit
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
+    - rid: 1050
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1048
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Matches
+        options:
+        - Matches
+        - Does Not Match
+    - rid: 1051
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1048
+        parentNodeID: 2
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 5184449006530483668, guid: caef50e694e10204c993186864e4cc23, type: 3}

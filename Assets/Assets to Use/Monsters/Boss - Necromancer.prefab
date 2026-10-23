@@ -225,10 +225,10 @@ MonoBehaviour:
   unitName: Boss
   baseDamage: 30
   baseAttacksPerSecond: 2
-  baseMaxHealth: 600
+  baseMaxHealth: 800
   baseMaxResource: 100
   baseMovementSpeed: 2
-  baseArmor: 0
+  baseArmor: 5
   baseCriticalStrikeChance: 0
   baseCriticalStrikeDamage: 2
   baseHealthRegen: 0
@@ -239,6 +239,8 @@ MonoBehaviour:
   abilities:
   - {fileID: 11400000, guid: 7f5a643269b552c4586bd9cabd56b69e, type: 2}
   - {fileID: 11400000, guid: 78a26e0a386159c468fb4ad26178fd34, type: 2}
+  - {fileID: 11400000, guid: ffc41dea01ad7444688a87c4662cb8ec, type: 2}
+  - {fileID: 11400000, guid: 8c55566cd6e9ded4a878fb87fba5924a, type: 2}
   lastAbilityCast: {fileID: 0}
   unitCanBeForceMoved: 1
   handPoint: {fileID: 8602773439654565985}
@@ -268,7 +270,7 @@ MonoBehaviour:
   healthBarType: 1
   uiSize: 3.6
   uiHeight: 2
-  spawnLevel: 1
+  spawnLevel: 5
   spawnLikelihood: 0
 --- !u!54 &2780831380324950161
 Rigidbody:

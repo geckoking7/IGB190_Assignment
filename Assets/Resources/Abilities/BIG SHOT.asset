@@ -23,13 +23,13 @@ MonoBehaviour:
   abilityAnimation: One Hand Slash
   range: 12
   castTime: 0.1
-  abilityCooldown: 0
-  abilityCost: 5
+  abilityCooldown: 3
+  abilityCost: 10
   movementLock: 1
-  animationActivationPosition: 0.5
+  animationActivationPosition: 0.63
   canMoveWhileCasting: 0
   hasSpecificCastTime: 0
-  cooldownIsAtackSpeed: 1
+  cooldownIsAtackSpeed: 0
   abilityGeneratesResource: 1
   requiresLineOfSight: 1
   canUpdateTargetWhileCasting: 0
@@ -108,19 +108,17 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         allowSingleUnit: 0
-    - rid: 1005
+    - rid: 1003
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: SpawnEffectAtLocation
-        functionDescription: Feedback/Play Effect at Location
-        functionDynamicDescription: Play $ effect at $ for $ at $ scale
+        functionName: RotateProjectile
+        functionDescription: Projectile/Rotate Projectile
+        functionDynamicDescription: Rotate $ by $
         functionEvaluators:
-        - rid: 1006
-        - rid: 1007
-        - rid: 1008
-        - rid: 1009
+        - rid: 1004
+        - rid: 1005
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -128,53 +126,32 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        nodeIcon: Effect
+        nodeIcon: Projectile
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 1006
-      type: {class: EffectNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Effect
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1005
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 0
-        allowFunction: 0
-        value: {fileID: 7212254496135200019, guid: d077338fd03742547afac76615d78715, type: 3}
-    - rid: 1007
-      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
+    - rid: 1004
+      type: {class: ProjectileNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 4
-        tempName: Location
+        tempName: Projectile
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 1005
-        parentNodeID: 1
+          rid: 1003
+        parentNodeID: 0
         indent: 0
-        presetName: Casting Unit
+        presetName: Last Created Projectile
         variableName: 
         stringSuffix: 
         nodeIcon: 
-        allowValue: 1
+        allowValue: 0
         allowPreset: 1
         allowFunction: 1
-        value: {x: 0, y: 0, z: 0}
-    - rid: 1008
+        value: {fileID: 0}
+    - rid: 1005
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -184,38 +161,17 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 1005
-        parentNodeID: 2
+          rid: 1003
+        parentNodeID: 1
         indent: 0
         presetName: 
         variableName: 
-        stringSuffix: s
+        stringSuffix: "\xBA"
         nodeIcon: 
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 2
-    - rid: 1009
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1005
-        parentNodeID: 3
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: x
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 1
+        value: 90
     - rid: 5672604951366336599
       type: {class: LogicEngine, ns: , asm: Assembly-CSharp}
       data:
@@ -228,8 +184,8 @@ MonoBehaviour:
           - rid: 5672604951366336600
           conditionNodes: []
           actionNodes:
-          - rid: 1005
           - rid: 5672604951366336601
+          - rid: 1003
           - rid: 5672604951366336602
         - scriptName: Unit Collision
           scriptUID: 982900900

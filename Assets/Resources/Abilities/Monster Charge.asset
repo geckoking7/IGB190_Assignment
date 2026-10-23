@@ -16,14 +16,14 @@ MonoBehaviour:
     rid: 6440872668980051968
   abilityFlavourText: 
   abilityIcon: {fileID: 21300000, guid: c46d7d28f1fafaf46ad6115bb92d4f1e, type: 3}
-  targetMode: 4
+  targetMode: 2
   abilityDescription: Charge towards the target location, dealing 150% weapon damage
     to all enemies near the point of impact.
   abilityAnimation: One Hand Slash
   range: 10
-  castTime: 0
+  castTime: 1.25
   abilityCooldown: 10
-  abilityCost: 0
+  abilityCost: 10
   movementLock: 0.5
   animationActivationPosition: 0.5
   canMoveWhileCasting: 0

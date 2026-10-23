@@ -1939,16 +1939,17 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 0
         allowFunction: 0
-        value: {fileID: 4058047307361898290, guid: 0fdf5f0aae105e14181605015447ddcf, type: 3}
+        value: {fileID: 3322928715736607801, guid: 0a8f3f196a635784c97be196c03c4678, type: 3}
     - rid: 1086
       type: {class: VectorNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 4
+        returnType: 2
         tempName: Location
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
+        functionName: PositionOfUnit
+        functionDescription: Unit/Position of Unit
+        functionDynamicDescription: Position of $
+        functionEvaluators:
+        - rid: 1104
         parentNode:
           rid: 1084
         parentNodeID: 1
@@ -2002,7 +2003,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 1
+        value: 0.5
     - rid: 1089
       type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -2321,6 +2322,27 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 3
+    - rid: 1104
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
     - rid: 1105
       type: {class: BuffNode, ns: , asm: Assembly-CSharp}
       data:

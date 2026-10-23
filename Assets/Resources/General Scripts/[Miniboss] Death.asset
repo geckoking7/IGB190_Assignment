@@ -23,19 +23,12 @@ MonoBehaviour:
       conditionNodes:
       - rid: 5672604951366336618
       actionNodes:
-      - rid: 1000
+      - rid: 1002
       - rid: 1011
       - rid: 1018
       - rid: 1014
-    - scriptName: Miniboss Trigger Condition
-      scriptUID: 1969880776
-      hasWait: 0
-      reportErrors: 1
-      eventNodes:
-      - rid: 1002
-      conditionNodes: []
-      actionNodes:
-      - rid: 1004
+      - rid: 1000
+      - rid: 1008
       - rid: 1006
       - rid: 1010
   references:
@@ -84,19 +77,20 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Defeat Big Bones
+        value: Delving Deeper
         options: []
     - rid: 1002
-      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: UnitEntersRegion
-        functionDescription: Region/Unit enters region
-        functionDynamicDescription: 'Unit enters region named $ (Presets: <color=yellow>Triggering
-          Unit</color>, <color=yellow>Unique Region ID</color>)'
+        functionName: ModifySpecificQuestRequirementProgress2
+        functionDescription: Quests/Modify Requirement Progress
+        functionDynamicDescription: Modify quest progress of $ on $ by $
         functionEvaluators:
         - rid: 1003
+        - rid: 1004
+        - rid: 1005
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -104,18 +98,15 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        nodeIcon: Region
+        nodeIcon: QuestNew
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        presets:
-        - Triggering Unit
-        - Unique Region ID
     - rid: 1003
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
-        tempName: Region Name
+        tempName: Requirement Name
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
@@ -131,30 +122,9 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 
+        value: Defeat Big Bones
         options: []
     - rid: 1004
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: CreateQuest2
-        functionDescription: Quests/Create Quest
-        functionDynamicDescription: Give the player a quest named $
-        functionEvaluators:
-        - rid: 1005
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: QuestNew
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 1005
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -164,8 +134,8 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 1004
-        parentNodeID: 0
+          rid: 1002
+        parentNodeID: 1
         indent: 0
         presetName: 
         variableName: 
@@ -174,20 +144,39 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Defeat Big Bones
+        value: Delving Deeper
         options: []
+    - rid: 1005
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1002
+        parentNodeID: 2
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
     - rid: 1006
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: AddQuestRequirement2
-        functionDescription: Quests/Add Quest Requirement
-        functionDynamicDescription: Add $ requirement to $ with $ progress increments
+        functionName: CreateQuest2
+        functionDescription: Quests/Create Quest
+        functionDynamicDescription: Give the player a quest named $
         functionEvaluators:
         - rid: 1007
-        - rid: 1008
-        - rid: 1009
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -203,7 +192,7 @@ MonoBehaviour:
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
-        tempName: Requirement
+        tempName: Quest Name
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
@@ -219,30 +208,29 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Kill Him
+        value: Purge the Necromancer
         options: []
     - rid: 1008
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 0
-        tempName: Quest Name
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
+        returnType: 2
+        tempName: 
+        functionName: Wait
+        functionDescription: Flow/Wait
+        functionDynamicDescription: Wait for $ second(s)
+        functionEvaluators:
+        - rid: 1009
         parentNode:
-          rid: 1006
-        parentNodeID: 1
+          rid: -2
+        parentNodeID: -1
         indent: 0
         presetName: 
         variableName: 
         stringSuffix: 
-        nodeIcon: 
+        nodeIcon: Timer
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Defeat Big Bones
-        options: []
     - rid: 1009
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
@@ -253,8 +241,8 @@ MonoBehaviour:
         functionDynamicDescription: 
         functionEvaluators: []
         parentNode:
-          rid: 1006
-        parentNodeID: 2
+          rid: 1008
+        parentNodeID: 0
         indent: 0
         presetName: 
         variableName: 
@@ -263,16 +251,18 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 1
+        value: 2
     - rid: 1010
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: DisableScript
-        functionDescription: Flow/Disable This Script
-        functionDynamicDescription: Disable this script
-        functionEvaluators: []
+        functionName: ShowTutorialMessage
+        functionDescription: UI Actions/Show Tutorial Message
+        functionDynamicDescription: Show a tutorial message printing $ for $ seconds
+        functionEvaluators:
+        - rid: 1023
+        - rid: 1024
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -280,7 +270,7 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        nodeIcon: Cancel
+        nodeIcon: UI
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
@@ -439,7 +429,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 15
+        value: 30
     - rid: 1018
       type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -548,6 +538,49 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {x: 0, y: 0, z: 0}
+    - rid: 1023
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1010
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Purge the Necromancer to rid the crypt of his magics.
+        options: []
+    - rid: 1024
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1010
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 6
     - rid: 5672604951366336617
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:

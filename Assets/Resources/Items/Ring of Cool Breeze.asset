@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1cdd5fc33fd8b841b7c7cd7dff9b881, type: 3}
   m_Name: Ring of Cool Breeze
   m_EditorClassIdentifier: Assembly-CSharp::Item
-  itemDescription: 'Gains addition regen when you are moving, with each 40% of movement
+  itemDescription: 'Gains addition regen when you are moving, with each 10% of movement
     speed giving 1 health per second '
   itemTag: 
   itemFlavourText: 
@@ -21,7 +21,7 @@ MonoBehaviour:
   itemType: 0
   itemRarity: 2
   itemCost: 2000
-  itemSet: {fileID: 0}
+  itemSet: {fileID: 11400000, guid: 7c465fd4062f1cf4cb20b6f262b569e6, type: 2}
   randomStatCount: 3
   guaranteedStats: []
   randomisableStats:

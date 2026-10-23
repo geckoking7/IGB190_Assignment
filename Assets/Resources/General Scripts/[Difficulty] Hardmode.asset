@@ -26,6 +26,7 @@ MonoBehaviour:
       actionNodes:
       - rid: 1006
       - rid: 1011
+      - rid: 1018
   references:
     version: 2
     RefIds:
@@ -434,3 +435,46 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {fileID: 11400000, guid: e4cfca0539cc1e94bb41f35405320a62, type: 2}
+    - rid: 1018
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ShowDebugMessage
+        functionDescription: Debug/Show Debug Message
+        functionDynamicDescription: Show a debug message printing $
+        functionEvaluators:
+        - rid: 1019
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: UI
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 1019
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Message
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1018
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: eghsehshe
+        options: []

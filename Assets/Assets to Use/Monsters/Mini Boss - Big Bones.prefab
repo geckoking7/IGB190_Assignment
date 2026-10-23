@@ -285,8 +285,8 @@ NavMeshAgent:
   m_GameObject: {fileID: 8637392150435583504}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.3
-  m_Speed: 2.3
+  m_Radius: 0.7
+  m_Speed: 2.4
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 720
@@ -315,7 +315,7 @@ MonoBehaviour:
   colorFade: {r: 0, g: 0, b: 0, a: 0}
   unitName: Big Bones
   baseDamage: 30
-  baseAttacksPerSecond: 2
+  baseAttacksPerSecond: 1.4
   baseMaxHealth: 600
   baseMaxResource: 100
   baseMovementSpeed: 2
@@ -330,7 +330,8 @@ MonoBehaviour:
   abilities:
   - {fileID: 11400000, guid: f9f58df6fc0648940b27b9bf00fcde1a, type: 2}
   - {fileID: 11400000, guid: 68c155ef503fc064d9085f68f5703d55, type: 2}
-  - {fileID: 11400000, guid: a39d42e88a196084f979c0593f8a8433, type: 2}
+  - {fileID: 11400000, guid: bf34a0701c093cd4394e38842d4506fc, type: 2}
+  - {fileID: 11400000, guid: cb46d3d3d7378c642be9b3ddd66b9339, type: 2}
   lastAbilityCast: {fileID: 0}
   unitCanBeForceMoved: 1
   handPoint: {fileID: 6935721391789313625}
@@ -357,10 +358,10 @@ MonoBehaviour:
   corpseDuration: 60
   monsterLabel: Mini-Boss
   isEmpowered: 1
-  healthBarType: 1
+  healthBarType: 2
   uiSize: 3.6
   uiHeight: 2
-  spawnLevel: 5
+  spawnLevel: 4
   spawnLikelihood: 0
 --- !u!54 &2780831380324950161
 Rigidbody:

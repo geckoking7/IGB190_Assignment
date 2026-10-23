@@ -20,7 +20,7 @@ MonoBehaviour:
   abilityDescription: Summon a few lads
   abilityAnimation: Shout
   range: 999
-  castTime: 2
+  castTime: 4
   abilityCooldown: 30
   abilityCost: 20
   movementLock: 1
@@ -422,6 +422,32 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 10
+    - rid: 1017
+      type: {class: EventNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: WhenUnitBeginsCastingThisAbility
+        functionDescription: Ability/When a unit begins casting this ability
+        functionDynamicDescription: 'When a unit begins casting this ability (Presets:
+          <color=yellow>Casting Unit</color>, <color=yellow>Ability Target Location</color>,
+          <color=yellow>Target Unit</color>)'
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Event
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        presets:
+        - Casting Unit
+        - Ability Target Location
+        - Target Unit
     - rid: 1018
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
@@ -495,36 +521,10 @@ MonoBehaviour:
           hasWait: 0
           reportErrors: 1
           eventNodes:
-          - rid: 5672605291991531654
+          - rid: 1017
           conditionNodes: []
           actionNodes:
           - rid: 1007
           - rid: 1000
           - rid: 1015
           - rid: 1010
-    - rid: 5672605291991531654
-      type: {class: EventNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: WhenUnitFinishesCastingThisAbility
-        functionDescription: Ability/When a unit finishes casting this ability
-        functionDynamicDescription: 'When a unit finishes casting this ability (Presets:
-          <color=yellow>Casting Unit</color>, <color=yellow>Ability Target Location</color>,
-          <color=yellow>Target Unit</color>)'
-        functionEvaluators: []
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Event
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        presets:
-        - Casting Unit
-        - Ability Target Location
-        - Target Unit

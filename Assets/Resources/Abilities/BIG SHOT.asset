@@ -21,7 +21,7 @@ MonoBehaviour:
 
     Large Slash Projectile'
   abilityAnimation: One Hand Slash
-  range: 8
+  range: 12
   castTime: 0.1
   abilityCooldown: 0
   abilityCost: 5
@@ -49,15 +49,12 @@ MonoBehaviour:
       data:
         returnType: 2
         tempName: 
-        functionName: CreateArcGuide
-        functionDescription: Feedback/Create Arc Effect Guide from Unit
-        functionDynamicDescription: Create a line guide with $ arc from $ with radius
-          $ for $
+        functionName: DamageUnits
+        functionDescription: Unit/Combat/Deal Damage to Unit(s)
+        functionDynamicDescription: Deal $ attack damage to $
         functionEvaluators:
         - rid: 1001
         - rid: 1002
-        - rid: 1003
-        - rid: 1004
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -84,17 +81,17 @@ MonoBehaviour:
         indent: 0
         presetName: 
         variableName: 
-        stringSuffix: 
+        stringSuffix: '%'
         nodeIcon: 
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 45
+        value: 100
     - rid: 1002
-      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      type: {class: UnitGroupNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 4
-        tempName: Unit
+        tempName: Unit(s)
         functionName: 
         functionDescription: 
         functionDynamicDescription: 
@@ -103,56 +100,14 @@ MonoBehaviour:
           rid: 1000
         parentNodeID: 1
         indent: 0
-        presetName: Casting Unit
+        presetName: Colliding Unit
         variableName: 
         stringSuffix: 
         nodeIcon: 
-        allowValue: 1
+        allowValue: 0
         allowPreset: 1
         allowFunction: 1
-        value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
-    - rid: 1003
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1000
-        parentNodeID: 2
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: m
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 1
-    - rid: 1004
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1000
-        parentNodeID: 3
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: s
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 2
+        allowSingleUnit: 0
     - rid: 1005
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -274,7 +229,6 @@ MonoBehaviour:
           conditionNodes: []
           actionNodes:
           - rid: 1005
-          - rid: 1000
           - rid: 5672604951366336601
           - rid: 5672604951366336602
         - scriptName: Unit Collision
@@ -285,6 +239,7 @@ MonoBehaviour:
           - rid: 5672604951366336603
           conditionNodes: []
           actionNodes:
+          - rid: 1000
           - rid: 5672604951366336604
         - scriptName: Terrain Collision
           scriptUID: 850514857
@@ -478,7 +433,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 0
         allowFunction: 0
-        value: {fileID: 6106289200676636190, guid: 0bc11f1830d4fc74daacdfbd22a2de23, type: 3}
+        value: {fileID: -2277053337341798319, guid: be640325ce5865d468ecb17af5755db0, type: 3}
     - rid: 5672604951366336608
       type: {class: VectorNode, ns: , asm: Assembly-CSharp}
       data:
@@ -542,7 +497,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 25
+        value: 15
     - rid: 5672604951366336611
       type: {class: ProjectileNode, ns: , asm: Assembly-CSharp}
       data:

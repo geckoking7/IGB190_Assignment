@@ -1203,6 +1203,87 @@ Transform:
   m_Children: []
   m_Father: {fileID: 69651963}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &39658610
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 243147159722867909, guid: 6510495f74fa4b04ba36c49542609363, type: 3}
+      propertyPath: baseArmor
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 243147159722867909, guid: 6510495f74fa4b04ba36c49542609363, type: 3}
+      propertyPath: baseDamage
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 243147159722867909, guid: 6510495f74fa4b04ba36c49542609363, type: 3}
+      propertyPath: baseMaxHealth
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 243147159722867909, guid: 6510495f74fa4b04ba36c49542609363, type: 3}
+      propertyPath: baseMovementSpeed
+      value: 2.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 243147159722867909, guid: 6510495f74fa4b04ba36c49542609363, type: 3}
+      propertyPath: baseResourceRegen
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 243147159722867909, guid: 6510495f74fa4b04ba36c49542609363, type: 3}
+      propertyPath: baseAttacksPerSecond
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 498993261086472550, guid: 6510495f74fa4b04ba36c49542609363, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.951537
+      objectReference: {fileID: 0}
+    - target: {fileID: 498993261086472550, guid: 6510495f74fa4b04ba36c49542609363, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.004997
+      objectReference: {fileID: 0}
+    - target: {fileID: 498993261086472550, guid: 6510495f74fa4b04ba36c49542609363, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 185.42238
+      objectReference: {fileID: 0}
+    - target: {fileID: 498993261086472550, guid: 6510495f74fa4b04ba36c49542609363, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 498993261086472550, guid: 6510495f74fa4b04ba36c49542609363, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 498993261086472550, guid: 6510495f74fa4b04ba36c49542609363, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 498993261086472550, guid: 6510495f74fa4b04ba36c49542609363, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 498993261086472550, guid: 6510495f74fa4b04ba36c49542609363, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 498993261086472550, guid: 6510495f74fa4b04ba36c49542609363, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 498993261086472550, guid: 6510495f74fa4b04ba36c49542609363, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8637392150435583504, guid: 6510495f74fa4b04ba36c49542609363, type: 3}
+      propertyPath: m_Name
+      value: Mini Boss - Big Bones
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6510495f74fa4b04ba36c49542609363, type: 3}
 --- !u!1001 &41330477
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -57288,6 +57369,10 @@ PrefabInstance:
       propertyPath: m_StoppingDistance
       value: 0.01
       objectReference: {fileID: 0}
+    - target: {fileID: 6228529445303724056, guid: 4e21e22814367324d994666b3b00c467, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6979524201626423483, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: m_UseGravity
       value: 0
@@ -75733,3 +75818,4 @@ SceneRoots:
   - {fileID: 986342619}
   - {fileID: 1295341693}
   - {fileID: 1706467912}
+  - {fileID: 39658610}

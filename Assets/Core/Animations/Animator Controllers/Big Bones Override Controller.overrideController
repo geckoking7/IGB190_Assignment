@@ -8,4 +8,12 @@ AnimatorOverrideController:
   m_PrefabAsset: {fileID: 0}
   m_Name: Big Bones Override Controller
   m_Controller: {fileID: 9100000, guid: 7fc484527f7352a49a5990317e5de029, type: 2}
-  m_Clips: []
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: f391a9431e98ab445852f888a4d69cbe, type: 2}
+    m_OverrideClip: {fileID: -203655887218126122, guid: 536ea7d6478884a46a7733dc5cd1263d, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: d630087e7070ace46b60123bd4e20248, type: 3}
+    m_OverrideClip: {fileID: -203655887218126122, guid: 52d98a5f537804b4dafc450e4a598b46, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 0127cbb0c3c792e4490d5dad1ebec9bb, type: 3}
+    m_OverrideClip: {fileID: -203655887218126122, guid: 57fba705bf314584aba786bd70db1e04, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: ecfccb49b05087e4083e95098aae4869, type: 2}
+    m_OverrideClip: {fileID: -203655887218126122, guid: 015b2bffec0678c4080d0171418d347d, type: 3}

@@ -18,7 +18,7 @@ MonoBehaviour:
   abilityIcon: {fileID: 21300000, guid: ee80f6801b5bb9541b138bbd53c5071b, type: 3}
   targetMode: 4
   abilityDescription: Player shoots fireball
-  abilityAnimation: Bow Shoot
+  abilityAnimation: None
   range: 8
   castTime: 0.1
   abilityCooldown: 0

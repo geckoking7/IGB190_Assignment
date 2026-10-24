@@ -285,7 +285,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 1
+        value: 1.5
     - rid: 1013
       type: {class: VectorNode, ns: , asm: Assembly-CSharp}
       data:
@@ -504,7 +504,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 0.5
+        value: 1
     - rid: 1023
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:

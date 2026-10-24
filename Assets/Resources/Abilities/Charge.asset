@@ -19,7 +19,7 @@ MonoBehaviour:
   targetMode: 4
   abilityDescription: Charge towards the target location, dealing 150% weapon damage
     to all enemies near the point of impact.
-  abilityAnimation: One Hand Slash
+  abilityAnimation: Shout
   range: 10
   castTime: 0
   abilityCooldown: 10

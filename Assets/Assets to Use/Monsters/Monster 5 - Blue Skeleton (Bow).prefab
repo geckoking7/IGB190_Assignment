@@ -5114,6 +5114,7 @@ MonoBehaviour:
   abilities:
   - {fileID: 11400000, guid: a754a6374a0c8674cbcc3b4c8912ec17, type: 2}
   - {fileID: 11400000, guid: 8aa3eeeb3fac3f4449ba6b01067b3a03, type: 2}
+  - {fileID: 11400000, guid: f9da420a630c4a441a3c1f2195c0717b, type: 2}
   lastAbilityCast: {fileID: 0}
   unitCanBeForceMoved: 1
   handPoint: {fileID: 0}

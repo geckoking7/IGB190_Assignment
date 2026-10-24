@@ -19,11 +19,11 @@ MonoBehaviour:
   targetMode: 2
   abilityDescription: Charge towards the target location, dealing 150% weapon damage
     to all enemies near the point of impact.
-  abilityAnimation: One Hand Slash
+  abilityAnimation: Shout
   range: 10
   castTime: 1.25
   abilityCooldown: 10
-  abilityCost: 10
+  abilityCost: 0
   movementLock: 0.5
   animationActivationPosition: 0.5
   canMoveWhileCasting: 0
@@ -130,7 +130,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 0.5
+        value: 0.4
     - rid: 1004
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
@@ -303,7 +303,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 1.5
+        value: 1
     - rid: 1012
       type: {class: NumberNode, ns: , asm: Assembly-CSharp}
       data:
@@ -499,7 +499,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 1.5
+        value: 1
     - rid: 1021
       type: {class: VectorNode, ns: , asm: Assembly-CSharp}
       data:
@@ -534,6 +534,53 @@ MonoBehaviour:
         parentNode:
           rid: -2
         parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 1023
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: OrComparison
+        functionDescription: Comparisons/Or Comparison
+        functionDynamicDescription: $ or $
+        functionEvaluators:
+        - rid: 1024
+        - rid: 1027
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 1024
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Bool
+        functionName: NumberComparison
+        functionDescription: Comparisons/Number Comparison
+        functionDynamicDescription: $ $ $
+        functionEvaluators:
+        - rid: 1033
+        - rid: 1034
+        - rid: 1035
+        parentNode:
+          rid: 1023
+        parentNodeID: 0
         indent: 0
         presetName: 
         variableName: 
@@ -592,6 +639,230 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 0.01
+    - rid: 1027
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Bool
+        functionName: UnitIsEmpowered
+        functionDescription: Monster/Monster Is Empowered
+        functionDynamicDescription: $ $ empowered
+        functionEvaluators:
+        - rid: 1028
+        - rid: 1029
+        parentNode:
+          rid: 1023
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 1028
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: Casting Unit
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 1029
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Is
+        options:
+        - Is
+        - Is Not
+    - rid: 1030
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 1031
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 1
+    - rid: 1032
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: Wait
+        functionDescription: Flow/Wait
+        functionDynamicDescription: Wait for $ second(s)
+        functionEvaluators:
+        - rid: 1036
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Timer
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 1033
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: RandomNumberBetween
+        functionDescription: Random/Random Number
+        functionDynamicDescription: Random Number Between $ and $
+        functionEvaluators:
+        - rid: 1030
+        - rid: 1031
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 1034
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Less Than Or Equal To
+        options:
+        - Equal To
+        - Not Equal To
+        - Less Than
+        - Less Than Or Equal To
+        - Greater Than
+        - Greater Than Or Equal To
+    - rid: 1035
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0.25
+    - rid: 1036
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1032
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0.25
     - rid: 6440872668980051968
       type: {class: LogicEngine, ns: , asm: Assembly-CSharp}
       data:
@@ -602,7 +873,8 @@ MonoBehaviour:
           reportErrors: 1
           eventNodes:
           - rid: 6440872668980051969
-          conditionNodes: []
+          conditionNodes:
+          - rid: 1023
           actionNodes:
           - rid: 6440872668980051970
           - rid: 6440872668980051971
@@ -610,6 +882,7 @@ MonoBehaviour:
           - rid: 1009
           - rid: 6440872668980051973
           - rid: 1005
+          - rid: 1032
           - rid: 6440872668980051974
           - rid: 1016
           - rid: 6440872668980051976
@@ -1144,7 +1417,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 1.5
+        value: 1
     - rid: 6440872668980051999
       type: {class: VectorNode, ns: , asm: Assembly-CSharp}
       data:

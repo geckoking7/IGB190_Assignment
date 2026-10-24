@@ -108,70 +108,6 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         allowSingleUnit: 0
-    - rid: 1003
-      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 2
-        tempName: 
-        functionName: RotateProjectile
-        functionDescription: Projectile/Rotate Projectile
-        functionDynamicDescription: Rotate $ by $
-        functionEvaluators:
-        - rid: 1004
-        - rid: 1005
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: Projectile
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-    - rid: 1004
-      type: {class: ProjectileNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 4
-        tempName: Projectile
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1003
-        parentNodeID: 0
-        indent: 0
-        presetName: Last Created Projectile
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 0
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 0}
-    - rid: 1005
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1003
-        parentNodeID: 1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: "\xBA"
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 90
     - rid: 5672604951366336599
       type: {class: LogicEngine, ns: , asm: Assembly-CSharp}
       data:
@@ -185,7 +121,6 @@ MonoBehaviour:
           conditionNodes: []
           actionNodes:
           - rid: 5672604951366336601
-          - rid: 1003
           - rid: 5672604951366336602
         - scriptName: Unit Collision
           scriptUID: 982900900

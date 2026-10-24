@@ -23,11 +23,11 @@ MonoBehaviour:
       conditionNodes:
       - rid: 5672604951366336618
       actionNodes:
-      - rid: 1002
+      - rid: 1000
+      - rid: 1005
       - rid: 1011
       - rid: 1018
       - rid: 1014
-      - rid: 1000
       - rid: 1008
       - rid: 1006
       - rid: 1010
@@ -77,20 +77,84 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: Delving Deeper
+        value: Kill Big Bones
         options: []
     - rid: 1002
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Range
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: m
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 2
+    - rid: 1003
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 1004
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 1005
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 2
         tempName: 
-        functionName: ModifySpecificQuestRequirementProgress2
-        functionDescription: Quests/Modify Requirement Progress
-        functionDynamicDescription: Modify quest progress of $ on $ by $
+        functionName: ShowStatusMessage
+        functionDescription: UI Actions/Show In-World Status Message
+        functionDynamicDescription: Show a status message at $ with color $ printing
+          $
         functionEvaluators:
-        - rid: 1003
-        - rid: 1004
-        - rid: 1005
+        - rid: 1022
+        - rid: 1025
+        - rid: 1026
         parentNode:
           rid: -2
         parentNodeID: -1
@@ -98,75 +162,10 @@ MonoBehaviour:
         presetName: 
         variableName: 
         stringSuffix: 
-        nodeIcon: QuestNew
+        nodeIcon: UI
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-    - rid: 1003
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Requirement Name
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1002
-        parentNodeID: 0
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: Defeat Big Bones
-        options: []
-    - rid: 1004
-      type: {class: StringNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Quest Name
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1002
-        parentNodeID: 1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: Delving Deeper
-        options: []
-    - rid: 1005
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: 1002
-        parentNodeID: 2
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: 1
     - rid: 1006
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -299,12 +298,13 @@ MonoBehaviour:
     - rid: 1012
       type: {class: VectorNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 4
+        returnType: 2
         tempName: Location
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
+        functionName: PositionOfUnit
+        functionDescription: Unit/Position of Unit
+        functionDynamicDescription: Position of $
+        functionEvaluators:
+        - rid: 1003
         parentNode:
           rid: 1011
         parentNodeID: 0
@@ -391,12 +391,12 @@ MonoBehaviour:
       data:
         returnType: 2
         tempName: Location
-        functionName: RandomNearbyUnitToPoint
-        functionDescription: Random Unit Near Point
-        functionDynamicDescription: Random unit within $ distance of $
+        functionName: RandomPointNearPoint
+        functionDescription: Random/Random Point Near Point
+        functionDynamicDescription: Random point within $ of $
         functionEvaluators:
+        - rid: 1002
         - rid: 1021
-        - rid: 1022
         parentNode:
           rid: 1014
         parentNodeID: 0
@@ -497,38 +497,40 @@ MonoBehaviour:
         value: Loop ID
         options: []
     - rid: 1021
-      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      type: {class: VectorNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 0
-        tempName: 
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
+        returnType: 2
+        tempName: Location
+        functionName: PositionOfUnit
+        functionDescription: Unit/Position of Unit
+        functionDynamicDescription: Position of $
+        functionEvaluators:
+        - rid: 1004
         parentNode:
           rid: -2
         parentNodeID: -1
         indent: 0
-        presetName: 
+        presetName: Killed Unit
         variableName: 
-        stringSuffix: m
+        stringSuffix: 
         nodeIcon: 
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 2
+        value: {x: 0, y: 0, z: 0}
     - rid: 1022
       type: {class: VectorNode, ns: , asm: Assembly-CSharp}
       data:
-        returnType: 4
+        returnType: 2
         tempName: Location
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
+        functionName: PositionOfUnit
+        functionDescription: Unit/Position of Unit
+        functionDynamicDescription: Position of $
+        functionEvaluators:
+        - rid: 1027
         parentNode:
-          rid: -2
-        parentNodeID: -1
+          rid: 1005
+        parentNodeID: 0
         indent: 0
         presetName: Killed Unit
         variableName: 
@@ -581,6 +583,70 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 6
+    - rid: 1025
+      type: {class: ColorNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Color
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1005
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {r: 0.9516857, g: 0.98490566, b: 0, a: 1}
+    - rid: 1026
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Message
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1005
+        parentNodeID: 2
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: Quest Complete!
+        options: []
+    - rid: 1027
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1022
+        parentNodeID: 0
+        indent: 0
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
     - rid: 5672604951366336617
       type: {class: EventNode, ns: , asm: Assembly-CSharp}
       data:

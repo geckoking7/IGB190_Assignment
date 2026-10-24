@@ -26,7 +26,7 @@ MonoBehaviour:
   abilityCooldown: 7
   abilityCost: 5
   movementLock: 1
-  animationActivationPosition: 1
+  animationActivationPosition: 0.509
   canMoveWhileCasting: 0
   hasSpecificCastTime: 1
   cooldownIsAtackSpeed: 0
@@ -282,7 +282,7 @@ MonoBehaviour:
           rid: -2
         parentNodeID: -1
         indent: 0
-        presetName: All Enemies
+        presetName: Player
         variableName: 
         stringSuffix: 
         nodeIcon: 
@@ -418,7 +418,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 1.4
+        value: 3
     - rid: 1023
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:

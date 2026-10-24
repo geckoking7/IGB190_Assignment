@@ -1289,7 +1289,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 243147159722867909, guid: 6510495f74fa4b04ba36c49542609363, type: 3}
       propertyPath: baseMaxHealth
-      value: 800
+      value: 1600
       objectReference: {fileID: 0}
     - target: {fileID: 243147159722867909, guid: 6510495f74fa4b04ba36c49542609363, type: 3}
       propertyPath: baseMovementSpeed
@@ -60294,7 +60294,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: B_GOD_MODE
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
       propertyPath: baseDamage
@@ -74407,6 +74407,10 @@ PrefabInstance:
       value: Boss
       objectReference: {fileID: 0}
     - target: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
+      propertyPath: baseMaxHealth
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
       propertyPath: abilities.Array.size
       value: 5
       objectReference: {fileID: 0}
@@ -74422,6 +74426,14 @@ PrefabInstance:
       propertyPath: 'abilities.Array.data[4]'
       value: 
       objectReference: {fileID: 11400000, guid: 423c9b0d78369384fbab5c8e4857b2ce, type: 2}
+    - target: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
+      propertyPath: 'abilities.Array.data[5]'
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
+      propertyPath: 'abilities.Array.data[6]'
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 498993261086472550, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
       propertyPath: m_RootOrder
       value: 17

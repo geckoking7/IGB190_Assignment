@@ -473,7 +473,7 @@ MonoBehaviour:
         parentNode:
           rid: -2
         parentNodeID: -1
-        indent: 0
+        indent: 1
         presetName: 
         variableName: 
         stringSuffix: 
@@ -537,7 +537,7 @@ MonoBehaviour:
         parentNode:
           rid: -2
         parentNodeID: -1
-        indent: 0
+        indent: 1
         presetName: 
         variableName: 
         stringSuffix: 
@@ -601,7 +601,7 @@ MonoBehaviour:
         parentNode:
           rid: -2
         parentNodeID: -1
-        indent: 0
+        indent: 1
         presetName: 
         variableName: 
         stringSuffix: 
@@ -664,7 +664,7 @@ MonoBehaviour:
         parentNode:
           rid: -2
         parentNodeID: -1
-        indent: 0
+        indent: 1
         presetName: 
         variableName: 
         stringSuffix: 
@@ -714,6 +714,27 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 15
+    - rid: 1031
+      type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DoActionsIfBool
+        functionDescription: Flow/If Statement
+        functionDynamicDescription: Do actions if $
+        functionEvaluators:
+        - rid: 1033
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
     - rid: 1032
       type: {class: VectorNode, ns: , asm: Assembly-CSharp}
       data:
@@ -735,6 +756,272 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: {x: 0, y: 0, z: 0}
+    - rid: 1033
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Bool
+        functionName: UnitComparison
+        functionDescription: Comparisons/Unit Comparison
+        functionDynamicDescription: $ $ $
+        functionEvaluators:
+        - rid: 1034
+        - rid: 1035
+        - rid: 1036
+        parentNode:
+          rid: 1031
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 1034
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: Goal Unit
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
+    - rid: 1035
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Equal To
+        options:
+        - Equal To
+        - Not Equal To
+    - rid: 1036
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
+    - rid: 1037
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DestroyProjectile
+        functionDescription: Projectile/Destroy Projectile
+        functionDynamicDescription: Destroy $
+        functionEvaluators:
+        - rid: 1038
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 1
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Projectile
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 1038
+      type: {class: ProjectileNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Projectile
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1037
+        parentNodeID: 0
+        indent: 0
+        presetName: Event Projectile
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 0
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 0}
+    - rid: 1039
+      type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DoActionsIfBool
+        functionDescription: Flow/If Statement
+        functionDynamicDescription: Do actions if $
+        functionEvaluators:
+        - rid: 1040
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 1040
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Bool
+        functionName: UnitComparison
+        functionDescription: Comparisons/Unit Comparison
+        functionDynamicDescription: $ $ $
+        functionEvaluators:
+        - rid: 1041
+        - rid: 1042
+        - rid: 1043
+        parentNode:
+          rid: 1039
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 1041
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: Goal Unit
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
+    - rid: 1042
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Not Equal To
+        options:
+        - Equal To
+        - Not Equal To
+    - rid: 1043
+      type: {class: UnitNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 4
+        tempName: Unit
+        functionName: GetUnitWithLabel
+        functionDescription: Unit with Label
+        functionDynamicDescription: Unit labeled $
+        functionEvaluators:
+        - rid: 1045
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: Player
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 8969226238869256706, guid: 4e21e22814367324d994666b3b00c467, type: 3}
+    - rid: 1045
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 3
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 
+        options: []
     - rid: 5672604951366336614
       type: {class: LogicEngine, ns: , asm: Assembly-CSharp}
       data:
@@ -759,6 +1046,9 @@ MonoBehaviour:
           - rid: 1008
           conditionNodes: []
           actionNodes:
+          - rid: 1031
+          - rid: 1037
+          - rid: 1039
           - rid: 1019
           - rid: 1022
           - rid: 1025

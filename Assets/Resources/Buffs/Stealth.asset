@@ -298,7 +298,7 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 1
         allowFunction: 1
-        value: 0.1
+        value: 1
     - rid: 1010
       type: {class: UnitNode, ns: , asm: Assembly-CSharp}
       data:

@@ -1289,7 +1289,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 243147159722867909, guid: 6510495f74fa4b04ba36c49542609363, type: 3}
       propertyPath: baseMaxHealth
-      value: 1600
+      value: 2000
       objectReference: {fileID: 0}
     - target: {fileID: 243147159722867909, guid: 6510495f74fa4b04ba36c49542609363, type: 3}
       propertyPath: baseMovementSpeed
@@ -70524,7 +70524,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1719023589353836026, guid: 4acfaec6a187e864c9d90d88069d3e5d, type: 3}
       propertyPath: goldAmount
-      value: 10000
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1719023589353836027, guid: 4acfaec6a187e864c9d90d88069d3e5d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -74408,7 +74408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
       propertyPath: baseMaxHealth
-      value: 2000
+      value: 4000
       objectReference: {fileID: 0}
     - target: {fileID: 243147159722867909, guid: 374d47c23bdc7f5469a02d3129649e86, type: 3}
       propertyPath: abilities.Array.size

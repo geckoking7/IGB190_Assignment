@@ -26,8 +26,12 @@ MonoBehaviour:
       - rid: 1018
       - rid: 1005
       - rid: 1007
+      - rid: 1071
       - rid: 1011
       - rid: 1015
+      - rid: 1069
+      - rid: 1013
+      - rid: 1077
       - rid: 1060
       - rid: 1046
       - rid: 1053
@@ -305,7 +309,7 @@ MonoBehaviour:
         parentNode:
           rid: -2
         parentNodeID: -1
-        indent: 0
+        indent: 1
         presetName: 
         variableName: 
         stringSuffix: 
@@ -318,12 +322,13 @@ MonoBehaviour:
       data:
         returnType: 2
         tempName: Bool
-        functionName: PlayerHasItemEquipped
-        functionDescription: Player/Player Has Item Equipped
-        functionDynamicDescription: Player $ $ equipped
+        functionName: ItemComparison
+        functionDescription: Comparisons/Item Comparison
+        functionDynamicDescription: $ $ $
         functionEvaluators:
-        - rid: 1013
-        - rid: 1014
+        - rid: 1059
+        - rid: 1067
+        - rid: 1068
         parentNode:
           rid: 1011
         parentNodeID: 0
@@ -337,6 +342,27 @@ MonoBehaviour:
         allowFunction: 1
         value: 0
     - rid: 1013
+      type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DoActionsIfBool
+        functionDescription: Flow/If Statement
+        functionDynamicDescription: Do actions if $
+        functionEvaluators:
+        - rid: 1070
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 1
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 1014
       type: {class: StringNode, ns: , asm: Assembly-CSharp}
       data:
         returnType: 0
@@ -356,31 +382,14 @@ MonoBehaviour:
         allowValue: 1
         allowPreset: 0
         allowFunction: 0
-        value: Has
+        value: Ring 1
         options:
-        - Has
-        - Does Not Have
-    - rid: 1014
-      type: {class: ItemNode, ns: , asm: Assembly-CSharp}
-      data:
-        returnType: 0
-        tempName: Item
-        functionName: 
-        functionDescription: 
-        functionDynamicDescription: 
-        functionEvaluators: []
-        parentNode:
-          rid: -2
-        parentNodeID: -1
-        indent: 0
-        presetName: 
-        variableName: 
-        stringSuffix: 
-        nodeIcon: 
-        allowValue: 1
-        allowPreset: 1
-        allowFunction: 1
-        value: {fileID: 11400000, guid: 35e30ab806e27a74c97120ec3f4759cc, type: 2}
+        - Weapon
+        - Amulet
+        - Armor
+        - Boots
+        - Ring 1
+        - Ring 2
     - rid: 1015
       type: {class: ActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -395,7 +404,7 @@ MonoBehaviour:
         parentNode:
           rid: -2
         parentNodeID: -1
-        indent: 1
+        indent: 2
         presetName: 
         variableName: 
         stringSuffix: 
@@ -1347,6 +1356,27 @@ MonoBehaviour:
         allowPreset: 1
         allowFunction: 1
         value: 125125130
+    - rid: 1059
+      type: {class: ItemNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Item
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 11400000, guid: 35e30ab806e27a74c97120ec3f4759cc, type: 2}
     - rid: 1060
       type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
       data:
@@ -1503,3 +1533,419 @@ MonoBehaviour:
         allowFunction: 0
         value: Heal
         options: []
+    - rid: 1067
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Equal To
+        options:
+        - Equal To
+        - Not Equal To
+    - rid: 1068
+      type: {class: ItemNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Item
+        functionName: PlayerEquipmentInSlot
+        functionDescription: Player Equipment in Slot
+        functionDynamicDescription: Player Equipment in $ Slot
+        functionEvaluators:
+        - rid: 1014
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 11400000, guid: e875568681576aa4bb15eb218935a734, type: 2}
+    - rid: 1069
+      type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DoActionsIfBool
+        functionDescription: Flow/If Statement
+        functionDynamicDescription: Do actions if $
+        functionEvaluators:
+        - rid: 1083
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 1070
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Bool
+        functionName: ItemComparison
+        functionDescription: Comparisons/Item Comparison
+        functionDynamicDescription: $ $ $
+        functionEvaluators:
+        - rid: 1073
+        - rid: 1074
+        - rid: 1075
+        parentNode:
+          rid: 1013
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 1071
+      type: {class: NestingActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: DoActionsIfBool
+        functionDescription: Flow/If Statement
+        functionDynamicDescription: Do actions if $
+        functionEvaluators:
+        - rid: 1072
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Condition
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 1072
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Bool
+        functionName: ItemExists
+        functionDescription: Validity/Item Exists
+        functionDynamicDescription: $ exists
+        functionEvaluators:
+        - rid: 1080
+        parentNode:
+          rid: 1071
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 1073
+      type: {class: ItemNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: Item
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1070
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 11400000, guid: 35e30ab806e27a74c97120ec3f4759cc, type: 2}
+    - rid: 1074
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1070
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Equal To
+        options:
+        - Equal To
+        - Not Equal To
+    - rid: 1075
+      type: {class: ItemNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Item
+        functionName: PlayerEquipmentInSlot
+        functionDescription: Player Equipment in Slot
+        functionDynamicDescription: Player Equipment in $ Slot
+        functionEvaluators:
+        - rid: 1076
+        parentNode:
+          rid: 1070
+        parentNodeID: 2
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 11400000, guid: e875568681576aa4bb15eb218935a734, type: 2}
+    - rid: 1076
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1075
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Ring 2
+        options:
+        - Weapon
+        - Amulet
+        - Armor
+        - Boots
+        - Ring 1
+        - Ring 2
+    - rid: 1077
+      type: {class: ActionNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: 
+        functionName: ModifyNumberVariable
+        functionDescription: Variables/Modify Number Variable
+        functionDynamicDescription: Modify script number variable named $ by $
+        functionEvaluators:
+        - rid: 1078
+        - rid: 1079
+        parentNode:
+          rid: -2
+        parentNodeID: -1
+        indent: 2
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: Variable
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+    - rid: 1078
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1077
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Heal
+        options: []
+    - rid: 1079
+      type: {class: NumberNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1077
+        parentNodeID: 1
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0.15
+    - rid: 1080
+      type: {class: ItemNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Item
+        functionName: PlayerEquipmentInSlot
+        functionDescription: Player Equipment in Slot
+        functionDynamicDescription: Player Equipment in $ Slot
+        functionEvaluators:
+        - rid: 1081
+        parentNode:
+          rid: 1072
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 11400000, guid: e875568681576aa4bb15eb218935a734, type: 2}
+    - rid: 1081
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1080
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Ring 1
+        options:
+        - Weapon
+        - Amulet
+        - Armor
+        - Boots
+        - Ring 1
+        - Ring 2
+    - rid: 1083
+      type: {class: BoolNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Bool
+        functionName: ItemExists
+        functionDescription: Validity/Item Exists
+        functionDynamicDescription: $ exists
+        functionEvaluators:
+        - rid: 1091
+        parentNode:
+          rid: 1069
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: 0
+    - rid: 1091
+      type: {class: ItemNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 2
+        tempName: Item
+        functionName: PlayerEquipmentInSlot
+        functionDescription: Player Equipment in Slot
+        functionDynamicDescription: Player Equipment in $ Slot
+        functionEvaluators:
+        - rid: 1103
+        parentNode:
+          rid: 1083
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 1
+        allowFunction: 1
+        value: {fileID: 11400000, guid: e875568681576aa4bb15eb218935a734, type: 2}
+    - rid: 1103
+      type: {class: StringNode, ns: , asm: Assembly-CSharp}
+      data:
+        returnType: 0
+        tempName: 
+        functionName: 
+        functionDescription: 
+        functionDynamicDescription: 
+        functionEvaluators: []
+        parentNode:
+          rid: 1091
+        parentNodeID: 0
+        indent: 0
+        presetName: 
+        variableName: 
+        stringSuffix: 
+        nodeIcon: 
+        allowValue: 1
+        allowPreset: 0
+        allowFunction: 0
+        value: Ring 2
+        options:
+        - Weapon
+        - Amulet
+        - Armor
+        - Boots
+        - Ring 1
+        - Ring 2
